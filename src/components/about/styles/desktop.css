@@ -1,0 +1,80 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 20px;
+}
+.profileAbout{
+    /* width: 100%; */
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    place-items: center;
+    gap: 10px;
+    /* background-color: rgba(0, 0, 0, 0.137); */
+}
+.profileImage{
+    width: 300px;
+    height: 300px;
+    /* flex-grow: 1; */
+    border-radius: 10%;
+}
+.aboutText{
+    /* background-color: brown; */
+    min-width: 60%;
+    flex-grow: 1;
+    color: rgb(44, 44, 44);
+}
+.skillsAndLenguagesBox {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.progressBarsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.progressBar {
+    overflow: hidden;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+}
+
+.progressBarLabel {
+    height: 100%;
+    width: 100px;
+    background-color: aqua;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    background-color: rgb(140, 148, 150);
+    font-weight: 600;
+    color: rgb(214, 54, 80);
+}
+
+.progressBarBackground {
+    position: relative;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.progress {
+    position: absolute;
+    height: 100%;
+    width: calc(100% * 0.5);
+    background-color: rgb(65, 80, 85);
+}

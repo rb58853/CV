@@ -1,0 +1,11 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 100%;
+}
+.container{
+    margin-top: 60px ;
+    /* background-color: rgba(80, 255, 124, 0.13); */
+    width: max(90%, 800px);
+}
