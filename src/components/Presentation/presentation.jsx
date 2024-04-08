@@ -1,9 +1,20 @@
-import './styles/desktop.css' 
+import './styles/desktop.css'
 function EnglishPresentation() {
     return (
         <section className="presentation">
-            Hello i'm Raul.
-            I.m a Computer Scientist
+            <text>
+                {`Hello, I'm `}
+                <text style={{ color: 'white' }}>
+                    Raul Beltran
+                </text>
+                .
+            </text>
+            <text>
+                {`I'm a `}
+                <text style={{ color: 'white' }}>
+                    Computer Scientist
+                </text>
+            </text>
         </section>
     )
 }

@@ -4,50 +4,93 @@
     place-content: center;
     place-items: center;
     gap: 20px;
+    width: min(100%, 1400px);
 }
-.profileAbout{
+
+.profileAbout {
     /* width: 100%; */
-    width: 1000px;
+    width: min(1000px, 100%);
     display: flex;
     flex-direction: row;
     place-content: center;
     place-items: center;
-    gap: 10px;
+    gap: 20px;
     /* background-color: rgba(0, 0, 0, 0.137); */
 }
-.profileImage{
+
+.profileImage {
     width: 300px;
     height: 300px;
     /* flex-grow: 1; */
     border-radius: 10%;
 }
-.aboutText{
+
+.aboutText {
     /* background-color: brown; */
     min-width: 60%;
     flex-grow: 1;
     color: rgb(44, 44, 44);
 }
+
+.line {
+    width: 100%;
+}
+
 .skillsAndLenguagesBox {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.skillsAndLenguagesColums {
     display: flex;
     flex-direction: row;
     place-content: center;
-    gap: 10px;
+    gap: 30px;
     width: 100%;
+}
+
+.infoBox {
+    top: 2%;
+    width: 94%;
+    background-color: rgb(70, 84, 88, 0.2);
+    position: absolute;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    padding: 2%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.infoBox.active {
+    opacity: 1;
 }
 
 .progressBarsContainer {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    /* width: 45%; */
     background-color: rgba(0, 0, 0, 0.03);
     padding: 20px;
     border-radius: 10px;
     gap: 10px;
+    flex-grow: 1;
+}
+
+.progressBarsContainer>h1 {
+    font-size: 20px;
+    color: rgb(20, 30, 40);
 }
 
 .progressBar {
     overflow: hidden;
-    height: 25px;
+    height: 22px;
     display: flex;
     flex-direction: row;
     border-radius: 2px;
@@ -55,14 +98,15 @@
 
 .progressBarLabel {
     height: 100%;
-    width: 100px;
+    width: 120px;
     background-color: aqua;
     display: flex;
     place-content: center;
     place-items: center;
-    background-color: rgb(140, 148, 150);
-    font-weight: 600;
-    color: rgb(214, 54, 80);
+    background-color: rgb(100, 120, 130);
+    /* font-weight: 600; */
+    color: white;
+    cursor: pointer;
 }
 
 .progressBarBackground {
@@ -76,5 +120,5 @@
     position: absolute;
     height: 100%;
     width: calc(100% * 0.5);
-    background-color: rgb(65, 80, 85);
+    background-color: rgb(70, 84, 88);
 }

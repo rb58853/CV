@@ -4,8 +4,12 @@ import skills from '../../data/skills.js'
 import languages from '../../data/languages.js'
 import { sortDictionary, sortDictionaryByValue } from '../../utils/sortDictionary.js'
 import about from '../../data/about.js'
+import { useState } from 'react'
 
 function About() {
+    const [info, setInfo] = useState('')
+    const [boxInfoActive, setBoxInfoActive] = useState(false)
+
     return (
         <section className='about'>
             <h1 className='defaultHeader'>About</h1>
@@ -13,12 +17,23 @@ function About() {
                 <img className='profileImage' src="/images/profile.jpg" alt="profile" />
                 <AboutText />
             </div>
+            <hr className='line' />
+
             <div className='skillsAndLenguagesBox'>
-                <Skills />
-                <Languages />
+                <InfoBox info={info} active={boxInfoActive} />
+                <div className='skillsAndLenguagesColums' >
+                    <Skills setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
+                    <Languages setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
+                </div>
             </div>
         </section>
     )
+}
+
+function InfoBox({ info, active }) {
+    return <div className={`infoBox ${active ? 'active' : ''}`}>
+        {info}
+    </div>
 }
 
 function AboutText() {
@@ -28,9 +43,9 @@ function AboutText() {
     return <div className='aboutText'> {parraphs}</div>
 }
 
-function Languages() {
+function Languages({ setBoxInfoActive, setInfo }) {
     const languagesView = Object.values(SortedBars(languages)).map((item) => {
-        return <ProgressBar label={item.label} percentage={item.skill} />
+        return <ProgressBar label={item.label} info={item.info} percentage={item.skill} setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
     })
 
     return (
@@ -41,9 +56,9 @@ function Languages() {
     )
 }
 
-function Skills() {
+function Skills({ setBoxInfoActive, setInfo }) {
     const skillsView = Object.values(SortedBars(skills)).map((item) => {
-        return <ProgressBar label={item.label} percentage={item.skill} />
+        return <ProgressBar label={item.label} info={item.info} percentage={item.skill} setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
     })
 
     return (
@@ -54,13 +69,21 @@ function Skills() {
     )
 }
 
-function ProgressBar({ label, percentage }) {
+function ProgressBar({ label, info, percentage, setBoxInfoActive, setInfo }) {
     percentage /= 100
     return (
         <div className='progressBar'>
-            <div className='progressBarLabel'>
+            <label className='progressBarLabel'
+                onMouseEnter={() => {
+                    setBoxInfoActive(true)
+                    setInfo(info)
+                }}
+                onMouseOut={() => {
+                    setBoxInfoActive(false)
+                }}
+            >
                 {label}
-            </div>
+            </label>
 
             <div className='progressBarBackground'>
                 <div className='progress' style={{ width: `calc(100% * ${percentage})` }} />
