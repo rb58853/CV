@@ -1,1 +1,4 @@
-const barHeight = 60;
+const env = {
+    barHeight: 60,
+}
+export default env

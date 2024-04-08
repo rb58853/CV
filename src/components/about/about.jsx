@@ -11,19 +11,21 @@ function About() {
     const [boxInfoActive, setBoxInfoActive] = useState(false)
 
     return (
-        <section className='about'>
-            <h1 className='defaultHeader'>About</h1>
-            <div className='profileAbout'>
-                <img className='profileImage' src="/images/profile.jpg" alt="profile" />
-                <AboutText />
-            </div>
-            <hr className='line' />
+        <section className='aboutBackground'>
+            <div className='about'>
+                <h1 className='defaultHeader'>About</h1>
+                <div className='profileAbout'>
+                    <img className='profileImage' src="/images/profile.jpg" alt="profile" />
+                    <AboutText />
+                </div>
+                <div className='line' />
 
-            <div className='skillsAndLenguagesBox'>
-                <InfoBox info={info} active={boxInfoActive} />
-                <div className='skillsAndLenguagesColums' >
-                    <Skills setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
-                    <Languages setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
+                <div className='skillsAndLenguagesBox'>
+                    <InfoBox info={info} active={boxInfoActive} />
+                    <div className='skillsAndLenguagesColums' >
+                        <Skills setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
+                        <Languages setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
+                    </div>
                 </div>
             </div>
         </section>

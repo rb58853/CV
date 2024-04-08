@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100%;
     background-color: rgb(37, 41, 52);
-    background-color: rgb(27, 31, 42);
+    /* background-color: rgb(27, 31, 42); */
     color: white;
     display: flex;
     place-content: center;
@@ -10,4 +10,5 @@
     font-size: 50px;
     font-weight: 500;
     flex-direction: column;
+    z-index: 3;
 }

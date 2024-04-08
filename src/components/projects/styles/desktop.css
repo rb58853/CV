@@ -1,0 +1,15 @@
+.projects{
+    background-color: rgba(0, 0, 0, 0.04);
+    width: 100%;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+} 
+.projectsContent {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 20px;
+    width: min(max(90%,800px), max(1400px,120vh));
+}

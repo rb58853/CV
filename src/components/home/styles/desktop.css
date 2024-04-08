@@ -6,12 +6,9 @@
 }
 .container{
     margin-top: 35px ;
-    /* background-color: rgba(80, 255, 124, 0.13); */
-    width: max(90%, 800px);
+    width: max(100%, 800px);
     display: flex;
     flex-direction: column;
     place-items: center;
-    /* height: calc(100vh - 50px);
-    background-color: brown;
-    overflow: auto; */
+    position: relative;
 }
