@@ -55,7 +55,6 @@
 .infoBox {
     top: 2%;
     width: 94%;
-    background-color: rgb(70, 84, 88, 0.2);
     position: absolute;
     backdrop-filter: blur(10px);
     border-radius: 5px;
@@ -63,6 +62,9 @@
     z-index: 1;
     pointer-events: none;
     opacity: 0;
+    background-color: rgb(70, 84, 88, 0.2);
+    background-color: rgb(57, 72, 85, 0.2);
+
     transition-property: opacity;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
@@ -104,6 +106,7 @@
     place-content: center;
     place-items: center;
     background-color: rgb(100, 120, 130);
+    background-color: rgb(107, 121, 132);
     /* font-weight: 600; */
     color: white;
     cursor: pointer;
@@ -121,4 +124,5 @@
     height: 100%;
     width: calc(100% * 0.5);
     background-color: rgb(70, 84, 88);
+    background-color: rgb(57, 72, 85);
 }
