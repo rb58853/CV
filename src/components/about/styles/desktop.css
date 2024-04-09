@@ -122,6 +122,13 @@
     color: white;
     /* color: rgb(227, 27, 109); */
     cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+.progressBarLabel.highlight{
+    background-color: rgb(230, 106, 156);
 }
 
 .progressBarBackground {
@@ -137,4 +144,11 @@
     width: calc(100% * 0.5);
     background-color: rgb(70, 84, 88);
     background-color: rgb(57, 72, 85);
+
+    transition-property: background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+.progress.highlight{
+    background-color: rgb(207, 20, 94);
 }

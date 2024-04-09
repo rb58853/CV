@@ -78,7 +78,7 @@
     opacity: 0;
 
     transition-property: opacity;
-    transition-duration: 400ms;
+    transition-duration: 300ms;
     transition-timing-function: ease-in-out;
 }
 
@@ -101,7 +101,7 @@
 
 
     transition-property: transform, opacity;
-    transition-duration: 400ms;
+    transition-duration: 300ms;
     transition-timing-function: ease-in-out;
 }
 
@@ -162,7 +162,8 @@
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: rgba(0, 0, 0, 0.467);
+    backdrop-filter: blur(10px);
     /* top: 0px; */
     z-index: 5;
     scroll-behavior: none;
@@ -171,7 +172,7 @@
     display: flex;
     pointer-events: none;
     opacity: 0;
-    scale: 0.5;
+    /* scale: 0.5; */
     transition-property: opacity, scale;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
@@ -180,7 +181,7 @@
 .projectWindowBack.active {
     pointer-events: auto;
     opacity: 1;
-    scale: 1;
+    /* scale: 1; */
 
 }
 
@@ -192,8 +193,16 @@
     flex-direction: column;
     place-items: center;
     background-color: white;
-
+    scale: 0.5;
+    transition-property: scale;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
+
+.projectWindow.active {
+    scale: 1;
+}
+
 
 .carrusel {
     width: 100%;

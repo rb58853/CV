@@ -104,7 +104,7 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
 
     return (
         <div className={`projectWindowBack ${windowProject ? 'active' : ''}`}>
-            <div className='projectWindow'>
+            <div className={`projectWindow ${windowProject ? 'active' : ''}`}>
 
                 <div className='carrusel'>
                     <img className='carruselImage' src={project.images[0]} alt="" />

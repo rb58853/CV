@@ -23,8 +23,8 @@ function About() {
                 <div className='skillsAndLenguagesBox'>
                     <InfoBox info={info} active={boxInfoActive} />
                     <div className='skillsAndLenguagesColums' >
-                        <Skills setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
-                        <Languages setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
+                        <Skills setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
+                        <Languages setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
                     </div>
                 </div>
             </div>
@@ -45,9 +45,9 @@ function AboutText() {
     return <div className='aboutText'> {parraphs}</div>
 }
 
-function Languages({ setBoxInfoActive, setInfo }) {
+function Languages({ setBoxInfoActive, setInfo, boxInfoActive }) {
     const languagesView = Object.values(SortedBars(languages)).map((item) => {
-        return <ProgressBar label={item.label} info={item.info} percentage={item.skill} setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
+        return <ProgressBar label={item.label} info={item.info} percentage={item.skill} setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
     })
 
     return (
@@ -58,9 +58,9 @@ function Languages({ setBoxInfoActive, setInfo }) {
     )
 }
 
-function Skills({ setBoxInfoActive, setInfo }) {
+function Skills({ setBoxInfoActive, setInfo, boxInfoActive }) {
     const skillsView = Object.values(SortedBars(skills)).map((item) => {
-        return <ProgressBar label={item.label} info={item.info} percentage={item.skill} setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} />
+        return <ProgressBar label={item.label} info={item.info} percentage={item.skill} setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
     })
 
     return (
@@ -71,24 +71,23 @@ function Skills({ setBoxInfoActive, setInfo }) {
     )
 }
 
-function ProgressBar({ label, info, percentage, setBoxInfoActive, setInfo }) {
+function ProgressBar({ label, info, percentage, setBoxInfoActive, setInfo, boxInfoActive }) {
     percentage /= 100
     return (
-        <div className='progressBar'>
-            <label className='progressBarLabel'
-                onMouseEnter={() => {
-                    setBoxInfoActive(true)
-                    setInfo(info)
-                }}
-                onMouseOut={() => {
-                    setBoxInfoActive(false)
-                }}
-            >
+        <div className='progressBar'
+            onMouseOver={() => {
+                setBoxInfoActive(label)
+                setInfo(info)
+            }}
+            onMouseOut={() => {
+                setBoxInfoActive(false)
+            }}>
+            <label className={`progressBarLabel ${label == boxInfoActive ? 'highlight' : ''}`}>
                 {label}
             </label>
 
             <div className='progressBarBackground'>
-                <div className='progress' style={{ width: `calc(100% * ${percentage})` }} />
+                <div className={`progress ${label == boxInfoActive ? 'highlight' : ''}`} style={{ width: `calc(100% * ${percentage})` }} />
             </div>
         </div>
     )
