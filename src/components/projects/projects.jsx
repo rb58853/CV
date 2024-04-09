@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import projects from '../../data/proyects'
+import projects from '../../data/projects'
 import './styles/desktop.css'
 import '../../styles/style.css'
 
@@ -18,7 +18,6 @@ function Projects() {
             </div>
         </section>
     )
-
 }
 
 function SkillsBar({ setSkill, skillState }) {
@@ -26,7 +25,7 @@ function SkillsBar({ setSkill, skillState }) {
     const skillsList = ['All']
     Object.values(projects).forEach(project => {
         project.skills.forEach(skill => {
-            if (!(skill in skillsList))
+            if (!skillsList.includes(skill))
                 skillsList.push(skill)
         })
     })
@@ -70,7 +69,10 @@ function ProjectBox({ project }) {
             onMouseOut={() => { setActiveInfo('') }}
         >
             <div className={`projectBoxInfoBackground ${activeInfo}`} />
+            {project.images[0] && <img className={`projectBoxImage`} src={project.images[0]} />}
+
             <div className={`projectBoxInfo top ${activeInfo}`}>
+                {/* <text>{project.skills.join(' / ')}</text> */}
                 <h1>{project.title}</h1>
                 <text>{project.languages.join(' / ')}</text>
             </div>
@@ -82,6 +84,7 @@ function ProjectBox({ project }) {
                 >
                     LEARN MORE
                 </button>
+
             </div>
         </div>
     )

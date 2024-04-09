@@ -30,21 +30,24 @@
     font-size: 22px;
     cursor: pointer;
     transition-property: background-color, color;
-    transition-duration: 200ms;
+    transition-duration: 500ms;
     transition-timing-function: ease-in-out;
 }
 
 .buttonSkill.active {
     background-color: rgb(227, 27, 109);
+    transition-duration: 500ms;
     color: white;
 }
 
 .buttonSkill:hover {
-    background-color: rgba(57, 72, 85, 0.2);
+    background-color: rgba(57, 72, 85, 0.1);
+    transition-duration: 100ms;
 }
 
 .buttonSkill.active:hover {
     background-color: rgb(227, 27, 109);
+    transition-duration: 500ms;
     color: white;
 }
 
@@ -57,8 +60,8 @@
 }
 
 .projectBox {
-    background-color: rgba(0, 0, 0, 0.452);
-    aspect-ratio: 1/1;
+    background-color: rgba(0, 0, 0, 0.252);
+    aspect-ratio: 4/3;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -121,6 +124,7 @@
 .projectBoxInfo >h1 {
     font-size: 22px;
     text-align: center;
+    /* margin-top: 0px; */
     margin-bottom: 0px;
 }
 
@@ -147,4 +151,9 @@
 .viewProjectButton.active {
     background-color: rgba(227, 27, 109, 1);
     color: white;
+}
+
+.projectBoxImage{
+    max-width: 100%;
+    max-height: 100%;
 }
