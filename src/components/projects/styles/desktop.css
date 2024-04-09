@@ -1,15 +1,150 @@
-.projects{
-    background-color: rgba(0, 0, 0, 0.04);
+.projects {
+    background-color: rgba(240, 240, 240, 1);
     width: 100%;
     display: flex;
     place-items: center;
     flex-direction: column;
-} 
+    padding-bottom: 100px;
+}
+
 .projectsContent {
     display: flex;
     flex-direction: column;
     place-content: center;
     place-items: center;
     gap: 20px;
-    width: min(max(90%,800px), max(1400px,120vh));
+    width: min(max(90%, 800px), max(1400px, 120vh));
+}
+
+.skillsBar {
+    overflow-x: auto;
+    display: flex;
+}
+
+.buttonSkill {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(66, 66, 66, 1);
+
+    padding-inline: 11px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.buttonSkill.active {
+    background-color: rgb(227, 27, 109);
+    color: white;
+}
+
+.buttonSkill:hover {
+    background-color: rgba(57, 72, 85, 0.2);
+}
+
+.buttonSkill.active:hover {
+    background-color: rgb(227, 27, 109);
+    color: white;
+}
+
+.projectsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 31%), 1fr));
+    grid-auto-rows: minmax(1px, auto);
+    grid-gap: 1px;
+    width: 100%;
+}
+
+.projectBox {
+    background-color: rgba(0, 0, 0, 0.452);
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.projectBoxInfoBackground {
+    background-color: rgba(240, 240, 240, 1);
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+.projectBoxInfoBackground.active {
+    opacity: 1;
+}
+
+
+.projectBoxInfo {
+    /* background-color: rgba(255, 255, 255, 1); */
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+
+
+    transition-property: transform, opacity;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+.projectBoxInfo.top {
+    transform: translateY(-50%);
+    max-width: 80%;
+}
+
+.projectBoxInfo.bottom {
+    transform: translateY(50%);
+    bottom: 0px;
+    place-content: flex-start;
+}
+
+.projectBoxInfo.active {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.projectBoxInfo >h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.projectBoxInfo>text {
+    text-align: center;
+    color: rgb(227, 27, 109);
+}
+
+.viewProjectButton {
+    pointer-events: auto;
+    background-color: rgba(227, 27, 109, 0);
+    border: solid 2px rgba(227, 27, 109);
+    padding: 10px;
+    padding-inline: 30px;
+    font-size: 18px;
+    margin-top: 10%;
+    cursor: pointer;
+    transition-property: color, background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    z-index: 3;
+}
+
+.viewProjectButton.active {
+    background-color: rgba(227, 27, 109, 1);
+    color: white;
 }

@@ -1,5 +1,5 @@
 .aboutBackground{
-    background-color: rgba(255, 255, 255,0);
+    background-color: rgba(255, 255, 255,0.9);
     width: 100%;
     display: flex;
     place-items: center;
@@ -30,7 +30,8 @@
     width: 300px;
     height: 300px;
     /* flex-grow: 1; */
-    border-radius: 10%;
+    /* border-radius: 10%; */
+    border: solid 2px rgba(57, 72, 85, 0.5)
 }
 
 .aboutText {
@@ -63,17 +64,17 @@
 }
 
 .infoBox {
-    top: 10px;
     position: absolute;
     backdrop-filter: blur(10px);
-    border-radius: 5px;
     padding: 20px;
-    margin-inline: 10px;
     z-index: 1;
     pointer-events: none;
     opacity: 0;
-    background-color: rgb(70, 84, 88, 0.2);
-    background-color: rgb(57, 72, 85, 0.2);
+    background-color: rgb(255, 255, 255, 0.3);
+
+    /* top: 10px;
+    margin-inline: 10px;
+    background-color: rgb(57, 72, 85,0.2); */
 
     transition-property: opacity;
     transition-duration: 200ms;
@@ -90,7 +91,7 @@
     /* width: 45%; */
     background-color: rgb(57, 72, 85, 0.02);
     padding: 20px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     gap: 10px;
     flex-grow: 1;
 }
@@ -105,7 +106,7 @@
     height: max(2.2vh, 22px);
     display: flex;
     flex-direction: row;
-    border-radius: 2px;
+    /* border-radius: 2px; */
 }
 
 .progressBarLabel {

@@ -3,7 +3,7 @@ const languages =
     javaScript: {
         label: 'JavaScript',
         info: 'JavaScript is a programming language used to make web pages interactive. It allows developers to create dynamic content updates, control multimedia, animate images, and much more, enhancing the user experience on a website. It is the third layer of standard web technologies, alongside HTML and CSS, and is essential for modern web development.',
-        skill: 75,
+        skill: 81,
         image: 'icons/reacjs.png'
     },
 
@@ -23,7 +23,7 @@ const languages =
     python: {
         label: 'python',
         info: 'Python is a high-level, interpreted programming language, known for its clear and readable syntax, similar to English. It was created by Guido van Rossum in 1991 and has become one of the most popular programming languages due to its versatility, ease of learning, and use in various areas such as web development, mobile applications, data science, machine learning, and more.',
-        skill: 90,
+        skill: 92,
         image: 'icons/machinelearning.png'
     },
 
