@@ -121,7 +121,7 @@
     opacity: 1;
 }
 
-.projectBoxInfo >h1 {
+.projectBoxInfo>h1 {
     font-size: 22px;
     text-align: center;
     /* margin-top: 0px; */
@@ -153,7 +153,147 @@
     color: white;
 }
 
-.projectBoxImage{
+.projectBoxImage {
     max-width: 100%;
     max-height: 100%;
+}
+
+.projectWindowBack {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.267);
+    /* top: 0px; */
+    z-index: 5;
+    scroll-behavior: none;
+    place-content: center;
+    place-items: center;
+    display: flex;
+    pointer-events: none;
+    opacity: 0;
+    scale: 0.5;
+    transition-property: opacity, scale;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.projectWindowBack.active {
+    pointer-events: auto;
+    opacity: 1;
+    scale: 1;
+
+}
+
+.projectWindow {
+    /* width: min(80%, 800px); */
+    width: min(80vh, 100%);
+    height: min(min(85vh, 110vw), 100%);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    background-color: white;
+
+}
+
+.carrusel {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.151);
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    display: flex;
+    place-items: center;
+    place-content: center;
+}
+
+.carruselImage {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.proyectWindowText {
+    width: 90%;
+    color: rgb(66, 66, 66);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.description {
+    overflow-y: auto;
+    /* max-height: min(200px,50%); */
+    max-height: 27vh;
+    /* margin-bottom: 20px; */
+    margin-block: 20px;
+}
+
+.proyectWindowText>h1 {
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+.proyectWindowText>text {
+    /* font-size: 22px; */
+    color: rgba(227, 27, 109);
+    /* margin-bottom: 20px; */
+}
+
+.viewOnGithub {
+    pointer-events: auto;
+    background-color: rgba(227, 27, 109, 0);
+    border: solid 2px rgba(227, 27, 109);
+    padding: 10px;
+    padding-inline: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    width: fit-content;
+    color: rgba(227, 27, 109);
+    text-decoration: none;
+
+    transition-property: color, background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.viewOnGithub:Hover {
+    background-color: rgba(227, 27, 109, 1);
+    color: white;
+}
+
+.endBar {
+    display: flex;
+    gap: 5px;
+    margin-top: auto;
+    margin-bottom: 20px;
+
+    place-content: flex-start;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.buttonClose {
+    margin-left: auto;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    opacity: 0.6;
+    cursor: pointer;
+    scale: 1;
+
+    transition-property: opacity, scale;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.buttonClose:hover {
+    opacity: 0.8;
+    scale: 1.2;
+}
+
+.closeImage {
+    height: 30px;
 }

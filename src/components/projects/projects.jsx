@@ -5,7 +5,8 @@ import '../../styles/style.css'
 
 function Projects() {
     const [skill, setSkill] = useState('All')
-    const [language, setLanguage] = useState(null)
+    const [project, setProject] = useState(Object.values(projects)[0])
+    const [windowProject, setWindowProject] = useState(false)
 
     return (
         <section className="projects">
@@ -14,7 +15,10 @@ function Projects() {
                     Projects
                 </h1>
                 <SkillsBar setSkill={setSkill} skillState={skill} />
-                <Container />
+                <Container setProject={setProject} setWindowProject={setWindowProject} />
+                {
+                    <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
+                }
             </div>
         </section>
     )
@@ -47,10 +51,9 @@ function SkillsBar({ setSkill, skillState }) {
     )
 }
 
-function Container() {
-    const [currentProject, setCurrentProject] = useState(null)
+function Container({ setProject, setWindowProject }) {
     const projectsView = Object.values(projects).map(project => {
-        return <ProjectBox project={project} />
+        return <ProjectBox project={project} setProject={setProject} setWindowProject={setWindowProject} />
     })
 
     return (
@@ -60,7 +63,7 @@ function Container() {
     )
 }
 
-function ProjectBox({ project }) {
+function ProjectBox({ project, setProject, setWindowProject }) {
     const [activeInfo, setActiveInfo] = useState('')
     const [activeButton, setActiveButton] = useState('')
     return (
@@ -81,6 +84,10 @@ function ProjectBox({ project }) {
                 <button className={`viewProjectButton ${activeButton}`}
                     onMouseOver={() => setActiveButton('active')}
                     onMouseOut={() => setActiveButton('')}
+                    onClick={() => {
+                        setProject(project)
+                        setWindowProject(true)
+                    }}
                 >
                     LEARN MORE
                 </button>
@@ -89,4 +96,51 @@ function ProjectBox({ project }) {
         </div>
     )
 }
+
+function ProjectWindow({ project, setWindowProject, windowProject }) {
+    const details = Object.keys(project.features).map((key) => {
+        return <text><b>{key}: </b> {project.features[key]}</text>
+    })
+
+    return (
+        <div className={`projectWindowBack ${windowProject ? 'active' : ''}`}>
+            <div className='projectWindow'>
+
+                <div className='carrusel'>
+                    <img className='carruselImage' src={project.images[0]} alt="" />
+                </div>
+                <div className='proyectWindowText'>
+                    <h1>{project.title}</h1>
+                    <text>{"" + project.skills.join(' / ') + " | " + project.languages}</text>
+                    {/* <div className='line' /> */}
+
+                    <div className='description'>
+                        <div className='features'>
+                            {details}
+                        </div>
+                        <text>{project.description}</text>
+                    </div>
+
+                    <div className='endBar'>
+                        {project.github && <a href={project.github} className='viewOnGithub'> View on github </a>}
+
+                        {project.paper && <a href={project.paper}
+                            className='viewOnGithub'> Read paper </a>}
+
+                        {project.sitie && <a href={project.sitie} className='viewOnGithub'> Visit sitie </a>}
+
+                        {project.app && <a href={project.app} className='viewOnGithub'> App </a>}
+
+                        <button className='buttonClose'
+                            onClick={() => { setWindowProject(false) }}
+                        >
+                            <img className='closeImage' src="/images/icons/close.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 export default Projects
