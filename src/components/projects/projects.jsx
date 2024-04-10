@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import projects from '../../data/projects'
 import './styles/desktop.css'
 import '../../styles/style.css'
@@ -15,7 +15,8 @@ function Projects() {
                     Projects
                 </h1>
                 <SkillsBar setSkill={setSkill} skillState={skill} />
-                <Container setProject={setProject} setWindowProject={setWindowProject} />
+                <Container setProject={setProject} setWindowProject={setWindowProject} skill={skill} columns={4} />
+                
                 {
                     <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
                 }
@@ -49,10 +50,50 @@ function SkillsBar({ setSkill, skillState }) {
     )
 }
 
-function Container({ setProject, setWindowProject }) {
-    const projectsView = Object.values(projects).map(project => {
-        return <ProjectBox project={project} setProject={setProject} setWindowProject={setWindowProject} />
-    })
+function Container({ setProject, setWindowProject, skill, columns = 3 }) {
+    // const [projectsJson, setProjectsJson] = useState(projects)
+    const [projectsView, setProjectsView] = useState([])
+
+    useEffect(() => {
+        // let newProjectsJson = {}
+        // Object.keys(projects).forEach(key => {
+        //     if (skill === 'All' || projects[key].skills.includes(skill))
+        //         newProjectsJson[key] = projects[key];
+        // })
+
+        let index = -1;
+        let fullIndex = -1;
+        let temp = []
+
+        Object.values(projects).forEach((project) => {
+            fullIndex += 1
+            if (skill === 'All' || project.skills.includes(skill)) {
+                index += 1
+                temp.push(<ProjectBox
+                    project={project}
+                    setProject={setProject}
+                    setWindowProject={setWindowProject}
+                    active={true}
+                    translate={[100 * (index % columns), 100 * Math.floor(index / columns)]}
+                    columns={columns}
+                />)
+            }
+            else {
+                temp.push(<ProjectBox
+                    project={project}
+                    setProject={setProject}
+                    setWindowProject={setWindowProject}
+                    active={false}
+                    translate={[100 * (fullIndex % columns), 100 * Math.floor(fullIndex / columns)]}
+                    columns={columns}
+                />)
+            }
+        })
+
+        setProjectsView(temp)
+
+        // setProjectsJson(newProjectsJson)
+    }, [skill])
 
     return (
         <div className='projectsContainer'>
@@ -61,35 +102,47 @@ function Container({ setProject, setWindowProject }) {
     )
 }
 
-function ProjectBox({ project, setProject, setWindowProject }) {
+function ProjectBox({ project, setProject, setWindowProject, active, translate, columns }) {
     const [activeInfo, setActiveInfo] = useState('')
     const [activeButton, setActiveButton] = useState('')
+    // const [translate, setTranslate] = useState(translateIn)
+    const widthFromColumns = 100 / columns;
     return (
-        <div className='projectBox'
-            onMouseOver={() => { setActiveInfo('active') }}
-            onMouseOut={() => { setActiveInfo('') }}
-        >
-            <div className={`projectBoxInfoBackground ${activeInfo}`} />
-            {project.images[0] && <img className={`projectBoxImage`} src={project.images[0]} alt='' />}
+        <div className={`projectBoxAbsolute ${active ? 'active' : ''}`}
+            style={
+                {
+                    transform: `translate(${translate[0]}%,${translate[1]}%)`,
+                    // width: `${widthFromColumns}%'`
+                    width: `25%'`
+                }
 
-            <div className={`projectBoxInfo top ${activeInfo}`}>
-                {/* <text>{project.skills.join(' / ')}</text> */}
-                <h1>{project.title}</h1>
-                <text>{project.languages.join(' / ')}</text>
-            </div>
+            }>
 
-            <div className={`projectBoxInfo bottom ${activeInfo}`}>
-                <button className={`viewProjectButton ${activeButton}`}
-                    onMouseOver={() => setActiveButton('active')}
-                    onMouseOut={() => setActiveButton('')}
-                    onClick={() => {
-                        setProject(project)
-                        setWindowProject(true)
-                    }}
-                >
-                    LEARN MORE
-                </button>
+            <div className={`projectBox ${active ? 'active' : ''}`}
+                onMouseOver={() => { setActiveInfo('active') }}
+                onMouseOut={() => { setActiveInfo('') }}
+            >
+                <div className={`projectBoxInfoBackground ${activeInfo}`} />
+                {project.images[0] && <img className={`projectBoxImage`} src={project.images[0]} alt='' />}
 
+                <div className={`projectBoxInfo top ${activeInfo}`}>
+                    <h1>{project.title}</h1>
+                    <text>{project.languages.join(' / ')}</text>
+                </div>
+
+                <div className={`projectBoxInfo bottom ${activeInfo}`}>
+                    <button className={`viewProjectButton ${activeButton}`}
+                        onMouseOver={() => setActiveButton('active')}
+                        onMouseOut={() => setActiveButton('')}
+                        onClick={() => {
+                            setProject(project)
+                            setWindowProject(true)
+                        }}
+                    >
+                        LEARN MORE
+                    </button>
+
+                </div>
             </div>
         </div>
     )
@@ -120,14 +173,17 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
                     </div>
 
                     <div className='endBar'>
-                        {project.github && <a href={project.github} className='viewOnGithub'> View on github </a>}
+                        {project.github && <a href={project.github}
+                            className={`viewOnGithub ${windowProject ? 'active' : ''}`}> View on github </a>}
 
                         {project.paper && <a href={project.paper}
-                            className='viewOnGithub'> Read paper </a>}
+                            className={`viewOnGithub ${windowProject ? 'active' : ''}`}> Read paper </a>}
 
-                        {project.sitie && <a href={project.sitie} className='viewOnGithub'> Visit sitie </a>}
+                        {project.sitie && <a href={project.sitie}
+                            className={`viewOnGithub ${windowProject ? 'active' : ''}`}> Visit sitie </a>}
 
-                        {project.app && <a href={project.app} className='viewOnGithub'> App </a>}
+                        {project.app && <a href={project.app}
+                            className={`viewOnGithub ${windowProject ? 'active' : ''}`}> App </a>}
 
                         <button className='buttonClose'
                             onClick={() => { setWindowProject(false) }}

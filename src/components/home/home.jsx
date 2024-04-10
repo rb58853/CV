@@ -12,6 +12,8 @@ function Home() {
             <div className="container">
                 <About />
                 <Projects/>
+                <div style={{height:500}}/>
+
             </div>
         </section>
 

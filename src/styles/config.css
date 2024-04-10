@@ -1,4 +1,10 @@
 :root {
+    --default-highlight-color: rgba(227, 27, 109);
+
+    --presentation-button-highlight-color:rgb(4, 194, 201);
+    --presentation-button-border-color: white;
+    
+    
     --progress-bar-color: rgb(57, 72, 85);
 
     --progress-bar-highlight-color: rgba(207, 20, 94, 1);

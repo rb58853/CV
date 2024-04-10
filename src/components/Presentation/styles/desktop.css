@@ -12,3 +12,27 @@
     flex-direction: column;
     z-index: 3;
 }
+
+.viewWorkButton {
+    pointer-events: auto;
+    background-color: rgba(227, 27, 109, 0);
+    border: solid 3px;
+    border-color: var(--presentation-button-border-color);
+    padding: 15px;
+    padding-inline: 30px;
+    font-size: 24px;
+    margin-top: 40px;
+    cursor: pointer;
+    color: white;
+    z-index: 3;
+
+    transition-property: color, background-color, border-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.viewWorkButton:hover {
+    background-color: var(--presentation-button-highlight-color);
+    border-color: var(--presentation-button-highlight-color);
+    color: white;
+}

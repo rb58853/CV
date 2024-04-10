@@ -51,12 +51,47 @@
     color: white;
 }
 
+/* 
 .projectsContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(300px, 31%), 1fr));
-    grid-auto-rows: minmax(1px, auto);
-    /* grid-gap: 1px; */
+    display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    place-items: center;
+    place-content: center;
+} */
+
+.rowProjects {
+    display: flex;
+    width: 100%;
+    place-items: center;
+    place-content: center;
+}
+
+.projectsContainer {
+    width: 100%;
+    height: 200px;
+    background-color: brown;
+    position: relative;
+}
+
+.projectBoxAbsolute {
+    aspect-ratio: 4/3;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+
+    transition-property:  opacity, transform;
+    transition-duration: 750ms;
+    transition-timing-function: ease-in-out;
+}
+
+.projectBoxAbsolute.active {
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .projectBox {
@@ -67,7 +102,19 @@
     display: flex;
     flex-direction: column;
     place-items: center;
+    width: 100%;
+    scale: 0;
+
+    transition-property: scale;
+    transition-duration: 750ms;
+    transition-timing-function: ease-in-out;
 }
+
+.projectBox.active {
+    scale: 1;
+}
+
+
 
 .projectBoxInfoBackground {
     background-color: rgba(240, 240, 240, 1);
@@ -134,7 +181,6 @@
 }
 
 .viewProjectButton {
-    pointer-events: auto;
     background-color: rgba(227, 27, 109, 0);
     border: solid 2px rgba(227, 27, 109);
     padding: 10px;
@@ -142,6 +188,7 @@
     font-size: 18px;
     margin-top: 10%;
     cursor: pointer;
+
     transition-property: color, background-color;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
@@ -160,7 +207,7 @@
 
 .projectWindowBack {
     position: fixed;
-    top:0px;
+    top: 0px;
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.467);
@@ -198,10 +245,13 @@
     transition-property: scale;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
+    pointer-events: none;
 }
+
 
 .projectWindow.active {
     scale: 1;
+    pointer-events: auto;
 }
 
 
@@ -247,8 +297,9 @@
     /* margin-bottom: 20px; */
 }
 
+
 .viewOnGithub {
-    pointer-events: auto;
+    pointer-events: none;
     background-color: rgba(227, 27, 109, 0);
     border: solid 2px rgba(227, 27, 109);
     padding: 10px;
@@ -262,6 +313,10 @@
     transition-property: color, background-color;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
+}
+
+.viewOnGithub.active {
+    pointer-events: auto;
 }
 
 .viewOnGithub:Hover {

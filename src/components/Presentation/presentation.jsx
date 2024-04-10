@@ -15,6 +15,11 @@ function EnglishPresentation() {
                     Computer Scientist
                 </text>
             </text>
+            
+            <button className='viewWorkButton'>
+                View my work
+            </button>
+
         </section>
     )
 }
