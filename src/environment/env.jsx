@@ -1,11 +1,6 @@
 const env = {
     barHeight: 60,
-}
-
-export const colors={
-    progressBar: '',
-    progressBarLabel: '',
-    highligth: '',
+    projectColumns: 3,
 }
 
 export default env

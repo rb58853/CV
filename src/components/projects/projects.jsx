@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import projects from '../../data/projects'
 import './styles/desktop.css'
 import '../../styles/style.css'
+import env from '../../environment/env'
 
 function Projects() {
     const [skill, setSkill] = useState('All')
@@ -15,7 +16,7 @@ function Projects() {
                     Projects
                 </h1>
                 <SkillsBar setSkill={setSkill} skillState={skill} />
-                <Container setProject={setProject} setWindowProject={setWindowProject} skill={skill} columns={4} />
+                <Container setProject={setProject} setWindowProject={setWindowProject} skill={skill} columns={env.projectColumns} />
                 
                 {
                     <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
@@ -112,8 +113,7 @@ function ProjectBox({ project, setProject, setWindowProject, active, translate, 
             style={
                 {
                     transform: `translate(${translate[0]}%,${translate[1]}%)`,
-                    // width: `${widthFromColumns}%'`
-                    width: `25%'`
+                    width: `${widthFromColumns}%`
                 }
 
             }>
