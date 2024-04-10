@@ -1,18 +1,19 @@
-.aboutBackground{
-    background-color: rgba(255, 255, 255,0.9);
+.aboutBackground {
+    background-color: rgba(255, 255, 255, 0.9);
     width: 100%;
     display: flex;
     place-items: center;
     flex-direction: column;
     padding-bottom: 50px;
-} 
+}
+
 .about {
     display: flex;
     flex-direction: column;
     place-content: center;
     place-items: center;
     gap: 20px;
-    width: min(max(90%,800px), max(1400px,120vh));
+    width: min(max(90%, 800px), max(1400px, 120vh));
 }
 
 .profileAbout {
@@ -31,7 +32,7 @@
     height: 300px;
     /* flex-grow: 1; */
     /* border-radius: 10%; */
-    border: solid 2px rgba(57, 72, 85, 0.5)
+    border: solid 2px rgb(207, 20, 94, 0.5)
 }
 
 .aboutText {
@@ -64,10 +65,15 @@
 }
 
 .infoBox {
-    position: absolute;
+    position: fixed;
+    border: solid 1px rgb(207, 20, 94);
+    /* border:  solid 1px  black; */
+
+    top: 50px;
+
     backdrop-filter: blur(10px);
     padding: 20px;
-    z-index: 1;
+    z-index: 5;
     pointer-events: none;
     opacity: 0;
     background-color: rgb(255, 255, 255, 0.3);
@@ -127,7 +133,8 @@
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
 }
-.progressBarLabel.highlight{
+
+.progressBarLabel.highlight {
     background-color: rgb(230, 106, 156);
 }
 
@@ -142,13 +149,13 @@
     position: absolute;
     height: 100%;
     width: calc(100% * 0.5);
-    background-color: rgb(70, 84, 88);
-    background-color: rgb(57, 72, 85);
+    background-color:  var(--progress-bar-color);
 
     transition-property: background-color;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
 }
-.progress.highlight{
-    background-color: rgb(207, 20, 94);
+
+.progress.highlight {
+    background-color: var(--progress-bar-highlight-color);
 }

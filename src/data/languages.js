@@ -45,5 +45,17 @@ const languages =
         skill: 10,
         image: 'icons/net.png'
     },
+    c: {
+        label: 'C',
+        info: 'Prolog is a logical programming language that originated in the field of artificial intelligence, automated theorem proving, and computational linguistics. It is based on first-order logic, a formal form of logic, and unlike many other programming languages, Prolog is primarily designed as a declarative programming language.',
+        skill: 10,
+        image: 'icons/net.png'
+    },
+    cPlusPlus: {
+        label: 'C++',
+        info: 'Prolog is a logical programming language that originated in the field of artificial intelligence, automated theorem proving, and computational linguistics. It is based on first-order logic, a formal form of logic, and unlike many other programming languages, Prolog is primarily designed as a declarative programming language.',
+        skill: 15,
+        image: 'icons/net.png'
+    },
 }
 export default languages

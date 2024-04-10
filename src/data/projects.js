@@ -3,32 +3,44 @@ const projects = {
         skills: ['ML'],
         languages: ["Python"],
         title: 'Audio Genre Classification',
-        description: 'descripcion del proyecto',
+        description: 'La clasificación de géneros musicales juega un papel crucial en las aplicaciones modernas de procesamiento de señales de audio digital. En este estudio, proponemos varios enfoques de aprendizaje automático para categorizar con precisión pistas de música en géneros predefinidos. Cada enfoque utiliza diversos conjuntos de características que se pueden extraer de las canciones; desde los comunes: MFCC, señal de audio directa; hasta características poco exploradas en este problema: letra de la canción, Transformada de Wavelet. Para evaluar los modelos utilizamos el dataset de referencia en el campo, GTZAN. En los resultados obtenidos destaca que la letra de la canción no aporta mucho a la clasificación, al menos en el dataset utilizado. Los otros modelos muestran resultados consistentes con el estado del arte, con una precisión entre 75 % y 80 %',
+
         features: {
             dataset: "GTZAN",
             models: "CNN, RNN",
-            keywords: "Music genre, CNN, Spectograms."
+            keywords: "Music genre, CNN, spectograms, MFCC, Conv1D, encoder."
         },
-        images: ['/images/projects/audioML/1.jpg'],
+        images: ['/projects/audioML/1.jpg'],
         github: 'https://github.com/science-engineering-art/mugenfier',
-        paper: '',
+        paper: '/projects/audioML/audioML.pdf',
         app: null,
     },
 
     IRSImagesCLIP: {
         skills: ["IRS", "ML"],
         title: 'Image Retrieval System using Machine Learning',
-        description: 'descripcion del proyecto',
+        description: 'In this thesis, the problem of precise image retrieval is addressed. The work employs a new approach: the application of the Segment Anything (SAM) segmentation models and the Constractive Language-Image Pretraining (CLIP) model for the generation of multimodal embeddings. Special emphasis is placed on image retrieval via precise queries, taking into account the position of image segments that compose the same, processing both text and images.',
         languages: ["Python"],
-        images: ['/images/projects/IRSImagesCLIP/1.jpg'],
+        features: {
+            keywords: "Embeddings, Multimodals Embeddings."
+        },
+        
+        images: ['/projects/IRSImagesCLIP/1.jpg'],
+        github: 'https://github.com/rb58853/ML-RSI-Images',
+        paper: '/projects/IRSImagesCLIP/IRSImagesCLIP.pdf',
+        app: null,
     },
 
     colorProblem: {
         skills: ['DAA'],
         title: '8 Colors Problem',
-        description: 'descripcion del proyecto',
+        description: 'Dado una lista con 8 colores posibles ... ... ... ...',
         languages: ["Python"],
+        features: {
+            keywords: "Dynamic programation (DP), algorithms analysis, best computational complex."
+        },
         images: [],
+        github: 'https://github.com/maux96/DAA-problema-1',
     },
 
     navMeshAgentAI: {
@@ -39,13 +51,13 @@ const projects = {
 
         features: {
             Engine: 'Unity Engine',
-            keywords: "Inteligent agents, Metaheuristics, Heuristics, Space simulation, Multitude simulation",
+            keywords: "Inteligent agents, metaheuristics, heuristics, terrain simulation, multitude simulation",
         },
-        images: ['/images/projects/navMeshAgentAI/1.jpg', '/images/projects/navMeshAgentAI/2.jpg', '/images/projects/navMeshAgentAI/3.jpg',
+        images: ['/projects/navMeshAgentAI/1.jpg', '/projects/navMeshAgentAI/2.jpg', '/projects/navMeshAgentAI/3.jpg',
         ],
 
         github: 'https://github.com/rb58853/NavAgent-AI',
-        paper: 'https://github.com/rb58853/NavAgent-AI/blob/rb58/NavAgent%20(informe).pdf',
+        paper: '/projects/navMeshAgentAI/NavAgentPaper.pdf',
         app: 'https://t.me/+Eh4DRMgqdtYzMDlh',
     },
 
@@ -54,13 +66,22 @@ const projects = {
         title: 'Art Shop Emilio',
         description: 'descripcion del proyecto',
         languages: ["Javascript", "CSS"],
+        features: {
+            framework:'ReactJS',
+            keywords: "Web development, frontend, digital-shop."
+        },
         images: [],
     },
+
     coolCompiler: {
         skills: ["Compilers"],
         title: 'Cool Compiler',
         description: 'descripcion del proyecto',
         languages: ["MIPS", "Python", "Cool"],
+        features: {
+            keywords: "Language theory, CIL intermedie language, assambly, parsing-semantic-code generation."
+        },
+    
         images: [],
     },
 
@@ -69,13 +90,24 @@ const projects = {
         title: 'Information Retieval System for text documents',
         description: 'descripcion del proyecto',
         languages: ["Python"],
+        features: {
+            from: "COOL",
+            target: "MIPS",
+            keywords: "Documents retrieval, Data structure Trie, vector model, vaswani model, latent semantic model, object oriented language compiler."
+        },
         images: [],
     },
-    shell: {
-        skills: ["OS"],
-        title: 'Linux Shell Implementation',
+
+    yugiOhBackend: {
+        skills: ["Django"],
+        title: 'Yugi Oh Backend APP',
         description: 'descripcion del proyecto',
-        languages: ["C"],
+        languages: ["python"],
+        features: {
+            framework:'Django',
+            keywords: "Backend, Database, vector model, vaswani model, latent semantic model."
+        },
+      
         images: [],
     },
 

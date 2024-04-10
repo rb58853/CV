@@ -33,11 +33,9 @@ function SkillsBar({ setSkill, skillState }) {
                 skillsList.push(skill)
         })
     })
-
-
     skillsList.forEach(skill => {
         buttons.push(
-            <button className={`buttonSkill ${skill == skillState ? 'active' : ''}`}
+            <button className={`buttonSkill ${skill === skillState ? 'active' : ''}`}
                 onClick={() => setSkill(skill)}
             >
                 {skill}
@@ -72,7 +70,7 @@ function ProjectBox({ project, setProject, setWindowProject }) {
             onMouseOut={() => { setActiveInfo('') }}
         >
             <div className={`projectBoxInfoBackground ${activeInfo}`} />
-            {project.images[0] && <img className={`projectBoxImage`} src={project.images[0]} />}
+            {project.images[0] && <img className={`projectBoxImage`} src={project.images[0]} alt='' />}
 
             <div className={`projectBoxInfo top ${activeInfo}`}>
                 {/* <text>{project.skills.join(' / ')}</text> */}
@@ -111,7 +109,7 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
                 </div>
                 <div className='proyectWindowText'>
                     <h1>{project.title}</h1>
-                    <text>{"" + project.skills.join(' / ') + " | " + project.languages}</text>
+                    <text>{"" + project.skills.join(' / ') + " | " + project.languages.join(' / ')}</text>
                     {/* <div className='line' /> */}
 
                     <div className='description'>
