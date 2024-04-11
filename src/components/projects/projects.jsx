@@ -106,7 +106,6 @@ function Container({ setProject, setWindowProject, skill }) {
                     setProject={setProject}
                     setWindowProject={setWindowProject}
                     active={false}
-                    translate={[100 * (fullIndex % columns), 100 * Math.floor(fullIndex / columns)]}
                     columns={columns}
                 />)
             }
@@ -125,14 +124,20 @@ function Container({ setProject, setWindowProject, skill }) {
 }
 
 function ProjectBox({ project, setProject, setWindowProject, active, translate, columns }) {
+    const [stateTranslate, setStateTranslate] = useState(translate)
     const [activeInfo, setActiveInfo] = useState('')
     const [activeButton, setActiveButton] = useState('')
     const widthFromColumns = 100 / columns;
+    useLayoutEffect(() => {
+        if (translate)
+            setStateTranslate(translate)
+    }, [translate])
+
     return (
         <div className={`projectBoxAbsolute ${active ? 'active' : ''}`}
             style={
                 {
-                    transform: `translate(${translate[0]}%,${translate[1]}%)`,
+                    transform: `translate(${stateTranslate[0]}%,${stateTranslate[1]}%)`,
                     width: `${widthFromColumns}%`
                 }
             }>
