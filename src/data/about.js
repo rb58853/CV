@@ -3,4 +3,5 @@ const about =
 My methodological approach includes the use of agile methodologies such as Scrum and Kanban, which allows me to work efficiently and adaptably. I value the importance of maintaining clean, organized, and well-commented code, following the SOLID principles to ensure the quality, maintainability, and scalability of software.\n\
 My professional interests lean towards number theory, graph theory, and the development of solutions in the field of machine learning and artificial intelligence. I am open to working on projects that require both frontend and backend development, as well as game development, and I am committed to creating optimal solutions."
 
+export const name = 'Raul Beltran' 
 export default about

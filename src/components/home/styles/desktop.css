@@ -6,7 +6,8 @@
 }
 .container{
     margin-top: 35px ;
-    width: max(100%, 800px);
+    /* width: max(100%, 800px); */
+    width: 100%;
     display: flex;
     flex-direction: column;
     place-items: center;

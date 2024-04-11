@@ -1,0 +1,37 @@
+.contact {
+    background-color: rgb(30, 29, 36);
+    padding-block: 100px;
+    width: 100%;
+    display: flex;
+    place-content: center;
+}
+
+.socials {
+    display: flex;
+    place-content: center;
+    gap: 20px;
+    max-width: 60%;
+}
+
+.socialButton {
+    height: 60px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    place-content: center;
+    place-items: center;
+    scale: 1;
+    transition-property: scale, background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+.socialButton:hover {
+    scale: 1.05;
+    background-color: var(--secundary-highlight-color);
+}
+
+
+.socialIcon {
+    height: 70%;
+    width: 70%;
+}

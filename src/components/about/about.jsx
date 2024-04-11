@@ -1,4 +1,5 @@
 import './styles/desktop.css'
+import './styles/mobile.css'
 import '../../styles/style.css'
 import skills from '../../data/skills.js'
 import languages from '../../data/languages.js'

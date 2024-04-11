@@ -1,6 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import projects from '../../data/projects'
 import './styles/desktop.css'
+import './styles/mobile.css'
 import '../../styles/style.css'
 import env from '../../environment/env'
 import { useSize } from '../../hooks/useSize'
@@ -60,9 +61,10 @@ function Container({ setProject, setWindowProject, skill }) {
     const size = useSize(projectsContainerRef)
 
     useLayoutEffect(() => {
-        if (size.width / (columns + 1) > env.boxProjectMinWidth)
+        const tempWidth = size.width >= 800 ? env.boxProjectMinWidth : env.boxProjectMinWidthMobile 
+        if (size.width / (columns + 1) > tempWidth)
             setColums(columns + 1)
-        if (size.width / columns < env.boxProjectMinWidth)
+        if (size.width / columns < tempWidth)
             setColums(columns - 1)
 
     }, [size])
@@ -180,6 +182,7 @@ function ProjectBox({ project, setProject, setWindowProject, active, translate, 
 function ProjectWindow({ project, setWindowProject, windowProject }) {
     const carruselRef = React.useRef();
     const carruselImagesRef = React.useRef();
+    const textRef = React.useRef();
     const { width } = useSize(carruselRef)
     const [indexImage, setIndexImage] = useState(0)
 
@@ -190,6 +193,14 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
             behavior: 'smooth'
         });
     }, [indexImage])
+
+    useEffect(() => {
+
+        textRef.current.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, [windowProject])
 
 
     const images = [];
@@ -225,7 +236,7 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
                     <text>{"" + project.skills.join(' / ') + " | " + project.languages.join(' / ')}</text>
                     {/* <div className='line' /> */}
 
-                    <div className='description'>
+                    <div className='description' ref={textRef}>
                         <div className='features'>
                             {details}
                         </div>

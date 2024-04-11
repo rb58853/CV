@@ -1,19 +1,18 @@
+import { name } from '../../data/about'
 import './styles/desktop.css'
+import './styles/mobile.css'
 function EnglishPresentation() {
     return (
         <section className="presentation">
             <text>
                 {`Hello, I'm `}
-                <text style={{ color: 'rgb(227, 27, 109)', fontWeight: 400 }}>
-                    Raul Beltran
+                <text className='nameText'>
+                    {name}
                 </text>
                 .
             </text>
             <text>
-                {`I'm a `}
-                <text style={{ color: 'white' }}>
-                    Computer Scientist
-                </text>
+                {`I'm a Computer Scientist.`}
             </text>
             
             <button className='viewWorkButton'>

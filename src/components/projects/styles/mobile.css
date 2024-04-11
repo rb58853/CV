@@ -1,0 +1,56 @@
+@media(max-width:800px) {
+    .projectsContent {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .projectWindow {
+        width: 90%;
+        height: 90%;
+    }
+
+    .switchImageButton {
+        display: none;
+    }
+    
+    .viewOnGithub {
+        padding: 0px;
+        padding-inline: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        width: fit-content;
+    }
+    .endBar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: auto;
+        margin-bottom: 20px;
+    
+        place-content: flex-start;
+    }
+
+    .projectBoxInfo>h1 {
+        font-size: 14px;
+    }
+    .projectBoxInfo>text {
+        font-size: 12px;
+    }
+
+    .buttonSkill {
+        font-size: 18px;
+    }
+
+    .skillsBar {
+        scrollbar-width: none;
+    }
+    .viewProjectButton {
+        font-size: 13px;
+        margin-top: 10%;
+    }
+
+    .noImageProject>h1 {
+        font-size: 16px;
+    }
+
+}

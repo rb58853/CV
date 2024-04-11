@@ -3,6 +3,7 @@ import EnglishPresentation from "../Presentation/presentation"
 import Bar from "../bar/bar"
 import About from '../about/about'
 import Projects from '../projects/projects'
+import Contact from '../contact/contact'
 
 function Home() {
     return (
@@ -12,7 +13,8 @@ function Home() {
             <div className="container">
                 <About />
                 <Projects/>
-                <div style={{height:500}}/>
+
+                <Contact/>
 
             </div>
         </section>

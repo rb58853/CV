@@ -1,5 +1,7 @@
 :root {
+    --bar-color: rgb(30, 29, 36);
     --default-highlight-color: rgba(227, 27, 109);
+    --secundary-highlight-color: rgb(4, 194, 201);
 
     --presentation-button-highlight-color:rgb(4, 194, 201);
     --presentation-button-border-color: white;
