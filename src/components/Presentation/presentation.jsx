@@ -4,7 +4,7 @@ function EnglishPresentation() {
         <section className="presentation">
             <text>
                 {`Hello, I'm `}
-                <text style={{ color: 'rgb(227, 27, 109)', fontWeight: 500 }}>
+                <text style={{ color: 'rgb(227, 27, 109)', fontWeight: 400 }}>
                     Raul Beltran
                 </text>
                 .

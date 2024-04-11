@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import projects from '../../data/projects'
 import './styles/desktop.css'
 import '../../styles/style.css'
 import env from '../../environment/env'
+import { useSize } from '../../hooks/useSize'
 
 function Projects() {
     const [skill, setSkill] = useState('All')
@@ -17,7 +18,7 @@ function Projects() {
                 </h1>
                 <SkillsBar setSkill={setSkill} skillState={skill} />
                 <Container setProject={setProject} setWindowProject={setWindowProject} skill={skill} columns={env.projectColumns} />
-                
+
                 {
                     <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
                 }
@@ -51,35 +52,55 @@ function SkillsBar({ setSkill, skillState }) {
     )
 }
 
-function Container({ setProject, setWindowProject, skill, columns = 3 }) {
-    // const [projectsJson, setProjectsJson] = useState(projects)
+function Container({ setProject, setWindowProject, skill }) {
     const [projectsView, setProjectsView] = useState([])
+    const [columns, setColums] = useState(3)
+    const [rows, setRows] = useState(0)
+    const projectsContainerRef = useRef()
+    const size = useSize(projectsContainerRef)
+
+    useLayoutEffect(() => {
+        if (size.width / (columns + 1) > env.boxProjectMinWidth)
+            setColums(columns + 1)
+        if (size.width / columns < env.boxProjectMinWidth)
+            setColums(columns - 1)
+
+    }, [size])
 
     useEffect(() => {
-        // let newProjectsJson = {}
-        // Object.keys(projects).forEach(key => {
-        //     if (skill === 'All' || projects[key].skills.includes(skill))
-        //         newProjectsJson[key] = projects[key];
-        // })
-
         let index = -1;
         let fullIndex = -1;
-        let temp = []
+        let temp = [];
+        let length = 0;
+
+        Object.values(projects).forEach((project) => {
+            if (skill === 'All' || project.skills.includes(skill)) {
+                length += 1
+            }
+        })
+        setRows(Math.ceil((length / columns)))
 
         Object.values(projects).forEach((project) => {
             fullIndex += 1
             if (skill === 'All' || project.skills.includes(skill)) {
                 index += 1
+                let rest = columns - (length % columns);
+
+                let translateX = 100 * (index % columns);
+                if (index / columns >= Math.floor(length / columns))
+                    translateX += rest * 50;
+
                 temp.push(<ProjectBox
                     project={project}
                     setProject={setProject}
                     setWindowProject={setWindowProject}
                     active={true}
-                    translate={[100 * (index % columns), 100 * Math.floor(index / columns)]}
+                    translate={[translateX, 100 * Math.floor(index / columns)]}
                     columns={columns}
                 />)
             }
             else {
+
                 temp.push(<ProjectBox
                     project={project}
                     setProject={setProject}
@@ -90,14 +111,14 @@ function Container({ setProject, setWindowProject, skill, columns = 3 }) {
                 />)
             }
         })
-
         setProjectsView(temp)
-
-        // setProjectsJson(newProjectsJson)
-    }, [skill])
+    }, [skill, columns])
 
     return (
-        <div className='projectsContainer'>
+        <div className='projectsContainer'
+            ref={projectsContainerRef}
+            style={{ height: ((size.width * 3 / 4) / columns) * rows }}
+        >
             {projectsView}
         </div>
     )
@@ -106,7 +127,6 @@ function Container({ setProject, setWindowProject, skill, columns = 3 }) {
 function ProjectBox({ project, setProject, setWindowProject, active, translate, columns }) {
     const [activeInfo, setActiveInfo] = useState('')
     const [activeButton, setActiveButton] = useState('')
-    // const [translate, setTranslate] = useState(translateIn)
     const widthFromColumns = 100 / columns;
     return (
         <div className={`projectBoxAbsolute ${active ? 'active' : ''}`}
@@ -115,7 +135,6 @@ function ProjectBox({ project, setProject, setWindowProject, active, translate, 
                     transform: `translate(${translate[0]}%,${translate[1]}%)`,
                     width: `${widthFromColumns}%`
                 }
-
             }>
 
             <div className={`projectBox ${active ? 'active' : ''}`}
@@ -123,7 +142,12 @@ function ProjectBox({ project, setProject, setWindowProject, active, translate, 
                 onMouseOut={() => { setActiveInfo('') }}
             >
                 <div className={`projectBoxInfoBackground ${activeInfo}`} />
+
                 {project.images[0] && <img className={`projectBoxImage`} src={project.images[0]} alt='' />}
+                {!project.images[0] &&
+                    <div className='noImageProject'>
+                        <h1> {project.title}</h1>
+                    </div>}
 
                 <div className={`projectBoxInfo top ${activeInfo}`}>
                     <h1>{project.title}</h1>
@@ -149,17 +173,48 @@ function ProjectBox({ project, setProject, setWindowProject, active, translate, 
 }
 
 function ProjectWindow({ project, setWindowProject, windowProject }) {
+    const carruselRef = React.useRef();
+    const carruselImagesRef = React.useRef();
+    const { width } = useSize(carruselRef)
+    const [indexImage, setIndexImage] = useState(0)
+
+    useEffect(() => {
+        carruselImagesRef.current.scrollTo({
+            // carruselRef.current.scrollTo({
+            left: width * indexImage,
+            behavior: 'smooth'
+        });
+    }, [indexImage])
+
+
+    const images = [];
+    project.images.map(path => {
+        images.push(<img className='carruselImage' src={path} alt=""
+            style={{ width: width }} />)
+    })
+
     const details = Object.keys(project.features).map((key) => {
         return <text><b>{key}: </b> {project.features[key]}</text>
     })
-
     return (
         <div className={`projectWindowBack ${windowProject ? 'active' : ''}`}>
             <div className={`projectWindow ${windowProject ? 'active' : ''}`}>
 
-                <div className='carrusel'>
-                    <img className='carruselImage' src={project.images[0]} alt="" />
+                <div className='carruselContainer' ref={carruselRef}>
+                    {
+                        images.length > 1 && [<button className='switchImageButton next'
+                            onClick={() => setIndexImage(Math.min(indexImage + 1, images.length - 1))}
+                        > {'›'} </button>,
+                        <button className='switchImageButton back'
+                            onClick={() => setIndexImage(Math.max(indexImage - 1, 0))}
+                        > {'‹'} </button>
+                        ]
+                    }
+                    <div className='carrusel' ref={carruselImagesRef}>
+                        {images}
+                    </div>
                 </div>
+
                 <div className='proyectWindowText'>
                     <h1>{project.title}</h1>
                     <text>{"" + project.skills.join(' / ') + " | " + project.languages.join(' / ')}</text>
