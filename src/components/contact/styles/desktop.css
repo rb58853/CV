@@ -1,5 +1,5 @@
 .contact {
-    background-color: rgb(30, 29, 36);
+    background-color: var(--bar-color);
     padding-block: 100px;
     width: 100%;
     display: flex;
@@ -29,7 +29,6 @@
     scale: 1.05;
     background-color: var(--secundary-highlight-color);
 }
-
 
 .socialIcon {
     height: 70%;

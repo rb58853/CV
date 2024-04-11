@@ -1,8 +1,7 @@
 .presentation {
     height: 100vh;
     width: 100%;
-    background-color: rgb(37, 41, 52);
-    /* background-color: rgb(27, 31, 42); */
+    background-color: var(--presentation-background-color);
     color: white;
     display: flex;
     place-content: center;
@@ -18,7 +17,7 @@
 
 .viewWorkButton {
     pointer-events: auto;
-    background-color: rgba(227, 27, 109, 0);
+    background-color: rgba(0, 0, 0, 0);
     border: solid 3px;
     border-color: var(--presentation-button-border-color);
     padding: 15px;

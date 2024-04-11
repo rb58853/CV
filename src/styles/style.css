@@ -1,7 +1,7 @@
 .defaultHeader {
     font-size: 42px;
     font-weight: 600;
-    color: rgb(11, 11, 11);
+    color: var(--text-color);
     place-self: center;
 }
 

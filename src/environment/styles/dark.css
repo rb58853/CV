@@ -1,0 +1,31 @@
+:root {
+    --bar-color: rgb(40, 40, 40);
+
+    --line-color: rgba(255, 255, 255, 0.2);
+    --text-color: rgb(240, 240, 240);
+
+    --default-highlight-color: rgb(4, 194, 201);
+    --secundary-highlight-color: rgba(227, 27, 109);
+
+    --presentation-background-color: rgb(37, 41, 52);
+    --presentation-button-highlight-color: rgb(4, 194, 201);
+    --presentation-button-border-color: white;
+
+    --about-background-color: rgba(35,35,35, 1);
+    --info-box-background-color: rgb(255, 255, 255, 0.3);
+
+    --progress-bar-background-color: rgba(255, 255, 255, 0.1);
+    --progress-bar-color: rgb(204, 204, 204);
+    --progress-bar-highlight-color: rgb(4, 194, 201);
+    --progress-bar-label-color: rgb(99, 99, 99);
+    --progress-bar-label-highlight-color: rgb(0, 87, 90);
+
+    --default-container-background-color: rgb(255, 255, 255, 0.02);
+
+    --projects-background-color: rgba(30, 30, 30, 1);
+    --skill-label-color: rgba(200, 200, 200, 1);
+
+    --default-hover-color: rgba(0, 0, 0, 0.1);
+
+    --project-window-color: rgba(30, 30, 30);
+}

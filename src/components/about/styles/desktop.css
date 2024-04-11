@@ -1,5 +1,5 @@
 .aboutBackground {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--about-background-color);
     width: 100%;
     display: flex;
     place-items: center;
@@ -24,28 +24,24 @@
     place-content: center;
     place-items: center;
     gap: 20px;
-    /* background-color: rgba(0, 0, 0, 0.137); */
 }
 
 .profileImage {
     width: 300px;
     height: 300px;
-    /* flex-grow: 1; */
-    /* border-radius: 10%; */
-    border: solid 2px rgb(207, 20, 94, 0.5)
 }
 
 .aboutText {
     /* background-color: brown; */
     min-width: 60%;
     flex-grow: 1;
-    color: rgb(44, 44, 44);
+    color: var(--text-color);
 }
 
 .line {
     width: 100%;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--line-color);
 }
 
 .skillsAndLenguagesBox {
@@ -66,7 +62,7 @@
 
 .infoBox {
     position: fixed;
-    border: solid 1px rgb(207, 20, 94);
+    border: solid 1px var(--bar-color);
     /* border:  solid 1px  black; */
 
     top: 50px;
@@ -78,11 +74,7 @@
     z-index: 5;
     pointer-events: none;
     opacity: 0;
-    background-color: rgb(255, 255, 255, 0.3);
-
-    /* top: 10px;
-    margin-inline: 10px;
-    background-color: rgb(57, 72, 85,0.2); */
+    background-color: var(--info-box-background-color);
 
     transition-property: opacity;
     transition-duration: 200ms;
@@ -96,17 +88,15 @@
 .progressBarsContainer {
     display: flex;
     flex-direction: column;
-    /* width: 45%; */
-    background-color: rgb(57, 72, 85, 0.02);
+    background-color: var(--default-container-background-color);
     padding: 20px;
-    /* border-radius: 5px; */
     gap: 10px;
     flex-grow: 1;
 }
 
 .progressBarsContainer>h1 {
     font-size: 20px;
-    color: rgb(20, 30, 40);
+    color: var(--text-color);
 }
 
 .progressBar {
@@ -124,11 +114,9 @@
     display: flex;
     place-content: center;
     place-items: center;
-    background-color: rgb(100, 120, 130);
-    background-color: rgb(107, 121, 132);
-    font-weight: 600;
+    background-color: var(--progress-bar-label-color);
+    /* font-weight: 600; */
     color: white;
-    /* color: rgb(227, 27, 109); */
     cursor: pointer;
 
     transition-property: background-color;
@@ -137,13 +125,13 @@
 }
 
 .progressBarLabel.highlight {
-    background-color: rgb(230, 106, 156);
+    background-color: var(--progress-bar-label-highlight-color)
 }
 
 .progressBarBackground {
     position: relative;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--progress-bar-background-color);
     flex-grow: 1;
 }
 
@@ -151,7 +139,7 @@
     position: absolute;
     height: 100%;
     width: calc(100% * 0.5);
-    background-color:  var(--progress-bar-color);
+    background-color: var(--progress-bar-color);
 
     transition-property: background-color;
     transition-duration: 200ms;
