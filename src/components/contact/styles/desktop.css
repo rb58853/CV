@@ -9,8 +9,8 @@
 .socials {
     display: flex;
     place-content: center;
-    gap: 20px;
-    max-width: 60%;
+    gap: min(20px,5%);
+    max-width: min(800px,90%);
 }
 
 .socialButton {

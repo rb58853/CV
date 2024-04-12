@@ -1,14 +1,15 @@
 import './App.css';
-// import './environment/styles/light.css'
+import Home from './components/home/home';
+import './environment/styles/light.css'
 import './environment/styles/dark.css'
 import './styles/style.css'
 
 
-function App({ content }) {
+function App() {
   return (
-    <div className="App">
-      {/* <ScrollToTop/> */}
-      {content}
+    <div className="App"
+    >
+      <Home/>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import projects from '../../data/projects'
+import projects from '../../environment/data/projects'
 import './styles/desktop.css'
 import './styles/mobile.css'
 import '../../styles/style.css'
@@ -18,7 +18,7 @@ function Projects() {
                     Projects
                 </h1>
                 <SkillsBar setSkill={setSkill} skillState={skill} />
-                <Container setProject={setProject} setWindowProject={setWindowProject} skill={skill} columns={env.projectColumns} />
+                <Container setProject={setProject} setWindowProject={setWindowProject} skill={skill}/>
 
                 {
                     <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
@@ -259,7 +259,7 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
                         <button className='buttonClose'
                             onClick={() => { setWindowProject(false) }}
                         >
-                            <img className='closeImage' src="/images/icons/close.png" alt="" />
+                            <img className='closeImage' src={`/images/icons/${env.mode}/close.png`} alt="" />
                         </button>
                     </div>
                 </div>

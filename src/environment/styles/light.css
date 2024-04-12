@@ -11,7 +11,8 @@
     --presentation-button-border-color: white;
 
     --about-background-color: rgba(255, 255, 255, 0.9);
-    --info-box-background-color: rgb(255, 255, 255, 0.3);
+    --info-box-background-color: rgb(255, 255, 255, 1);
+    /* --info-box-background-color: rgb(255, 255, 255, 0.3); */
 
     --progress-bar-background-color: rgba(0, 0, 0, 0.1);
     --progress-bar-color: rgb(57, 72, 85);
@@ -27,4 +28,6 @@
     --default-hover-color: rgba(0, 0, 0, 0.1);
     
     --project-window-color: rgba(255,255,255);
+
+    --info-box-color: rgba(230, 230, 230);
 }

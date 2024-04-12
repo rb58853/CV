@@ -1,6 +1,4 @@
 .presentation {
-    height: 100vh;
-    width: 100%;
     background-color: var(--presentation-background-color);
     color: white;
     display: flex;
@@ -10,6 +8,8 @@
     font-weight: 500;
     flex-direction: column;
     z-index: 3;
+    width: 100%;
+    min-height: 100vh;
 }
 .nameText{
     color: var(--default-highlight-color);
@@ -34,7 +34,7 @@
 }
 
 .viewWorkButton:hover {
-    background-color: var(--presentation-button-highlight-color);
-    border-color: var(--presentation-button-highlight-color);
+    background-color: var(--secundary-highlight-color);
+    border-color: var(--secundary-highlight-color);
     color: white;
 }

@@ -250,6 +250,7 @@
 }
 
 .projectWindow {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
     width: min(80vh, 100%);
     height: min(min(85vh, 110vw), 100%);
     display: flex;

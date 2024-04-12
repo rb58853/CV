@@ -3,6 +3,8 @@
     flex-direction: column;
     place-items: center;
     width: 100%;
+    overflow: auto;
+    height: 100vh;
 }
 .container{
     /* padding-top: 35px ; */

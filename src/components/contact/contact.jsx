@@ -1,4 +1,4 @@
-import socials from '../../data/socials.js'
+import socials from '../../environment/data/socials.js'
 import './styles/desktop.css'
 
 function Contact() {

@@ -1,10 +1,10 @@
 import './styles/desktop.css'
 import './styles/mobile.css'
 import '../../styles/style.css'
-import skills from '../../data/skills.js'
-import languages from '../../data/languages.js'
+import skills from '../../environment/data/skills.js'
+import languages from '../../environment/data/languages.js'
 import { sortDictionary, sortDictionaryByValue } from '../../utils/sortDictionary.js'
-import about from '../../data/about.js'
+import about from '../../environment/data/about.js'
 import { useState } from 'react'
 
 function About() {

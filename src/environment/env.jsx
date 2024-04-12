@@ -1,8 +1,8 @@
 const env = {
-    barHeight: 60,
-    projectColumns: 3,
+    barHeight: 35,
     boxProjectMinWidth: 300,
     boxProjectMinWidthMobile: 185,
+    mode: 'dark',
 }
 
 export default env

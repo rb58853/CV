@@ -1,9 +1,17 @@
-import { name } from '../../data/about'
+import { useEffect, useRef, useState } from 'react'
+import { name } from '../../environment/data/about'
 import './styles/desktop.css'
 import './styles/mobile.css'
-function EnglishPresentation() {
+import {useSize} from '../../hooks/useSize.jsx'
+
+function Presentation({ app }) {
+    const presentationRef = useRef()
+    const size = useSize(presentationRef)
+
     return (
-        <section className="presentation">
+        <section className="presentation"
+            ref={presentationRef}
+        >
             <text>
                 {`Hello, I'm `}
                 <text className='nameText'>
@@ -14,13 +22,18 @@ function EnglishPresentation() {
             <text>
                 {`I'm a Computer Scientist.`}
             </text>
-            
-            <button className='viewWorkButton'>
+
+            <button className='viewWorkButton'
+                onClick={() => {
+                    app.current.scrollTo({
+                        top: size.height,
+                        behavior: 'smooth'
+                    });
+                }}>
                 View my work
             </button>
-
         </section>
     )
 }
 
-export default EnglishPresentation
+export default Presentation
