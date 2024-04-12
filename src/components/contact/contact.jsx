@@ -3,7 +3,7 @@ import './styles/desktop.css'
 
 function Contact() {
     const socialsView = Object.keys(socials).map((key) => {
-        return  <ButtonSocial social={key} />
+        return <ButtonSocial social={key} />
     })
 
     return (
@@ -21,7 +21,7 @@ function ButtonSocial({ social }) {
         <a href={href} className='socialButton'>
             <img
                 className='socialIcon'
-                src={`/images/icons/socials/${social}.svg`} alt="" />
+                src={process.env.PUBLIC_URL + `/images/icons/socials/${social}.svg`} alt="" />
         </a>
     )
 }

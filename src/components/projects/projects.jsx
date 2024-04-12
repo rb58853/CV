@@ -18,7 +18,7 @@ function Projects() {
                     Projects
                 </h1>
                 <SkillsBar setSkill={setSkill} skillState={skill} />
-                <Container setProject={setProject} setWindowProject={setWindowProject} skill={skill}/>
+                <Container setProject={setProject} setWindowProject={setWindowProject} skill={skill} />
 
                 {
                     <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
@@ -61,7 +61,7 @@ function Container({ setProject, setWindowProject, skill }) {
     const size = useSize(projectsContainerRef)
 
     useLayoutEffect(() => {
-        const tempWidth = size.width >= 800 ? env.boxProjectMinWidth : env.boxProjectMinWidthMobile 
+        const tempWidth = size.width >= 800 ? env.boxProjectMinWidth : env.boxProjectMinWidthMobile
         if (size.width / (columns + 1) > tempWidth)
             setColums(columns + 1)
         if (size.width / columns < tempWidth)
@@ -150,7 +150,9 @@ function ProjectBox({ project, setProject, setWindowProject, active, translate, 
             >
                 <div className={`projectBoxInfoBackground ${activeInfo}`} />
 
-                {project.images[0] && <img className={`projectBoxImage`} src={project.images[0]} alt='' />}
+                {project.images[0] && <img className={`projectBoxImage`}
+                    src={process.env.PUBLIC_URL + project.images[0]} alt='' />}
+
                 {!project.images[0] &&
                     <div className='noImageProject'>
                         <h1> {project.title}</h1>
@@ -205,7 +207,7 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
 
     const images = [];
     project.images.map(path => {
-        images.push(<img className='carruselImage' src={path} alt=""
+        images.push(<img className='carruselImage' src={process.env.PUBLIC_URL + path} alt=""
             style={{ width: width }} />)
     })
 
@@ -247,7 +249,7 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
                         {project.github && <a href={project.github}
                             className={`viewOnGithub ${windowProject ? 'active' : ''}`}> View on github </a>}
 
-                        {project.paper && <a href={project.paper}
+                        {project.paper && <a href={process.env.PUBLIC_URL + project.paper}
                             className={`viewOnGithub ${windowProject ? 'active' : ''}`}> Read paper </a>}
 
                         {project.sitie && <a href={project.sitie}
@@ -259,7 +261,7 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
                         <button className='buttonClose'
                             onClick={() => { setWindowProject(false) }}
                         >
-                            <img className='closeImage' src={`/images/icons/${env.mode}/close.png`} alt="" />
+                            <img className='closeImage' src={process.env.PUBLIC_URL + `/images/icons/${env.mode}/close.png`} alt="" />
                         </button>
                     </div>
                 </div>

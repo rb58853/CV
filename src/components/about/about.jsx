@@ -16,7 +16,10 @@ function About() {
             <div className='about'>
                 <h1 className='defaultHeader'>About</h1>
                 <div className='profileAbout'>
-                    <img className='profileImage' src="/images/profile.jpg" alt="profile" />
+                    <img className='profileImage'
+                        src={process.env.PUBLIC_URL + "/images/profile.jpg"}
+
+                        alt="profile" />
                     <AboutText />
                 </div>
                 <div className='line' />
