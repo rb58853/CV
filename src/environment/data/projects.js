@@ -1,4 +1,6 @@
 const projects = {
+
+
     audioML: {
         skills: ['ML'],
         languages: ["Python"],
@@ -24,7 +26,7 @@ const projects = {
         features: {
             keywords: "Embeddings, Multimodals Embeddings."
         },
-        
+
         images: ['/projects/IRSImagesCLIP/1.jpg'],
         github: 'https://github.com/rb58853/ML-RSI-Images',
         paper: '/projects/IRSImagesCLIP/IRSImagesCLIP.pdf',
@@ -39,9 +41,22 @@ const projects = {
         features: {
             keywords: "Dynamic programation (DP), algorithms analysis, best computational complex."
         },
-        images: [],
+        images: ['/projects/8colorsProblem/1.jpg'],
         github: 'https://github.com/maux96/DAA-problema-1',
     },
+
+    coolCompiler: {
+        skills: ["Compilers"],
+        title: 'Cool Compiler',
+        description: 'descripcion del proyecto',
+        languages: ["MIPS", "Python", "Cool"],
+        features: {
+            keywords: "Language theory, CIL intermedie language, assambly, parsing-semantic-code generation."
+        },
+
+        images: ['/projects/coolCompiler/1.jpg'],
+    },
+
 
     navMeshAgentAI: {
         skills: ['Unity', 'AI', "Simulation"],
@@ -67,23 +82,28 @@ const projects = {
         description: 'descripcion del proyecto',
         languages: ["Javascript", "CSS"],
         features: {
-            framework:'ReactJS',
+            framework: 'ReactJS',
             keywords: "Web development, frontend, digital-shop."
         },
-        images: [],
+        images: ['/projects/shop/1.jpg', '/projects/shop/2.jpg', '/projects/shop/3.jpg', '/projects/shop/4.jpg'],
+
+        github: 'https://github.com/rb58853/my-app',
+        sitie: 'https://rb58853.github.io/my-app/',
     },
 
-    coolCompiler: {
-        skills: ["Compilers"],
-        title: 'Cool Compiler',
+    yugiOhBackend: {
+        skills: ["Django"],
+        title: 'Yugi Oh Backend APP',
         description: 'descripcion del proyecto',
-        languages: ["MIPS", "Python", "Cool"],
+        languages: ["python"],
         features: {
-            keywords: "Language theory, CIL intermedie language, assambly, parsing-semantic-code generation."
+            framework: 'Django',
+            keywords: "Backend, Database, vector model, vaswani model, latent semantic model."
         },
-    
-        images: [],
+
+        images: ['/projects/yugiOh/1.jpg'],
     },
+
 
     irs: {
         skills: ["IRS"],
@@ -95,22 +115,8 @@ const projects = {
             target: "MIPS",
             keywords: "Documents retrieval, Data structure Trie, vector model, vaswani model, latent semantic model, object oriented language compiler."
         },
-        images: [],
+        images: ['/projects/irs/2.jpg'],
     },
-
-    yugiOhBackend: {
-        skills: ["Django"],
-        title: 'Yugi Oh Backend APP',
-        description: 'descripcion del proyecto',
-        languages: ["python"],
-        features: {
-            framework:'Django',
-            keywords: "Backend, Database, vector model, vaswani model, latent semantic model."
-        },
-      
-        images: [],
-    },
-
 
 
 }

@@ -21,9 +21,8 @@
     }
 
     .profileImage {
-        aspect-ratio: 1 / 1;
-        width: 50%;
-        height: 50%;
+        width: 95%;
+        max-height: 100%;
     }
 
     .aboutText {
