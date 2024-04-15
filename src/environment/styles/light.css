@@ -1,12 +1,14 @@
 :root {
-    --bar-color: rgb(30, 29, 36);
+    --bar-color: rgb(30, 30, 30);
 
-    --line-color: rgba(0, 0, 0, 0.2) --text-color: rgb(44, 44, 44);
+    --line-color: rgba(0, 0, 0, 0.2);
+    --text-color: rgb(44, 44, 44);
 
     --default-highlight-color: rgba(227, 27, 109);
     --secundary-highlight-color: rgb(4, 194, 201);
 
-    --presentation-background-color: rgb(37, 41, 52);
+    --presentation-background-color: rgb(30, 30, 30);
+    /* --presentation-background-color: rgb(37, 41, 52); */
     --presentation-button-highlight-color: rgb(4, 194, 201);
     --presentation-button-border-color: white;
 
@@ -15,9 +17,9 @@
     /* --info-box-background-color: rgb(255, 255, 255, 0.3); */
 
     --progress-bar-background-color: rgba(0, 0, 0, 0.1);
-    --progress-bar-color: rgb(57, 72, 85);
+    --progress-bar-color: rgb(77, 77, 77);
     --progress-bar-highlight-color: rgba(207, 20, 94, 1);
-    --progress-bar-label-color: rgb(107, 121, 132);
+    --progress-bar-label-color: rgb(50, 50, 50);
     --progress-bar-label-highlight-color: rgb(230, 106, 156);
 
     --default-container-background-color: rgb(0, 0, 0, 0.02);

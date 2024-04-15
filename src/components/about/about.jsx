@@ -17,7 +17,7 @@ function About() {
                 <h1 className='defaultHeader'>About</h1>
                 <div className='profileAbout'>
                     <img className='profileImage'
-                        src={process.env.PUBLIC_URL + "/images/profile.jpg"}
+                        src={process.env.PUBLIC_URL + "/images/profile2.jpg"}
 
                         alt="profile" />
                     <AboutText />

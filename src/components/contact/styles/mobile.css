@@ -1,0 +1,7 @@
+.contact {
+    background-color: var(--bar-color);
+    padding-block: 100px;
+    width: 100%;
+    display: flex;
+    place-content: center;
+}
