@@ -77,18 +77,18 @@ const skills =
 
     django: {
         label: 'Django',
-        info: 'Unity is a leading game engine in the industry, renowned for its versatility and ability to support both 2D and 3D game development. It uses C# as its primary programming language, which simplifies the implementation of complex game logic. Furthermore, Unity provides a wide range of tools and resources for game development, including animation, artificial intelligence, and support for multiple distribution platforms.',
+        info: 'Django is a high-level Python web framework designed to facilitate rapid development and clean, pragmatic design. Developed by experienced programmers, Django aims to simplify the complexities of web development, allowing developers to focus on writing their applications without having to reinvent the wheel. It adheres to the "Dont Repeat Yourself" (DRY) principle, promoting reusability and modularity. Django follows the Model-View-Template (MVT) architectural pattern, separating the database layer (models), business logic (views), and presentation layer (templates).',
         skill: 40,
     },
 
     telegramBot: {
         label: 'Telegram bot',
-        info: 'Unity is a leading game engine in the industry, renowned for its versatility and ability to support both 2D and 3D game development. It uses C# as its primary programming language, which simplifies the implementation of complex game logic. Furthermore, Unity provides a wide range of tools and resources for game development, including animation, artificial intelligence, and support for multiple distribution platforms.',
+        info: 'A Telegram bot is a program designed to interact with users through the Telegram messaging platform. These bots can perform various functions, such as answering queries, providing information, and automating tasks.',
         skill: 40,
     },
     flutter: {
         label: 'Flutter',
-        info: 'Unity is a leading game engine in the industry, renowned for its versatility and ability to support both 2D and 3D game development. It uses C# as its primary programming language, which simplifies the implementation of complex game logic. Furthermore, Unity provides a wide range of tools and resources for game development, including animation, artificial intelligence, and support for multiple distribution platforms.',
+        info: 'Flutter is a UI toolkit developed by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language and provides a rich set of pre-designed widgets that make it easy to create complex custom interfaces. Flutter is known for its fast development cycle, expressive and flexible UI, and native performance.',
         skill: 40,
     },
 }

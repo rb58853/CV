@@ -37,7 +37,8 @@ const projects = {
     colorProblem: {
         skills: ['DAA'],
         title: '8 Colors Problem',
-        description: 'Dado una lista con 8 colores posibles ... ... ... ...',
+        description: 'Given an array A that contains only elements of 8 different types, the problem consists in finding the maximum subsequence T, which satisfies the constraints: For every pair of sets Ci, Cj of elements of specific types, it holds that |Ci| - |Cj| ≤ 1. Elements of the same set have to be consecutive in T.',
+
         languages: ["Python"],
         features: {
             keywords: "Dynamic programation (DP), algorithms analysis, best computational complex."
@@ -53,16 +54,49 @@ const projects = {
         description: 'Cool, which stands for Classroom Object-Oriented Language, is a small programming language designed primarily for educational purposes, particularly in undergraduate compiler course projects. Cool incorporates several features common in modern programming languages, such as objects, automatic memory management, and strong static typing. It is built on public domain tools and generates code for a MIPS simulator, making it portable across different platforms. The language has been widely used in teaching compilers at various institutions, and its software is considered stable.',
         languages: ["MIPS", "Python", "Cool"],
         features: {
+            from: "COOL",
+            target: "MIPS",
             keywords: "Language theory, CIL intermedie language, assambly, parsing-semantic-code generation, object oriented language compiler."
         },
 
-        images: ['/projects/coolCompiler/1.jpg'],
+        image: '/projects/coolCompiler/1.jpg',
+        images: ['/projects/coolCompiler/2.jpg'],
         github: 'https://github.com/rb58853/cool-compiler-2023',
         asStudent: 4,
     },
 
+    irs: {
+        skills: ["IRS"],
+        title: 'Information Retieval System for text documents',
+        description: 'This project focuses on the development of a sophisticated information retrieval system that integrates multiple advanced techniques to enhance precision and efficiency in document retrieval. The strategies employed include the use of vector models, latent semantic analysis (LSA), Vaswani attention, and the implementation of Trie structures for indexing and grouping documents.\n\
+        Vector Models and Latent Semantic Analysis (LSA): A vector-based approach is adopted to represent documents and queries in a multidimensional space, allowing similarities to be calculated through distance or cosine measures. LSA is applied to extract semantic features, improving contextual understanding and overcoming challenges such as synonymy and polysemy.\n\
+        Vaswani Attention: By incorporating Vaswani attention, complex relationships between words are captured, enhancing accuracy by considering the broader context in information retrieval.\n\
+        Trie Structure: A Trie structure is implemented to index and group documents, facilitating quick and effective searches. This enables near-instantaneous retrieval of relevant documents based on specific search patterns.\n\
+        This system not only demonstrates the ability to combine various techniques and algorithms to address complex challenges in processing and analyzing large volumes of data but also results in a robust and scalable system.',
+        languages: ["Python"],
+        features: {
+            keywords: "Documents retrieval, Data structure Trie, vector model, vaswani model, latent semantic model."
+        },
+        images: ['/projects/irs/2.jpg'],
+        asStudent: 3,
+        github: "https://github.com/lido98/RIUL",
+    },
+    tito: {
+        skills: ['DAA'],
+        title: 'Building roads',
+        description: "Let G(v, e) be a weighted graph on vertices and edges. The goal is to find the subgraph that maximizes the sum of edge weights minus the sum of vertex weights. Subject to the constraint that if an edge belongs to the solution subgraph then both vertices connected by it also belong to the subgraph.",
+
+        languages: ["Python"],
+        features: {
+            keywords: "Algorithms analysis, best computational complex, graphs theory, greedy, graph flow."
+        },
+        images: ['/projects/tito/image.jpg'],
+        github: 'https://github.com/rb58853/Tito-el-corrupto',
+        asStudent: 4,
+    },
+
     navMeshAgentAI: {
-        skills: ['Unity', 'AI', "Simulation"],
+        skills: ['AI'],
         languages: ["C#"],
         title: 'Nav Mesh Agent AI',
         description: 'An agent is understood as an entity capable of perceiving its environment, processing such perceptions, and responding to them with an action in its environment. A navigation agent, in turn, is an entity that can also navigate (move) within a given space. The simplest example of a navigation space would be a matrix of positions where an entity moves under certain rules or valid movements; the agent must be able to move from one position to another in this space. In this project, we define the navigation space as a mesh of traversable polygons that connect through edges, specifically a mesh of triangles. A multi-agent system is a system composed of multiple agents that interact with each other and have the capacity to communicate with each other. Among the main characteristics of an agent, it is important to highlight its autonomous behavior, its local vision of the system, and its decentralization, meaning that there is no entity that controls the global behavior of all agents. These multi-agent systems have been used in computing for years for crowd simulation, some of their utilities include simulating people in certain circumstances such as in an evacuation, a bus terminal, etc. In recent years, multi-agent systems have been used in the simulation of cinematic crowds, as is the case with The Lord of the Rings. Specifically, in our project, we will deal with this multi-agent system and the navigation system of the same, oriented towards the world of video games.',
@@ -70,6 +104,7 @@ const projects = {
         features: {
             Engine: 'Unity Engine',
             keywords: "Inteligent agents, metaheuristics, heuristics, terrain simulation, multitude simulation",
+            skills: "artificial inteligent, simulation, unity"
         },
 
         image: '/projects/navMeshAgentAI/1.jpg',
@@ -112,20 +147,87 @@ const projects = {
         asStudent: 3,
     },
 
-    irs: {
-        skills: ["IRS"],
-        title: 'Information Retieval System for text documents',
-        description: 'descripcion del proyecto',
-        languages: ["Python"],
+
+    azul: {
+        skills: ['Declarative'],
+        languages: ["Prolog"],
+        title: 'Azul',
+        description: "This project involves implementing a simulation of the popular board game Blue using the declarative programming language Prolog. Blue is known for its tile placement mechanics and scoring based on patterns and sequences. In this simulation, the fundamental rules of the game are modeled, including the arrangement of tiles, color selection, and point calculation according to player configurations. Declarative programming in Prolog allows for clear and concise definition of the game rules and victory conditions, leveraging automatic inference and Prolog's capability to find solutions from predefined facts and rules. The project includes:Rule Definition: The rules of the Blue game are established in terms of facts and logical rules in Prolog, enabling a direct interpretation of the game mechanics. Turn Simulation: Logic is implemented to simulate game turns, where each player can select tiles from virtual factories and place them on their personal boards following the game's restrictions. Point Calculation: A module is developed to automatically calculate each player's points at the end of each round and at the end of the game, based on the positions of the tiles on their boards. User Interface: Although Prolog is not known for its graphical capabilities, a simple text interface is created that allows users to interact with the simulation, select actions, and view the current state of the game.",
         features: {
-            from: "COOL",
-            target: "MIPS",
-            keywords: "Documents retrieval, Data structure Trie, vector model, vaswani model, latent semantic model."
+            keywords: "azul game, declarative programation, prolog.",
         },
-        images: ['/projects/irs/2.jpg'],
+
+        image: '/projects/azul/1.jpg',
+        images: ['/projects/azul/1.jpg'],
+
+        github: 'https://github.com/rb58853/Azul_Prolog',
+        paper: '/projects/azul/paper.pdf',
         asStudent: 3,
     },
 
+    ftp: {
+        skills: ['Dist Systems'],
+        languages: ["python"],
+        title: 'Distributed ftp',
+        description: "This project focuses on the design and implementation of a distributed file transfer protocol (FTP) system using Python, with a particular emphasis on leader coordination through the Bully algorithm. Distributed systems present unique challenges in terms of synchronization and coordination, especially regarding the election of a leader to manage critical operations. The Bully algorithm, recognized for its effectiveness in selecting leaders in distributed networks, plays a crucial role in this project. Distributed FTP Implementation: A distributed FTP system is developed that allows secure file transfers between nodes in a network. This system is designed to be resilient and scalable, capable of handling multiple simultaneous transfer requests without compromising performance. Bully Algorithm for Leader Coordination: The Bully algorithm is integrated for the election of leaders among the system nodes. This algorithm ensures that there is always an active and available node to coordinate FTP operations, even in case of failures or disconnections of some nodes. Failure Management and Reconnections: The system includes mechanisms to detect and handle node failures, ensuring the continuity of FTP service. When a node fails, the Bully algorithm activates a selection process to designate a new leader, minimizing service interruption.",
+
+        features: {
+            keywords: "Bully Algorithm, distributed ftp, data persistence",
+            skills: "networks, distributed systems."
+        },
+
+        image: '/projects/distributedFTP/image.jpg',
+        images: ['/projects/distributedFTP/image.jpg'],
+
+        github: 'https://github.com/maux96/distributed-ftp',
+        paper: '/projects/distributedFTP/paper.pdf',
+        asStudent: 4,
+    },
+
+    tito: {
+        skills: ['DAA'],
+        title: 'Building roads',
+        description: "Let G(v, e) be a weighted graph on vertices and edges. The goal is to find the subgraph that maximizes the sum of edge weights minus the sum of vertex weights. Subject to the constraint that if an edge belongs to the solution subgraph then both vertices connected by it also belong to the subgraph.",
+
+        languages: ["Python"],
+        features: {
+            keywords: "Algorithms analysis, best computational complex, graphs theory, greedy, graph flow."
+        },
+        images: ['/projects/tito/image.jpg'],
+        github: 'https://github.com/rb58853/Tito-el-corrupto',
+        asStudent: 4,
+    },
+
+    littleArchemy: {
+        skills: ['Django'],
+        title: 'Little Archemy',
+        description: 'This project combines the power of Django, a high-performance web development framework, with the interactivity of Telegram bots to create a unique platform dedicated to generating mathematical elements through virtual alchemical processes. The core idea is to allow users to interact with the system via text messages, where each mathematical element can be "rented" or combined with others to produce new concepts or mathematical solutions.',
+
+        languages: ["Python"],
+        features: {
+            keywords: "Telegram bot, Django backend, applied mathematics. "
+        },
+        images: ['/projects/littleArchemy/image.jpg'],
+        paper: '/projects/littleArchemy/paper.pdf',
+        github: 'https://github.com/rb58853/Little-Archemy',
+        asStudent: 3,
+    },
+
+    chatbot: {
+        skills: ['ML', "IRS"],
+        title: 'Devman ChatBot',
+        description: 'Project Description: Enhancing E-commerce Product Discovery with Embeddings and OpenAI GPT API. In the rapidly evolving landscape of e-commerce, enhancing product discovery has become crucial for businesses aiming to stand out amidst fierce competition. This project leverages cutting-edge technologies such as embeddings, IRS with Typesense, natural language processing (NLP) techniques powered by the OpenAI GPT API, and advanced information retrieval methods utilizing vector models to revolutionize how customers find products on online stores.',
+
+        languages: ["Python"],
+        features: {
+            keywords: "Ecomerse chat-bot, typesense data, embeddings, NLP (Natural Language process), products retrieval."
+        },
+        image: '/projects/chatBot/image.jpg',
+        images: ['/projects/chatBot/image.jpg'],
+        // paper: '/projects/littleArchemy/paper.pdf',
+        // github: 'https://github.com/rb58853/Little-Archemy',
+        // asStudent: 3,
+    },
 
 }
 export default projects

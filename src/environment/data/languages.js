@@ -59,8 +59,8 @@ const languages =
     },
     dart: {
         label: 'Dart',
-        info: 'C++ is a highly versatile and widely used programming language, known for its efficiency, control over system resources, and support for both low-level and high-level application development. Developed by Bjarne Stroustrup as an extension of the C language, C++ introduced object-oriented programming (OOP) to the C language, making it a middle-level language capable of handling both low-level system programming (such as operating systems, device drivers, and kernels) and high-level application development (like games, GUI applications, and desktop software).',
-        skill: 25,
+        info: 'Dart is a client-optimized programming language developed by Google, designed for crafting fast apps on any platform. It aims to offer a highly productive programming experience for multi-platform development, supported by a flexible execution runtime platform for app frameworks. Dart is particularly suited for client development, focusing on both efficient development processes, such as sub-second stateful hot reload, and delivering high-quality production experiences across various compilation targets like web, mobile, and desktop platforms.',
+        skill: 35,
         image: 'icons/net.png'
     },
 }
