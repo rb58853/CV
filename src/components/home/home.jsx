@@ -5,6 +5,7 @@ import About from '../about/about'
 import Projects from '../projects/projects'
 import Contact from '../contact/contact'
 import React, { useEffect, useRef } from 'react'
+import Options from '../../options/options'
 
 function Home() {
     const ref = React.useRef(null);
@@ -14,6 +15,7 @@ function Home() {
             <Presentation app={ref} />
 
             <div className="container">
+                <Options/>
                 <About />
                 <Projects />
                 <Contact />

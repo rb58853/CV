@@ -5,6 +5,10 @@
     place-items: center;
     flex-direction: column;
     padding-bottom: 50px;
+
+    transition-property: background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
 }
 
 .about {

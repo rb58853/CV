@@ -6,7 +6,7 @@ import Home from '../components/home/home.jsx';
 const routes = [
     {
         path: "/",
-        element: <App/>,
+        element: <App content = {<Home/>}/>,
     },
 ]
 

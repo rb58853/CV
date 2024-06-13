@@ -1,0 +1,13 @@
+.optionsBar{
+    background-color: var(--bar-color);
+    position: fixed;
+    display:  flex;
+    flex-direction: column;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 50px;
+
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    top: 10px;
+    right: 10px;
+}

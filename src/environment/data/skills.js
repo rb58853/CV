@@ -14,7 +14,7 @@ const skills =
     ai: {
         label: 'AI',
         info: 'Classical AI, also known as rule-based AI, focuses on developing systems that can perform specific tasks using predefined rules and heuristics. Unlike modern AI, which focuses on machine learning and adaptation from data, classical AI is based on human-established logic and rules',
-        skill: 55,
+        skill: 75,
     },
 
     simulation: {
@@ -25,19 +25,19 @@ const skills =
     machineLearning: {
         label: 'ML',
         info: 'Machine Learning (ML) is a branch of artificial intelligence (AI) that focuses on developing computer systems capable of learning from data and improving their performance over time without needing to be explicitly programmed. It is applicable across a wide range of industries, including healthcare, defense, financial services, marketing, and security services. Machine learning is a rapidly growing field with numerous research and development opportunities',
-        skill: 80,
+        skill: 85,
     },
 
     net: {
         label: '.Net',
         info: '.NET is a software development framework created by Microsoft that provides a runtime environment and a set of libraries and tools for building and running applications on Windows operating systems. This framework includes a variety of programming languages, such as C#, F#, and Visual Basic, and supports a range of application types, including desktop, web, mobile, and gaming applications',
-        skill: 50,
+        skill: 45,
     },
 
     irs: {
         label: 'IRS',
         info: 'Information retrieval systems are tools or techniques that allow users to search and retrieve information from a collection of documents or databases. This process begins when a user makes a query to the system, which is a formal statement of the need for information. Information retrieval systems are fundamental in various applications, such as internet search engines, recommendation systems, knowledge management systems, and more',
-        skill: 50,
+        skill: 85,
     },
 
     daa: {
@@ -49,7 +49,7 @@ const skills =
     compiler: {
         label: 'Compilers',
         info: 'A compiler is a program that translates code written in a high-level programming language to another language, usually a low-level one such as machine code or assembly. This translation process is known as compilation. Building a compiler involves dividing the process into phases, which include source program analysis and object program synthesis. Analysis verifies the correctness of the source program according to the language definition, while synthesis generates the output in the object language',
-        skill: 85,
+        skill: 83,
     },
 
     ds: {
@@ -72,17 +72,22 @@ const skills =
     unity: {
         label: 'Unity',
         info: 'Unity is a leading game engine in the industry, renowned for its versatility and ability to support both 2D and 3D game development. It uses C# as its primary programming language, which simplifies the implementation of complex game logic. Furthermore, Unity provides a wide range of tools and resources for game development, including animation, artificial intelligence, and support for multiple distribution platforms.',
-        skill: 85,
+        skill: 83,
     },
 
     django: {
         label: 'Django',
         info: 'Unity is a leading game engine in the industry, renowned for its versatility and ability to support both 2D and 3D game development. It uses C# as its primary programming language, which simplifies the implementation of complex game logic. Furthermore, Unity provides a wide range of tools and resources for game development, including animation, artificial intelligence, and support for multiple distribution platforms.',
-        skill: 45,
+        skill: 40,
     },
 
     telegramBot: {
         label: 'Telegram bot',
+        info: 'Unity is a leading game engine in the industry, renowned for its versatility and ability to support both 2D and 3D game development. It uses C# as its primary programming language, which simplifies the implementation of complex game logic. Furthermore, Unity provides a wide range of tools and resources for game development, including animation, artificial intelligence, and support for multiple distribution platforms.',
+        skill: 40,
+    },
+    flutter: {
+        label: 'Flutter',
         info: 'Unity is a leading game engine in the industry, renowned for its versatility and ability to support both 2D and 3D game development. It uses C# as its primary programming language, which simplifies the implementation of complex game logic. Furthermore, Unity provides a wide range of tools and resources for game development, including animation, artificial intelligence, and support for multiple distribution platforms.',
         skill: 40,
     },

@@ -23,7 +23,7 @@ const languages =
     python: {
         label: 'python',
         info: 'Python is a high-level, interpreted programming language, known for its clear and readable syntax, similar to English. It was created by Guido van Rossum in 1991 and has become one of the most popular programming languages due to its versatility, ease of learning, and use in various areas such as web development, mobile applications, data science, machine learning, and more.',
-        skill: 92,
+        skill: 95,
         image: 'icons/machinelearning.png'
     },
 
@@ -47,14 +47,20 @@ const languages =
     },
     c: {
         label: 'C',
-        info: 'Prolog is a logical programming language that originated in the field of artificial intelligence, automated theorem proving, and computational linguistics. It is based on first-order logic, a formal form of logic, and unlike many other programming languages, Prolog is primarily designed as a declarative programming language.',
+        info: 'C is a general-purpose programming language that was created in the 1970s by Dennis Ritchie at Bell Labs. It is widely used and influential, with its design reflecting the capabilities of the targeted CPUs. C has found lasting use in operating systems, device drivers, and protocol stacks, and it is commonly used across a range of computer architectures, from supercomputers to microcontrollers and embedded systems',
         skill: 10,
         image: 'icons/net.png'
     },
     cPlusPlus: {
         label: 'C++',
-        info: 'Prolog is a logical programming language that originated in the field of artificial intelligence, automated theorem proving, and computational linguistics. It is based on first-order logic, a formal form of logic, and unlike many other programming languages, Prolog is primarily designed as a declarative programming language.',
+        info: 'C++ is a highly versatile and widely used programming language, known for its efficiency, control over system resources, and support for both low-level and high-level application development. Developed by Bjarne Stroustrup as an extension of the C language, C++ introduced object-oriented programming (OOP) to the C language, making it a middle-level language capable of handling both low-level system programming (such as operating systems, device drivers, and kernels) and high-level application development (like games, GUI applications, and desktop software).',
         skill: 15,
+        image: 'icons/net.png'
+    },
+    dart: {
+        label: 'Dart',
+        info: 'C++ is a highly versatile and widely used programming language, known for its efficiency, control over system resources, and support for both low-level and high-level application development. Developed by Bjarne Stroustrup as an extension of the C language, C++ introduced object-oriented programming (OOP) to the C language, making it a middle-level language capable of handling both low-level system programming (such as operating systems, device drivers, and kernels) and high-level application development (like games, GUI applications, and desktop software).',
+        skill: 25,
         image: 'icons/net.png'
     },
 }

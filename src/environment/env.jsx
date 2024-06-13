@@ -1,8 +1,8 @@
 const env = {
-    barHeight: 35,
     boxProjectMinWidth: 300,
     boxProjectMinWidthMobile: 185,
     mode: 'light',
+    flagColors:['rgb(143, 72, 72)',' rgb(81, 121, 87)', 'rgb(65, 45, 136)', ' rgb(206, 180, 36)']
 }
 
 export default env

@@ -3,6 +3,9 @@
     font-weight: 600;
     color: var(--text-color);
     place-self: center;
+    transition-property: color;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
 }
 
 button {

@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react';
 import socials from '../../environment/data/socials.js'
 import './styles/desktop.css'
+
 
 function Contact() {
     const socialsView = Object.keys(socials).map((key) => {

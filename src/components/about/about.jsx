@@ -35,8 +35,8 @@ function About() {
         </section>
     )
 }
-
-function InfoBox({ info, active }) {
+                 
+export function InfoBox({ info, active }) {
     return <div className={`infoBox ${active ? 'active' : ''}`}>
         {info}
     </div>
