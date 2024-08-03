@@ -78,7 +78,7 @@ const skills =
     django: {
         label: 'Django',
         info: 'Django is a high-level Python web framework designed to facilitate rapid development and clean, pragmatic design. Developed by experienced programmers, Django aims to simplify the complexities of web development, allowing developers to focus on writing their applications without having to reinvent the wheel. It adheres to the "Dont Repeat Yourself" (DRY) principle, promoting reusability and modularity. Django follows the Model-View-Template (MVT) architectural pattern, separating the database layer (models), business logic (views), and presentation layer (templates).',
-        skill: 40,
+        skill: 70,
     },
 
     telegramBot: {

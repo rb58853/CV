@@ -14,7 +14,7 @@ function Options() {
 function Mode() {
     const [mode, setMode] = useState(env.mode)
     useEffect(() => {
-        SwitchTheme(mode)
+        // SwitchTheme(mode)
     }, [mode]);
     return (
 
