@@ -16,10 +16,9 @@ function About() {
             <div className='about'>
                 <h1 className='defaultHeader'>About</h1>
                 <div className='profileAbout'>
-                    <img className='profileImage'
+                    {/* <img className='profileImage'
                         src={process.env.PUBLIC_URL + "/images/profile.jpg"}
-
-                        alt="profile" />
+                        alt="profile" /> */}
                     <AboutText />
                 </div>
                 <div className='line' />
@@ -35,7 +34,7 @@ function About() {
         </section>
     )
 }
-                 
+
 export function InfoBox({ info, active }) {
     return <div className={`infoBox ${active ? 'active' : ''}`}>
         {info}

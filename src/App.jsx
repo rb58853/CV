@@ -1,5 +1,6 @@
 import './App.css';
 import './styles/style.css'
+import './environment/styles/dark.css'
 
 function App({ content }) {
 
