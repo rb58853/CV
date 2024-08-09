@@ -13,17 +13,22 @@ function Home() {
     return (
         <section className="home"
             ref={ref}>
-            <Chat />
-            {/* <Presentation app={ref} /> */}
-
-            <div className="container">
-                {/* <Options/>
-                <About />
-                <Projects />
-                <Contact /> */}
-            </div>
-
+            <Profile />
+            <Presentation app={ref} />
         </section>
     )
+}
+
+function Profile() {
+    return <div className='profile'>
+        <div className='profilePhotoAndName'>
+            <img className='photo' src="" alt="profile" />
+            <div>
+                <h3>Raul Beltran</h3>
+                <h4>comupter Scientist</h4>
+            </div>
+        </div>
+
+    </div>
 }
 export default Home

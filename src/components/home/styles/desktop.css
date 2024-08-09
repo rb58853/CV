@@ -1,17 +1,42 @@
-.home{
+.home {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     place-items: center;
     width: 100%;
     overflow-y: auto;
     height: 100vh;
     background-color: var(--bar-color);
+    color:  var(--text-color);
 }
-.container{
+
+.container {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     place-items: center;
     position: relative;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    min-width: 33%;
+    height: 100%;
+}
+
+.profilePhotoAndName {
+    display: flex;
+    /* place-items: center; */
+    height: 70px;
+    background-color:chocolate ;
+}
+.profilePhotoAndName>div>h3,h4 {
+    margin-block: 3px;
+}
+.photo{
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
