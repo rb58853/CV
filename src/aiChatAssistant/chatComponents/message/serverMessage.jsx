@@ -11,13 +11,12 @@ function ServerMessage({ data }) {
     const header = data['response']
 
     let projectsView = []
-    if (data['projects'].length > 0) {
+    if (Object.keys(data['projects']).length > 0) {
         const projectsData = data['projects']
-        projectsView = Object.keys(projects).map(key => {
-            return <ProjectMessage key={key} project={projects[key]} comment={projectsData[key]} />
+        projectsView = Object.keys(projectsData).map((key) => {
+            return <ProjectMessage key={key} projectInput={projects[key]} comment={projectsData[key]} />
         })
     }
-
     return (
         <div className="serverMessage">
             {data && <Message projects={projectsView} header={header} />}
@@ -33,7 +32,7 @@ function Message({ projects, header }) {
             </Markdown>
             {
                 projects.length > 0 &&
-                <div className='projects'>
+                <div className='projectsMessagesView'>
                     {projects}
                 </div>
             }

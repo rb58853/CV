@@ -13,10 +13,10 @@ function Home() {
     return (
         <section className="home"
             ref={ref}>
-            <Presentation app={ref} />
+            <Chat />
+            {/* <Presentation app={ref} /> */}
 
             <div className="container">
-                <Chat />
                 {/* <Options/>
                 <About />
                 <Projects />

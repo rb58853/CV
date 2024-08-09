@@ -1,29 +1,31 @@
+import { useRef, useState } from "react"
 import { ProjectBox, ProjectWindow } from "../../../components/projects/projects"
-
-function ProjectMessage({ project, comment }) {
-    const [project, setProject] = useState(project)
+import './styles/desktop.css'
+import Markdown from "react-markdown"
+import remarkGfm from "remark-gfm"
+function ProjectMessage({ projectInput, comment }) {
+    const [project, setProject] = useState(projectInput)
     const [windowProject, setWindowProject] = useState(false)
-
-    const [projectsView, setProjectsView] = useState([])
-    const projectsContainerRef = useRef()
-    const rows = 1
-    const size = 300
-
 
     return (
         <section className="projectMessage">
-            <p>{comment}</p>
-            <ProjectBox
-                project={project}
-                setProject={setProject}
-                setWindowProject={setWindowProject}
-                active={true}
-                translate={[0, 0]}
-                columns={1}
-            />
-            {
-                <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
-            }
+            <div className="boxProjectMessage">
+                <ProjectBox
+                    project={project}
+                    setProject={setProject}
+                    setWindowProject={setWindowProject}
+                    active={true}
+                    translate={[0, 0]}
+                    columns={1}
+                />
+            </div>
+            <h4 style={{ marginBlock: 5 }}>{projectInput.title}</h4>
+            <div className="line" />
+
+            <Markdown remarkPlugins={[remarkGfm]} >
+                {comment}
+            </Markdown>
+            {<ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />}
         </section>
     )
 }

@@ -8,10 +8,11 @@ import UserMessage from './chatComponents/message/userMessage';
 import ServerMessage from './chatComponents/message/serverMessage';
 import WaitMessage from './chatComponents/message/waitMessage';
 import { useDispatch, useSelector } from 'react-redux';
-import { addWsMessage, popWsMessage, setWs, setWsConnected, setWsMessages } from '../../redux/websocket/wsSlice';
+import { addWsMessage, popWsMessage, setWs, setWsConnected, setWsMessages } from '../redux/websocket/wsSlice';
+import { cvAssistantDomain } from '../environment/env';
 
 // const url = 'wss://dev.chat.flowychat.com/api/ws/chat';
-const url = 'ws://127.0.0.1:8080/ws/chat';
+const url = cvAssistantDomain;
 
 function connectWebSocket(url, configMessage) {
     return new Promise((resolve, reject) => {
@@ -35,7 +36,7 @@ function connectWebSocket(url, configMessage) {
     });
 }
 
-function Chat({ user = 'rb58853'}) {
+function Chat({ user = 'rb58853' }) {
     const webSocket = useSelector((state) => state.ws)
     const dispatch = useDispatch();
     const [query, setQuery] = useState('');
@@ -45,7 +46,7 @@ function Chat({ user = 'rb58853'}) {
 
     useEffect(() => {
         if (!connected) {
-            connectWebSocket(url, configMessage)
+            connectWebSocket(url, user)
                 .then((ws) => {
                     setThisWs(ws);
                     dispatch(setWs(ws))
@@ -78,7 +79,7 @@ function Chat({ user = 'rb58853'}) {
                     // Aquí puedes manejar el error, como intentar reconectar o mostrar un mensaje al usuario
                 });
         }
-    }, [configMessage, connected, dispatch, webSocket.messages]);
+    }, [connected, dispatch, webSocket.messages]);
 
     const sendMessage = () => {
         if (ws && ws.readyState === WebSocket.OPEN && query.trim() !== '') {

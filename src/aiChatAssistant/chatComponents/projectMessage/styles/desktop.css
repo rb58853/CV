@@ -1,0 +1,17 @@
+.projectMessage {
+    max-width: min(300px, 90%);
+    min-width: min(230px, 90%);
+    background-color: var(--projects-background-color);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 0px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.boxProjectMessage{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+}

@@ -2,7 +2,6 @@
   "homepage": "https://rb58853.github.io/CV",
   "name": "cv",
   "version": "0.1.0",
-  
   "private": true,
   "dependencies": {
     "@react-hook/resize-observer": "^1.2.6",
@@ -12,9 +11,11 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.1",
     "react-scripts": "5.0.1",
+    "remark-gfm": "^4.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
