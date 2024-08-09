@@ -6,6 +6,7 @@ import Projects from '../projects/projects'
 import Contact from '../contact/contact'
 import React, { useEffect, useRef } from 'react'
 import Options from '../../options/options'
+import Chat from '../../aiChatAssistant/chat'
 
 function Home() {
     const ref = React.useRef(null);
@@ -15,12 +16,13 @@ function Home() {
             <Presentation app={ref} />
 
             <div className="container">
-                <Options/>
+                <Chat />
+                {/* <Options/>
                 <About />
                 <Projects />
-                <Contact />
+                <Contact /> */}
             </div>
-            
+
         </section>
     )
 }

@@ -35,9 +35,8 @@ function connectWebSocket(url, configMessage) {
     });
 }
 
-function Chat({ id = null, store_name = "test_data" }) {
+function Chat({ user = 'rb58853'}) {
     const webSocket = useSelector((state) => state.ws)
-    const configMessage = `{"store_name": "${webSocket.store}", "chat_id": ${id ? id : '"None"'}}`
     const dispatch = useDispatch();
     const [query, setQuery] = useState('');
 

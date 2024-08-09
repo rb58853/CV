@@ -5,7 +5,7 @@ import './styles/mobile.css'
 import '../../styles/style.css'
 import env from '../../environment/env'
 import { useSize } from '../../hooks/useSize'
-import {InfoBox} from '../about/about'
+import { InfoBox } from '../about/about'
 import { studentInfo } from '../../environment/data/about'
 
 function Projects() {
@@ -127,7 +127,7 @@ function Container({ setProject, setWindowProject, skill }) {
     )
 }
 
-function ProjectBox({ project, setProject, setWindowProject, active, translate, columns }) {
+export function ProjectBox({ project, setProject, setWindowProject, active, translate, columns }) {
     const [stateTranslate, setStateTranslate] = useState(translate)
     const [activeInfo, setActiveInfo] = useState('')
     const [activeButton, setActiveButton] = useState('')
@@ -187,7 +187,7 @@ function ProjectBox({ project, setProject, setWindowProject, active, translate, 
     )
 }
 
-function ProjectWindow({ project, setWindowProject, windowProject }) {
+export function ProjectWindow({ project, setWindowProject, windowProject }) {
     const carruselRef = React.useRef();
     const carruselImagesRef = React.useRef();
     const textRef = React.useRef();
@@ -225,7 +225,7 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
     return (
         <div className={`projectWindowBack ${windowProject ? 'active' : ''}`}>
             <InfoBox info={info} active={boxInfoActive} />
-            
+
             <div className={`projectWindow ${windowProject ? 'active' : ''}`}>
 
                 <div className='carruselContainer' ref={carruselRef}>
@@ -247,10 +247,10 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
 
                 <div className='proyectWindowTextSpace'>
                     {project.asStudent && <div className='asStudentFlag'
-                        style={{ backgroundColor: env.flagColors[project.asStudent-1] }}
+                        style={{ backgroundColor: env.flagColors[project.asStudent - 1] }}
 
-                        onClick={() => {setBoxInfoActive(!boxInfoActive) }}
-                        onMouseOut={() => { setBoxInfoActive(false)}}
+                        onClick={() => { setBoxInfoActive(!boxInfoActive) }}
+                        onMouseOut={() => { setBoxInfoActive(false) }}
                     >
                         <img src={process.env.PUBLIC_URL + "/images/icons/info.svg"} alt="" />
                     </div>}
@@ -291,5 +291,5 @@ function ProjectWindow({ project, setWindowProject, windowProject }) {
         </div>
     )
 }
-                   
+
 export default Projects
