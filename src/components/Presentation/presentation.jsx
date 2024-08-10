@@ -3,10 +3,12 @@ import { name } from '../../environment/data/about'
 import './styles/desktop.css'
 import './styles/mobile.css'
 import { useSize } from '../../hooks/useSize.jsx'
+import { Link } from 'react-router-dom'
 
 function Presentation({ app }) {
     const presentationRef = useRef()
-    const size = useSize(presentationRef)
+    // const size = useSize(presentationRef)
+    const [indexActive, setIndexActive] = useState(-1)
 
     return (
         <section className="presentation"
@@ -24,23 +26,38 @@ function Presentation({ app }) {
             </text>
 
             <div className='selectSpace'>
-                <div className='viewMyWork'>
-                    <button className='viewWorkButton'
-                        onClick={() => { }}>
-                        View my work
+                <Link to='/projects' className='viewMyWork' onMouseOver={() => { setIndexActive(0) }}
+                    onMouseOut={() => { setIndexActive(-1) }}
+                >
+                    <button className={`viewWorkButton ${indexActive == 0 ? 'active' : ''}`}
+                    >
+                        View my works
                     </button>
-                    <div className='viewMyWorkContain'>
-                        Cosas aqui del work
-                    </div>
-                </div>
 
-                <div className='viewMyWork'>
-                    <button className='viewWorkButton'
-                        onClick={() => { }}>
+                    <div className='viewMyWorkContain'>
+                        <img className={`backImage ${indexActive == 0 ? 'active' : ''}`}
+                            src={process.env.PUBLIC_URL + "/images/backs/work.jpg"} alt="profile" />
+                        <p>
+                            Cosas aqui del work
+                        </p>
+                    </div>
+                </Link>
+
+                <div className='viewMyWork'
+                    onMouseOver={() => { setIndexActive(1) }}
+                    onMouseOut={() => { setIndexActive(-1) }}>
+
+                    <button className={`viewWorkButton ${indexActive == 1 ? 'active' : ''}`}
+                    >
                         Chat with me
                     </button>
+
                     <div className='viewMyWorkContain'>
-                        Cosas aqui del work
+                        <img className={`backImage ${indexActive == 1 ? 'active' : ''}`}
+                            src={process.env.PUBLIC_URL + "/images/backs/work.jpg"} alt="profile" />
+                        <p>
+                            Cosas aqui del work
+                        </p>
                     </div>
                 </div>
             </div>

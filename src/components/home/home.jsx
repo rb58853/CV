@@ -1,12 +1,7 @@
 import './styles/desktop.css'
+import './styles/mobile.css'
 import Presentation from "../Presentation/presentation"
-import Bar from "../bar/bar"
-import About from '../about/about'
-import Projects from '../projects/projects'
-import Contact from '../contact/contact'
 import React, { useEffect, useRef } from 'react'
-import Options from '../../options/options'
-import Chat from '../../aiChatAssistant/chat'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Link } from 'react-router-dom'
 

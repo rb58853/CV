@@ -39,7 +39,7 @@
 
 }
 
-.viewWorkButton:hover {
+.viewWorkButton.active {
     background-color: var(--secundary-highlight-color);
     border-color: var(--secundary-highlight-color);
     color: white;
@@ -68,8 +68,12 @@
     place-items: center;
     gap: 20px;
     border: solid 1px rgba(255, 255, 255, 0.137);
-    /* cursor: pointer; */
+    cursor: pointer;
     border-radius: 5px;
+    pointer-events: auto;
+    color: var(--text-color);
+    text-decoration: none;
+
 
     transition-property: transform;
     transition-duration: 200ms;
@@ -78,11 +82,43 @@
 }
 
 .viewMyWork:hover {
-    transform: scale(1.0);
+    transform: scale(1.02);
 }
 
 .viewMyWorkContain {
     /* background-color: aquamarine; */
     width: 90%;
     margin-top: 0px;
+    position: relative;
+    flex-grow: 1;
+}
+
+.viewMyWorkContain>p {
+    position: relative;
+    z-index: 1;
+
+}
+
+.backImage {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.5;
+    filter:saturate(0) blur(10px);
+    pointer-events: none;
+
+
+    transition-property: filter, opacity;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+.backImage.active {
+    filter:saturate(1) blur(0px);
+    opacity: 1;
+    z-index: 2;
+
+
 }
