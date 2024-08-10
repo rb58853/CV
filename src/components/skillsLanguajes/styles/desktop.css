@@ -1,18 +1,20 @@
 .skillsAndLenguagesBox {
     width: 100%;
-    max-width: min(1400px,90%);
+    max-width: 90%;
     position: relative;
     display: flex;
     flex-direction: column;
     place-items: center;
     margin-top: 100px;
     margin-bottom: 100px;
+    color: var(--text-color);
+    /* background-color: rgb(97, 0, 0); */
 
 }
 
 .skillsAndLenguagesColums {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     place-content: center;
     gap: 30px;
     width: 100%;
@@ -55,7 +57,6 @@
     border-radius: 5px;
     padding: 20px;
     gap: 10px;
-    width: 85%;
 }
 
 .progressBar {

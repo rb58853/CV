@@ -11,8 +11,8 @@ function View() {
     return (<div className='skillsAndLenguagesBox'>
         <InfoBox info={info} active={boxInfoActive} />
         <div className='skillsAndLenguagesColums' >
-            {/* <Skills setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} /> */}
             <Languages setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
+            <Skills setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
         </div>
     </div>
     )

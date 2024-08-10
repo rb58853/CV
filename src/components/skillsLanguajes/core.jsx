@@ -35,9 +35,11 @@ export function Skills({ setBoxInfoActive, setInfo, boxInfoActive }) {
     })
 
     return (
-        <div className='progressBarsContainer'>
+        <div>
             <h1>SKILLS</h1>
-            {skillsView}
+            <div className='progressBarsContainer'>
+                {skillsView}
+            </div>
         </div>
     )
 }
