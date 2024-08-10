@@ -1,16 +1,16 @@
 .presentation {
-    background-color: var(--presentation-background-color);
+    /* background-color: rgba(0, 0, 0, 0.055); */
     color: white;
     display: flex;
     place-content: center;
     place-items: center;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 500;
     flex-direction: column;
-    z-index: 3;
     width: 100%;
-    min-height: 100vh;
+    place-self: center;
     margin-top: 50px;
+    border-right: solid 1px rgba(255, 255, 255, 0.11);
 }
 
 .nameText {
@@ -20,7 +20,7 @@
 .viewWorkButton {
     pointer-events: auto;
     background-color: rgba(0, 0, 0, 0);
-    border: solid 3px;
+    border: solid 1px;
     border-color: var(--presentation-button-border-color);
     padding: 15px;
     padding-inline: 30px;
@@ -30,6 +30,7 @@
     color: white;
     z-index: 3;
     max-width: 90%;
+    border-radius: 3px;
 
 
     transition-property: color, background-color, border-color;
@@ -48,25 +49,27 @@
     display: flex;
     /* height: min(700px, 100%); */
     width: 100%;
-    background-color: brown;
+    /* background-color: brown; */
     place-content: center;
     place-items: center;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    padding-block: 50px;
     gap: 5%;
 
 }
 
 .viewMyWork {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     font-size: 20px;
-    width: min(400px, 40%);
-    height: min(600px, 90%);
+    width: min(400px, 45%);
+    aspect-ratio: 3/5;
     display: flex;
     flex-direction: column;
     place-items: center;
     gap: 20px;
-    border: solid 1px white;
-    cursor: pointer;
+    border: solid 1px rgba(255, 255, 255, 0.137);
+    /* cursor: pointer; */
+    border-radius: 5px;
 
     transition-property: transform;
     transition-duration: 200ms;
@@ -75,11 +78,11 @@
 }
 
 .viewMyWork:hover {
-    transform: scale(1.01);
+    transform: scale(1.0);
 }
 
 .viewMyWorkContain {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 90%;
     margin-top: 0px;
 }

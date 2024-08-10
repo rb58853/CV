@@ -5,8 +5,8 @@ import './styles/mobile.css'
 import '../../styles/style.css'
 import env from '../../environment/env'
 import { useSize } from '../../hooks/useSize'
-import { InfoBox } from '../about/about'
 import { studentInfo } from '../../environment/data/about'
+import { InfoBox } from '../skillsLanguajes/core'
 
 function Projects() {
     const [skill, setSkill] = useState('All')

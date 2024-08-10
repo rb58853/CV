@@ -8,12 +8,6 @@
         width: 95%;
     }
 
-    .skillsAndLenguagesColums {
-        flex-direction: column;
-        gap: 30px;
-        width: 100%;
-    }
-
     .profileAbout {
         width: 100%;
         flex-direction: column;

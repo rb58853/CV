@@ -1,42 +1,77 @@
 .home {
     display: flex;
     flex-direction: row;
-    place-items: center;
-    width: 100%;
+    /* place-items: center; */
+    width: 97%;
     overflow-y: auto;
     height: 100vh;
-    background-color: var(--bar-color);
-    color:  var(--text-color);
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    position: relative;
+    color: var(--text-color);
+    gap: 20px;
 }
 
 .profile {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.116);
+    background-color: var(--bar-color);
     min-width: 33%;
-    height: 100%;
+    height: fit-content;
+    margin-top: 20px;
+    border-radius: 10px;
+    flex-shrink: 0;
 }
 
 .profilePhotoAndName {
     display: flex;
-    /* place-items: center; */
-    height: 70px;
-    background-color:chocolate ;
+    place-items: center;
+    height: 100px;
+    /* background-color: chocolate; */
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
-.profilePhotoAndName>div>h3,h4 {
-    margin-block: 3px;
+
+.profilePhotoAndName>div>h3,
+h4 {
+    margin-block: 5px;
 }
-.photo{
-    height: 100%;
+
+.photo {
+    height: 90%;
     aspect-ratio: 1/1;
     object-fit: cover;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.info{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+
+}
+.infoRow{
+    display: flex;
+    gap: 5px;
+    place-items: center;
+    /* background-color: brown; */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    
+}
+.infoRow:hover{
+    background-color: rgba(255, 255, 255, 0.055);
+}
+
+.icon{
+    font-size: 130%;
+}
+
+.aboutText{
+    margin-top: 20px;
+    margin-left: 10px;
 }

@@ -8,6 +8,9 @@
     transition-property: background-color;
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
+    margin-top: 50px;
+    flex-grow: 1;
+
 }
 
 .projectsContent {

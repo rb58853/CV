@@ -1,0 +1,9 @@
+@media(max-width:800px) {
+    .skillsAndLenguagesColums {
+        flex-direction: column;
+        place-items: center;
+
+        gap: 30px;
+        width: 100%;
+    }
+}

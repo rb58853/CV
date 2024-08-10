@@ -1,12 +1,12 @@
 :root {
-    --bar-color: rgb(40, 40, 40);
+    --bar-color: rgb(35, 35, 35, 1);
+    --background-color: rgba(30, 30, 30, 1);
 
     --line-color: rgba(255, 255, 255, 0.2);
     --text-color: rgb(240, 240, 240);
 
     --default-highlight-color: rgb(4, 194, 201);
     --secundary-highlight-color: rgb(4, 194, 201);
-    ;
 
     --presentation-background-color: rgb(30, 30, 30);
     --presentation-button-border-color: white;
@@ -15,12 +15,12 @@
     --info-box-background-color: rgb(50, 50, 50, 1);
 
     --progress-bar-background-color: rgba(255, 255, 255, 0.1);
-    --progress-bar-color: rgb(120, 125, 130);
+    --progress-bar-color:  rgb(180, 180, 180);
     --progress-bar-highlight-color: rgb(4, 194, 201);
     --progress-bar-label-color: rgb(43, 45, 45);
     --progress-bar-label-highlight-color: rgb(0, 81, 83);
 
-    --default-container-background-color: rgb(0, 0, 0, 0.08);
+    --default-container-background-color: rgb(255, 255, 255, 0.01);
 
     --projects-background-color: rgba(30, 30, 30, 1);
     --skill-label-color: rgba(200, 200, 200, 1);
