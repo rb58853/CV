@@ -1,12 +1,16 @@
 .home {
     display: flex;
     flex-direction: row;
-    /* place-items: center; */
+    place-items: center;
     width: 97%;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    /* overflow-y:visible; */
+
     height: 100vh;
     color: var(--text-color);
     gap: 20px;
+    background-color: var(--background-color);
+    margin-top: 85px;
 }
 
 .profile {
@@ -16,7 +20,7 @@
     background-color: var(--bar-color);
     min-width: 33%;
     height: fit-content;
-    margin-top: 20px;
+    margin-top: 0px;
     border-radius: 10px;
     flex-shrink: 0;
 }
@@ -43,7 +47,7 @@ h4 {
     margin-left: 10px;
 }
 
-.info{
+.info {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -52,7 +56,8 @@ h4 {
     place-items: center;
 
 }
-.infoRow{
+
+.infoRow {
     display: flex;
     gap: 5px;
     place-items: center;
@@ -64,20 +69,22 @@ h4 {
     text-decoration: none;
     width: fit-content;
     width: 97%;
-    
+
 }
-.infoRow:hover{
+
+.infoRow:hover {
     background-color: rgba(255, 255, 255, 0.055);
 }
 
-.icon{
+.icon {
     font-size: 130%;
 }
 
-.aboutText{
+.aboutText {
     margin-top: 20px;
     margin-left: 1.5%;
     margin-right: auto;
+    color: var(--text-color);
 
     /* width: 97%; */
 }

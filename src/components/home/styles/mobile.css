@@ -1,13 +1,13 @@
-@media(max-width:800px) {
+@media(max-width:900px) {
     .home {
         display: flex;
         flex-direction: column;
-        /* place-items: center; */
         width: 97%;
-        overflow-y: auto;
         height: 100vh;
         color: var(--text-color);
         gap: 20px;
-        margin-top: 40px;
+    }
+    .profile {
+        width: 90%;
     }
 }

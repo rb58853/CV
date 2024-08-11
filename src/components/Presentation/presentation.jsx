@@ -31,7 +31,7 @@ function Presentation({ app }) {
                 >
                     <button className={`viewWorkButton ${indexActive == 0 ? 'active' : ''}`}
                     >
-                        View my works
+                        View my work
                     </button>
 
                     <div className='viewMyWorkContain'>

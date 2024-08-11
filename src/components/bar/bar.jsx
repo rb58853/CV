@@ -14,7 +14,7 @@ function Bar() {
             <div className='verticalLine' />
             <Link className='buttonSection' to="/skills">SKILLS & LANGUAGES</Link>
             <div className='verticalLine' />
-            <Link className='buttonSection' to="">ABOUT</Link>
+            <Link className='buttonSection' to="/about">ABOUT</Link>
 
 
 

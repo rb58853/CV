@@ -2,7 +2,10 @@
     position: fixed;
     width: fit-content;
     top: 20px;
-    right: 1.5%;
+    /* right: 1.5%;
+    left: auto;
+    right: auto;
+     */
     max-width: 95%;
     z-index: 2;
     background-color: var(--bar-color);

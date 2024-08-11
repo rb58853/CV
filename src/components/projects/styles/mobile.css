@@ -1,4 +1,4 @@
-@media(max-width:800px) {
+@media(max-width:600px) {
     .projectsContent {
         flex-direction: column;
         width: 95%;
@@ -55,5 +55,10 @@
 
     .asStudentFlag:hover {
         scale: 1;
+    }
+
+    .buttonSkill:hover {
+        background-color: rgba(0, 0, 0, 0);
+        transition-duration: 100ms;
     }
 }

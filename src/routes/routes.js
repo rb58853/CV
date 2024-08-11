@@ -4,6 +4,7 @@ import App from '../App.jsx';
 import Home from '../components/home/home.jsx';
 import Projects from '../components/projects/projects.jsx';
 import View from '../components/skillsLanguajes/view.jsx';
+import About from '../components/about/about.jsx';
 
 
 const routes = [
@@ -18,6 +19,10 @@ const routes = [
     {
         path: "/skills",
         element: <App content={<View />} />,
+    },
+    {
+        path: "/about",
+        element: <App content={<About />} />,
     },
 ]
 

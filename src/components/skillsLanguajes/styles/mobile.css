@@ -11,4 +11,9 @@
         position: relative;
         min-width: 120px;
     }
+    .skillsAndLenguagesColums>div{
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
 }

@@ -1,18 +1,30 @@
-@media(max-width:800px) {
+@media(max-width:630px) {
 
     .presentation {
-        height: 100vh;
+        height: auto;
+
         width: 100%;
         font-size: 6vw;
         font-weight: 500;
+        /* background-color: brown; */
     }
-    
+
     .presentation>* {
         max-width: 80%;
     }
 
     .viewWorkButton {
-        font-size: 70%;
+        /* font-size: 70%; */
         border-width: 2px;
+    }
+
+    .selectSpace {
+        flex-direction: column;
+        /* background-color: blueviolet; */
+        gap: 20px;
+    }
+
+    .viewMyWork {
+        width: 90%;
     }
 }

@@ -1,45 +1,51 @@
 import './styles/desktop.css'
 import './styles/mobile.css'
 import '../../styles/style.css'
-import skills from '../../environment/data/skills.js'
-import languages from '../../environment/data/languages.js'
-import { sortDictionary, sortDictionaryByValue } from '../../utils/sortDictionary.js'
 import about from '../../environment/data/about.js'
 import { useState } from 'react'
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import Contact from '../contact/contact.jsx'
+import { aboutMe, interests, know, languages, markdown, personalInformation, studyFields } from '../../environment/data/personal.js'
 
 function About() {
-    const [info, setInfo] = useState('')
-    const [boxInfoActive, setBoxInfoActive] = useState(false)
-
     return (
         <section className='aboutBackground'>
             <div className='about'>
-                <h1 className='defaultHeader'>About</h1>
                 <div className='profileAbout'>
-                    {/* <img className='profileImage'
-                        src={process.env.PUBLIC_URL + "/images/profile.jpg"}
-                        alt="profile" /> */}
-                    <AboutText />
-                </div>
-                <div className='line' />
-
-                {/* <div className='skillsAndLenguagesBox'>
-                    <InfoBox info={info} active={boxInfoActive} />
-                    <div className='skillsAndLenguagesColums' >
-                        <Skills setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
-                        <Languages setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
+                    <div style={{ width: '100%', display: 'flex' }}>
+                        <div>
+                            <Text value={personalInformation} />
+                        </div>
+                        <div>
+                            Aqui va foto y eso
+                            <Contact />
+                        </div>
                     </div>
-                </div> */}
+
+                    <div className='line' />
+                    <Text value={aboutMe} />
+                    <div className='line' />
+                    <Text value={interests} />
+                    <div className='line' />
+                    <div className='columsOrRows'>
+                        <Text value={studyFields} />
+                        <Text value={know} />
+                    </div>
+                    <div className='line' />
+                    <Text value={languages} />
+
+                </div>
+
             </div>
         </section>
     )
 }
 
-function AboutText() {
-    const parraphs = about.split('\n').map(parraph => {
-        return <p>{parraph}</p>
-    })
-    return <div className='aboutText'> {parraphs}</div>
+function Text({ value }) {
+    return <Markdown remarkPlugins={[remarkGfm]} className='aboutText'>
+        {value}
+    </Markdown>
 }
 
 
