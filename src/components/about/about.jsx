@@ -1,12 +1,10 @@
 import './styles/desktop.css'
 import './styles/mobile.css'
 import '../../styles/style.css'
-import about from '../../environment/data/about.js'
-import { useState } from 'react'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import Contact from '../contact/contact.jsx'
-import { aboutMe, interests, know, languages, markdown, personalInformation, studyFields } from '../../environment/data/personal.js'
+import { aboutMe, interests, know, languages, personalInformation, studyFields } from '../../environment/data/personal.js'
 
 function About() {
     return (

@@ -1,6 +1,5 @@
 import './styles/desktop.css'
 import './styles/mobile.css'
-import env from '../../environment/env'
 import { Link } from 'react-router-dom'
 
 function Bar() {
@@ -9,11 +8,11 @@ function Bar() {
             <Link className='buttonSection' to="/">
                 HOME
             </Link>
-            <div className='verticalLine' />
+            {/* <div className='verticalLine' /> */}
             <Link className='buttonSection' to="/projects">PROJECTS</Link>
-            <div className='verticalLine' />
+            {/* <div className='verticalLine' /> */}
             <Link className='buttonSection' to="/skills">SKILLS & LANGUAGES</Link>
-            <div className='verticalLine' />
+            {/* <div className='verticalLine' /> */}
             <Link className='buttonSection' to="/about">ABOUT</Link>
 
 

@@ -1,0 +1,48 @@
+.yearView {
+    width: 100%;
+    overflow-x: auto;
+    padding-block: 10px;
+}
+
+.contributionsBox {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    /* background-color: rgb(10, 10, 10); */
+    width: fit-content;
+}
+
+.weekView {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.backgroundSquare {
+    position: relative;
+    height: 12px;
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    /* overflow: hidden; */
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.simpleSquare {
+    position: absolute;
+    background-color: var(--contribution-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.infoDay {
+    position: absolute;
+    top: -30px;
+    background-color: gray;
+}
+
+.month {
+    width: 12px;
+}

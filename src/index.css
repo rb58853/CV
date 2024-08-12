@@ -13,3 +13,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Cambia el ancho de la scrollbar */
+::-webkit-scrollbar {
+  width: 0px; /* Ancho de la scrollbar */
+  height: 10px;
+}
+
+/* Estilo del track (fondo de la scrollbar) */
+::-webkit-scrollbar-track {
+  background: #ffffff1c; /* Color de fondo del track */
+}
+
+/* Estilo del thumb (parte deslizante de la scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #ffffff6c; /* Color del thumb */
+}
+
+/* Cambia el color del thumb al pasar el mouse por encima */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff9c; /* Color del thumb al pasar el mouse */
+}

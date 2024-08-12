@@ -56,14 +56,14 @@ function ProgressBar({ label, icon, info, percentage, setBoxInfoActive, setInfo,
                 setBoxInfoActive(false)
             }}>
 
-            <label className={`progressBarLabel ${label == boxInfoActive ? 'highlight' : ''}`}>
+            <label className={`progressBarLabel ${label === boxInfoActive ? 'highlight' : ''}`}>
                 <Icon className='skillIcon' icon={icon} />
                 {label}
 
             </label>
 
             <div className='progressBarBackground'>
-                <div className={`progress ${label == boxInfoActive ? 'highlight' : ''}`} style={{ width: `calc(100% * ${percentage})` }} />
+                <div className={`progress ${label === boxInfoActive ? 'highlight' : ''}`} style={{ width: `calc(100% * ${percentage})` }} />
             </div>
         </div>
     )

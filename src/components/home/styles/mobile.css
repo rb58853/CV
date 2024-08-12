@@ -2,12 +2,24 @@
     .home {
         display: flex;
         flex-direction: column;
-        width: 97%;
+        width: 95%;
         height: 100vh;
         color: var(--text-color);
         gap: 20px;
+        place-items: center;
     }
+
+    .profileSection {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        margin-top: 0px;
+        flex-shrink: 0;
+        max-width: 100%;
+        /* background-color: brown; */
+    }
+
     .profile {
-        width: 90%;
+        width: calc(100%-10px);
     }
 }

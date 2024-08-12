@@ -184,20 +184,6 @@ const projects = {
         asStudent: 4,
     },
 
-    tito: {
-        skills: ['DAA'],
-        title: 'Building roads',
-        description: "Let G(v, e) be a weighted graph on vertices and edges. The goal is to find the subgraph that maximizes the sum of edge weights minus the sum of vertex weights. Subject to the constraint that if an edge belongs to the solution subgraph then both vertices connected by it also belong to the subgraph.",
-
-        languages: ["Python"],
-        features: {
-            keywords: "Algorithms analysis, best computational complex, graphs theory, greedy, graph flow."
-        },
-        images: ['/projects/tito/image.jpg'],
-        github: 'https://github.com/rb58853/Tito-el-corrupto',
-        asStudent: 4,
-    },
-
     littleArchemy: {
         skills: ['Django'],
         title: 'Little Archemy',

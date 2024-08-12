@@ -69,7 +69,7 @@ function Container({ setProject, setWindowProject, skill }) {
         if (size.width / columns < tempWidth)
             setColums(columns - 1)
 
-    }, [size])
+    }, [size,columns])
 
     useEffect(() => {
         let index = -1;
@@ -115,7 +115,7 @@ function Container({ setProject, setWindowProject, skill }) {
             }
         })
         setProjectsView(temp)
-    }, [skill, columns])
+    }, [skill, columns,setWindowProject,setProject])
 
     return (
         <div className='projectsContainer'
@@ -202,7 +202,7 @@ export function ProjectWindow({ project, setWindowProject, windowProject }) {
             left: width * indexImage,
             behavior: 'smooth'
         });
-    }, [indexImage])
+    }, [indexImage,width])
 
     useEffect(() => {
 
@@ -214,7 +214,7 @@ export function ProjectWindow({ project, setWindowProject, windowProject }) {
 
 
     const images = [];
-    project.images.map(path => {
+    project.images.forEach(path => {
         images.push(<img className='carruselImage' src={process.env.PUBLIC_URL + path} alt=""
             style={{ width: width }} />)
     })

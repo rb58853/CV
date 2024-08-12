@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { name } from '../../environment/data/about'
 import './styles/desktop.css'
 import './styles/mobile.css'
-import { useSize } from '../../hooks/useSize.jsx'
 import { Link } from 'react-router-dom'
 
 function Presentation({ app }) {
@@ -29,13 +28,13 @@ function Presentation({ app }) {
                 <Link to='/projects' className='viewMyWork' onMouseOver={() => { setIndexActive(0) }}
                     onMouseOut={() => { setIndexActive(-1) }}
                 >
-                    <button className={`viewWorkButton ${indexActive == 0 ? 'active' : ''}`}
+                    <button className={`viewWorkButton ${indexActive === 0 ? 'active' : ''}`}
                     >
                         View my work
                     </button>
 
                     <div className='viewMyWorkContain'>
-                        <img className={`backImage ${indexActive == 0 ? 'active' : ''}`}
+                        <img className={`backImage ${indexActive === 0 ? 'active' : ''}`}
                             src={process.env.PUBLIC_URL + "/images/backs/work.jpg"} alt="profile" />
                         <p>
                             Cosas aqui del work
@@ -47,13 +46,13 @@ function Presentation({ app }) {
                     onMouseOver={() => { setIndexActive(1) }}
                     onMouseOut={() => { setIndexActive(-1) }}>
 
-                    <button className={`viewWorkButton ${indexActive == 1 ? 'active' : ''}`}
+                    <button className={`viewWorkButton ${indexActive === 1 ? 'active' : ''}`}
                     >
                         Chat with me
                     </button>
 
                     <div className='viewMyWorkContain'>
-                        <img className={`backImage ${indexActive == 1 ? 'active' : ''}`}
+                        <img className={`backImage ${indexActive === 1 ? 'active' : ''}`}
                             src={process.env.PUBLIC_URL + "/images/backs/work.jpg"} alt="profile" />
                         <p>
                             Cosas aqui del work

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import socials from '../../environment/data/socials.js'
 import './styles/desktop.css'
 

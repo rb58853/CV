@@ -1,3 +1,11 @@
+@media(max-width:1020px) {
+    .viewMyWork {
+    }
+
+    .viewWorkButton {
+        font-size: 100%;
+    }
+}
 @media(max-width:630px) {
 
     .presentation {
@@ -26,5 +34,10 @@
 
     .viewMyWork {
         width: 90%;
+    }
+
+    .viewWorkButton {
+        font-size: 24px;
+    
     }
 }
