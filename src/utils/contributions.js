@@ -1,5 +1,5 @@
 import axios from 'axios';
-const TOKEN = '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xxxxxxxxxxxx'
+let TOKEN = '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xxxxxxxxxx'
 const query = `
 query($userName:String!) {
   user(login: $userName){
@@ -23,7 +23,7 @@ export async function retrieveContributionData(userName = 'rb58853') {
     query,
     variables
   };
-
+  TOKEN = TOKEN.slice(0, TOKEN.length - 10)
   const headers = {
     Authorization: `Bearer ${TOKEN}`,
     'Content-Type': 'application/json'
