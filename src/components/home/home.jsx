@@ -56,7 +56,7 @@ function Profile() {
                     <text> Havana, Cuba</text>
                 </div>
 
-                <Link className='aboutText' to="">
+                <Link className='aboutText' to="/about">
                     More about me
                 </Link>
             </div>

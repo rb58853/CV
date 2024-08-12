@@ -37,7 +37,7 @@ function Presentation({ app }) {
                         <img className={`backImage ${indexActive === 0 ? 'active' : ''}`}
                             src={process.env.PUBLIC_URL + "/images/backs/work.jpg"} alt="profile" />
                         <p>
-                            Cosas aqui del work
+                            Designed space to offer you an integrated vision of my practical experience and technical skills, evidenced in real projects executed both during my studies and in work environments.
                         </p>
                     </div>
                 </Link>
@@ -55,7 +55,11 @@ function Presentation({ app }) {
                         <img className={`backImage ${indexActive === 1 ? 'active' : ''}`}
                             src={process.env.PUBLIC_URL + "/images/backs/work.jpg"} alt="profile" />
                         <p>
-                            Cosas aqui del work
+                            <b>VPS MISSED ONLINE (IN PROCESS)</b>
+                            <p>
+                                Space to interact with my Natural Language Processing AI, designed to provide you with answers about my information, projects, or skills based on your messages. This chat facilitates smooth and direct communication with the AI, allowing you to establish an interactive and effective conversation "with me".
+                            </p>
+
                         </p>
                     </div>
                 </div>
