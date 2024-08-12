@@ -1,5 +1,5 @@
 import axios from 'axios';
-const TOKEN = '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'
+const TOKEN = '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xxxxxxxxxxxx'
 const query = `
 query($userName:String!) {
   user(login: $userName){
