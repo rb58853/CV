@@ -26,12 +26,16 @@
 
 .buttonSection {
     color: var(--text-color);
+    color: rgb(170, 170, 170);
     font-weight: 600;
     text-decoration: none;
 }
 .buttonSection:hover {
-    color: white;
+    color: var(--text-color);
 
+}
+.buttonSection.active {
+    color: var(--text-color);
 }
 
 

@@ -8,7 +8,7 @@ import { setData, setWeeks } from "../../redux/contributions/contributiosSlice";
 function ContributionsBox() {
     const reduxData = useSelector((state) => state.contributions).data
     const [data, setData] = useState(reduxData);
-    
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -16,31 +16,31 @@ function ContributionsBox() {
                 try {
                     const result = await retrieveContributionData('rb58853');
                     setData(result);
-                    
+
                 } catch (error) {
                     console.error("Error fetching data:", error);
                 }
             }
         };
-        
+
         fetchData();
     }, []);
 
 
     const total = data && data['data']['user']['contributionsCollection']['contributionCalendar']['totalContributions']
 
-    return (
-        <div  className="contributions">
-            {data && `${total} contributions in the last year`}
-            {data && <YearView data={data} />}
-        </div>
+    return (data && <div className="contributions">
+        {data && `${total} contributions in the last year`}
+        {data && <YearView data={data} />}
+    </div>
     );
 }
 
 function YearView({ data }) {
     const [currentMonth, setCurrentMonth] = useState('none')
     const dispatch = useDispatch()
-    
+    const [keyId, setKeyId] = useState(0)
+
     const myContrs = useRef(null);
 
     const scrollToRight = () => {
@@ -64,8 +64,10 @@ function YearView({ data }) {
         return
     }
 
+
     const weekViews = weeks.map(week => {
-        return <WeekView week={week} currentMonth={currentMonth} setCurrentMonth={setCurrentMonth} />
+        // setKeyId(key+1);
+        return <WeekView key={keyId} week={week} currentMonth={currentMonth} setCurrentMonth={setCurrentMonth} />
     })
 
     return <div ref={myContrs} className="yearView">

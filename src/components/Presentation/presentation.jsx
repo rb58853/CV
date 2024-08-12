@@ -1,31 +1,23 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { name } from '../../environment/data/about'
 import './styles/desktop.css'
 import './styles/mobile.css'
 import { Link } from 'react-router-dom'
 
 function Presentation({ app }) {
-    const presentationRef = useRef()
-    // const size = useSize(presentationRef)
     const [indexActive, setIndexActive] = useState(-1)
 
     return (
-        <section className="presentation"
-            ref={presentationRef}
-        >
-            <text>
-                {`Hello, I'm `}
-                <text className='nameText'>
-                    {name}
-                </text>
-                .
-            </text>
-            <text>
-                {`I'm a Computer Scientist.`}
-            </text>
+        <section className="presentation">
+            <div className='presentationText'>
+                <text>{`Hello, I'm `}</text>
+                <text className='nameText'>{name}.</text>
+                <p>{`I'm a Computer Scientist.`}</p>
+            </div>
 
             <div className='selectSpace'>
-                <Link to='/projects' className='viewMyWork' onMouseOver={() => { setIndexActive(0) }}
+                <Link to="/projects" className='viewMyWork'
+                    onMouseOver={() => { setIndexActive(0) }}
                     onMouseOut={() => { setIndexActive(-1) }}
                 >
                     <button className={`viewWorkButton ${indexActive === 0 ? 'active' : ''}`}
@@ -42,7 +34,7 @@ function Presentation({ app }) {
                     </div>
                 </Link>
 
-                <div className='viewMyWork'
+                <Link to='/chat' className='viewMyWork'
                     onMouseOver={() => { setIndexActive(1) }}
                     onMouseOut={() => { setIndexActive(-1) }}>
 
@@ -62,7 +54,7 @@ function Presentation({ app }) {
 
                         </p>
                     </div>
-                </div>
+                </Link>
             </div>
         </section>
     )

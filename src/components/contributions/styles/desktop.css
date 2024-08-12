@@ -8,7 +8,8 @@
 .yearView {
     width: 100%;
     overflow-x: auto;
-    padding-block: 10px;
+    padding-block: 5px;
+    /* background-color: blue; */
 }
 
 .contributionsBox {

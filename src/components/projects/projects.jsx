@@ -7,18 +7,21 @@ import env from '../../environment/env'
 import { useSize } from '../../hooks/useSize'
 import { studentInfo } from '../../environment/data/about'
 import { InfoBox } from '../skillsLanguajes/core'
+import { useDispatch } from 'react-redux'
+import { setSection } from '../../redux/sections/sectionSlice'
+import setSectionFunction from '../../redux/sections/functions'
 
 function Projects() {
     const [skill, setSkill] = useState('All')
     const [project, setProject] = useState(Object.values(projects)[0])
     const [windowProject, setWindowProject] = useState(false)
-
+    const dispatch = useDispatch()
     return (
-        <section className="projects">
+        <section onFocus={setSectionFunction(dispatch, 'projects')} className="projects">
             <div className="projectsContent">
-                <h1 className='defaultHeader'>
+                {/* <h1 className='defaultHeader'>
                     Projects
-                </h1>
+                </h1> */}
                 <SkillsBar setSkill={setSkill} skillState={skill} />
                 <Container setProject={setProject} setWindowProject={setWindowProject} skill={skill} />
 
@@ -69,7 +72,7 @@ function Container({ setProject, setWindowProject, skill }) {
         if (size.width / columns < tempWidth)
             setColums(columns - 1)
 
-    }, [size,columns])
+    }, [size, columns])
 
     useEffect(() => {
         let index = -1;
@@ -115,7 +118,7 @@ function Container({ setProject, setWindowProject, skill }) {
             }
         })
         setProjectsView(temp)
-    }, [skill, columns,setWindowProject,setProject])
+    }, [skill, columns, setWindowProject, setProject])
 
     return (
         <div className='projectsContainer'
@@ -202,7 +205,7 @@ export function ProjectWindow({ project, setWindowProject, windowProject }) {
             left: width * indexImage,
             behavior: 'smooth'
         });
-    }, [indexImage,width])
+    }, [indexImage, width])
 
     useEffect(() => {
 

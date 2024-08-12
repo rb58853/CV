@@ -6,16 +6,19 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 import { Link } from 'react-router-dom'
 import ContributionsBox from '../contributions/contributions'
 import socials from '../../environment/data/socials'
+import { setSection } from '../../redux/sections/sectionSlice'
+import { useDispatch } from 'react-redux'
+import setSectionFunction from '../../redux/sections/functions'
 
 function Home() {
     const ref = React.useRef(null);
-    return (
-        <section className="home"
-            ref={ref}>
-            <Profile />
-            <Presentation app={ref} />
-        </section>
-    )
+    const dispatch = useDispatch()
+    return <section onFocus={setSectionFunction(dispatch, 'home')} className="home"
+        ref={ref}>
+        <Profile />
+        <Presentation app={ref} />
+    </section>
+
 }
 
 function Profile() {

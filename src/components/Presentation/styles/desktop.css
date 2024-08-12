@@ -11,9 +11,18 @@
     max-width: 50%;
 }
 
+.presentationText{
+    text-align: center;
+}
+.presentationText>*{
+    margin-block: 0px;
+}
+
+
 .nameText {
     color: var(--default-highlight-color);
 }
+
 
 .viewWorkButton {
     pointer-events: auto;
@@ -56,7 +65,7 @@
 .viewMyWork {
     /* background-color: blueviolet; */
     font-size: 20px;
-    width: min(400px, 45%);
+    width: min(350px, 50%);
     aspect-ratio: 3/5;
     overflow-y: hidden;
     

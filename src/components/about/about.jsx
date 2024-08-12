@@ -5,10 +5,14 @@ import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import Contact from '../contact/contact.jsx'
 import { aboutMe, interests, know, languages, personalInformation, studyFields } from '../../environment/data/personal.js'
+import { useDispatch } from 'react-redux'
+import { setSection } from '../../redux/sections/sectionSlice.jsx'
+import setSectionFunction from '../../redux/sections/functions.jsx'
 
 function About() {
+    const dispatch = useDispatch()
     return (
-        <section className='aboutBackground'>
+        <section onFocus={setSectionFunction(dispatch, 'about')} className='aboutBackground'>
             <div className='about'>
                 <div className='profileAbout'>
                     <div style={{ width: '100%', display: 'flex' }}>

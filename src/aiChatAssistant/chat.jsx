@@ -10,6 +10,8 @@ import WaitMessage from './chatComponents/message/waitMessage';
 import { useDispatch, useSelector } from 'react-redux';
 import { addWsMessage, popWsMessage, setWs, setWsConnected, setWsMessages } from '../redux/websocket/wsSlice';
 import { cvAssistantDomain } from '../environment/env';
+import { setSection } from '../redux/sections/sectionSlice';
+import setSectionFunction from '../redux/sections/functions';
 
 // const url = 'wss://dev.chat.flowychat.com/api/ws/chat';
 const url = cvAssistantDomain;
@@ -89,11 +91,9 @@ function Chat({ user = 'rb58853' }) {
         }
     };
 
-    return (
-        <div>
-            {connected ? <ConnectedChat sendMessage={sendMessage} query={query} setQuery={setQuery} /> : <UnconnectedChat />}
-        </div>
-    )
+    return <div onFocus={setSectionFunction(dispatch,'chat')}>
+        {connected ? <ConnectedChat sendMessage={sendMessage} query={query} setQuery={setQuery} /> : <UnconnectedChat />}
+    </div>
 }
 
 function UnconnectedChat() {

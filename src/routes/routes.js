@@ -5,6 +5,7 @@ import Home from '../components/home/home.jsx';
 import Projects from '../components/projects/projects.jsx';
 import View from '../components/skillsLanguajes/view.jsx';
 import About from '../components/about/about.jsx';
+import Chat from '../aiChatAssistant/chat.jsx'
 
 const routes = [
     {
@@ -22,6 +23,10 @@ const routes = [
     {
         path: "/about",
         element: <App content={<About />} />,
+    },
+    {
+        path: "/chat",
+        element: <App content={<Chat />} />,
     },
 ]
 

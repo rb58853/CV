@@ -1,14 +1,13 @@
-@media(max-width:1020px) {
+@media(max-width:1150px) {
 
     .viewWorkButton {
         font-size: 100%;
     }
     .presentation {
-        max-width: 70%;
+        max-width: 100%;
     }
 }
 @media(max-width:630px) {
-
     .presentation {
         height: auto;
         max-width: 100%;
@@ -16,15 +15,24 @@
         width: 100%;
         font-size: 6vw;
         font-weight: 500;
-        /* background-color: brown; */
+
+    }
+    .presentationText{
+        width: 90%;
     }
     .viewMyWork{
         overflow-y: visible;
-
+        aspect-ratio: auto;
+        max-width: 100%;
+        width: 100%;
     }
-
-    .presentation>* {
-        max-width: 80%;
+    .selectSpace {
+        display: flex;
+        place-content: center;
+        place-items: center;
+        padding-block: 30px;
+        gap: 5%;
+        max-width: 100%;
     }
 
     .viewWorkButton {
