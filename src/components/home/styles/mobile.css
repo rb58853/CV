@@ -7,6 +7,8 @@
         color: var(--text-color);
         gap: 20px;
         place-items: center;
+        place-content: start;
+
     }
 
     .profileSection {
