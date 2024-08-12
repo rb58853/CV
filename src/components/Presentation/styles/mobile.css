@@ -3,11 +3,15 @@
     .viewWorkButton {
         font-size: 100%;
     }
+    .presentation {
+        max-width: 70%;
+    }
 }
 @media(max-width:630px) {
 
     .presentation {
         height: auto;
+        max-width: 100%;
 
         width: 100%;
         font-size: 6vw;

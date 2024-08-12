@@ -1,7 +1,8 @@
 .home {
     display: flex;
     flex-direction: row;
-    /* place-items: center; */
+    place-items: center;
+    place-content: center;
     width: 97%;
     max-width: 100vw;
     color: var(--text-color);
@@ -22,7 +23,6 @@
     min-width: 33%;
     max-width: 41%;
 
-    /* background-color: blueviolet; */
 }
 
 .profile {
