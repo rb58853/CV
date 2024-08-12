@@ -12,13 +12,14 @@ function About() {
             <div className='about'>
                 <div className='profileAbout'>
                     <div style={{ width: '100%', display: 'flex' }}>
-                        <div>
+                        <div className='personal'>
+                            <Text value={"## Personal information"} />
                             <Text value={personalInformation} />
                         </div>
-                        <div>
+                        {/* <div>
                             Aqui va foto y eso
                             <Contact />
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className='line' />

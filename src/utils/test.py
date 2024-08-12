@@ -1,7 +1,7 @@
 import requests
 
 # Define tu token de acceso personal de GitHub aquí
-TOKEN = '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'
+TOKEN = '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'
 
 # La consulta GraphQL que quieres enviar
 query = """

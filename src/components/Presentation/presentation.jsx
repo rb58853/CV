@@ -53,7 +53,7 @@ function Presentation({ app }) {
 
                     <div className='viewMyWorkContain'>
                         <img className={`backImage ${indexActive === 1 ? 'active' : ''}`}
-                            src={process.env.PUBLIC_URL + "/images/backs/work.jpg"} alt="profile" />
+                            src={process.env.PUBLIC_URL + "/images/backs/chat.jpg"} alt="profile" />
                         <p>
                             <b>VPS MISSED ONLINE (IN PROCESS)</b>
                             <p>

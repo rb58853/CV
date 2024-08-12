@@ -1,3 +1,9 @@
+@media(max-width:1060px) {
+    .personal>* {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media(max-width:800px) {
     .about {
         display: flex;
@@ -32,4 +38,17 @@
 
     }
 
+    .personal>*>* {
+        width: auto;
+    }
+
+    .personal>h1 {
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:630px) {
+    .personal>* {
+        grid-template-columns: 1fr;
+    }
 }

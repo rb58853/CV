@@ -1,10 +1,10 @@
 .aboutBackground {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     place-items: center;
     flex-direction: column;
     padding-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 70px;
     transition-property: background-color;
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
@@ -35,7 +35,6 @@
 
 .aboutText {
     /* background-color: brown; */
-    min-width: 60%;
     flex-grow: 1;
     color: var(--text-color);
 }
@@ -58,4 +57,23 @@
 .columsOrRows {
     display: flex;
     width: 100%;
+}
+
+.personal>* {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: nowrap;
+}
+
+.personal>*>* {
+    margin-right: 20px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.personal>h1{
+    display: block;
+    width: fit-content;
+    margin-left: 10px;
+
 }

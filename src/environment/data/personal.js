@@ -36,8 +36,7 @@
 //     ]
 // }
 
-export const personalInformation = "## Personal Information\n\n\
-\
+export const personalInformation = "\n\n\
 **Name:** Raúl Beltrán Gómez  \n\n\
 **University:** University of Havana  \n\n\
 **Bachelor's Degree:** Computer Science  \n\n\
