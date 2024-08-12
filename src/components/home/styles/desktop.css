@@ -20,7 +20,7 @@
     margin-top: 0px;
     flex-shrink: 0;
     min-width: 33%;
-    max-width: 40%;
+    max-width: 41%;
 
     /* background-color: blueviolet; */
 }
@@ -63,7 +63,11 @@ h4 {
     flex-direction: column;
     gap: 5px;
     place-items: center;
+}
 
+.info>div{
+    cursor:default;
+    /* pointer-events: none; */
 }
 
 .infoRow {
@@ -96,4 +100,11 @@ h4 {
     color: var(--text-color);
 
     /* width: 97%; */
+}
+
+.plusInfo{
+    border: solid 1px rgba(255, 255, 255, 0.151);
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 10px;
 }

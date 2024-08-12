@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { retrieveContributionData } from "../../utils/contributions";
 import './styles/desktop.css'
 import './styles/mobile.css'
@@ -8,7 +8,7 @@ import { setData, setWeeks } from "../../redux/contributions/contributiosSlice";
 function ContributionsBox() {
     const reduxData = useSelector((state) => state.contributions).data
     const [data, setData] = useState(reduxData);
-    const dispatch = useDispatch()
+    
 
     useEffect(() => {
         const fetchData = async () => {
@@ -16,13 +16,13 @@ function ContributionsBox() {
                 try {
                     const result = await retrieveContributionData('rb58853');
                     setData(result);
-
+                    
                 } catch (error) {
                     console.error("Error fetching data:", error);
                 }
             }
         };
-
+        
         fetchData();
     }, []);
 
@@ -30,8 +30,8 @@ function ContributionsBox() {
     const total = data && data['data']['user']['contributionsCollection']['contributionCalendar']['totalContributions']
 
     return (
-        <div className="contributions">
-            {data &&`${total} contributions in the last year`}
+        <div  className="contributions">
+            {data && `${total} contributions in the last year`}
             {data && <YearView data={data} />}
         </div>
     );
@@ -40,11 +40,20 @@ function ContributionsBox() {
 function YearView({ data }) {
     const [currentMonth, setCurrentMonth] = useState('none')
     const dispatch = useDispatch()
+    
+    const myContrs = useRef(null);
+
+    const scrollToRight = () => {
+        if (myContrs.current) {
+            myContrs.current.scrollLeft = myContrs.current.scrollWidth - myContrs.current.clientWidth;
+        }
+    };
 
     let weeks = useSelector((state) => state.contributions).weeks
 
     useEffect(() => {
         dispatch(setData(data))
+        scrollToRight();
     }, [data])
 
     try {
@@ -59,7 +68,7 @@ function YearView({ data }) {
         return <WeekView week={week} currentMonth={currentMonth} setCurrentMonth={setCurrentMonth} />
     })
 
-    return <div className="yearView">
+    return <div ref={myContrs} className="yearView">
         <div className="contributionsBox">
             {weekViews}
         </div>

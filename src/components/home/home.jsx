@@ -5,6 +5,7 @@ import React from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Link } from 'react-router-dom'
 import ContributionsBox from '../contributions/contributions'
+import socials from '../../environment/data/socials'
 
 function Home() {
     const ref = React.useRef(null);
@@ -32,16 +33,21 @@ function Profile() {
             <div className='line' />
 
             <div className='info'>
-                <a href='sadass' className='infoRow'>
+                <a href={socials['cv']} className='infoRow'>
+                    <Icon className='icon' icon="mdi:document" />
+                    <text> Curriculum vitae</text>
+                </a>
+
+                <a href={socials['github']} className='infoRow'>
                     <Icon className='icon' icon="bi:github" />
                     <text> rb58853</text>
                 </a>
-                <a href='sadass' className='infoRow'>
+                <a href={socials['telegram']} className='infoRow'>
                     <Icon className='icon' icon="mdi:telegram" />
                     <text> @rb58853</text>
                 </a>
 
-                <a href='sadass' className='infoRow'>
+                <a href={socials['gmail']} className='infoRow'>
                     <Icon className='icon' icon="mdi:gmail" />
                     <text> rb58853@gmail.com</text>
                 </a>
@@ -51,10 +57,24 @@ function Profile() {
                     <text> +53 58486223</text>
                 </div>
 
-                <div className='infoRow'>
+
+                <a href={socials['loc']} className='infoRow'>
                     <Icon className='icon' icon="mdi:location" />
                     <text> Havana, Cuba</text>
+                </a>
+
+                <div className='infoRow'>
+                    <Icon className='icon' icon="ph:building-apartment-fill" />
+                    <text> MATCOM, University of Havana</text>
                 </div>
+
+                <div className='infoRow'>
+                    <Icon className='icon' icon="hugeicons:passport" />
+                    <text> Cuban 🇨🇺 | Spanish 🇪🇸</text>
+                </div>
+
+
+
 
                 <Link className='aboutText' to="/about">
                     More about me
@@ -62,6 +82,15 @@ function Profile() {
             </div>
         </div>
         <ContributionsBox />
+        <PlusInfo />
+    </div>
+}
+
+function PlusInfo() {
+    return <div className='plusInfo'>
+        <a href='https://user-badge.committers.top/cuba/rb58853'>
+            <img src="https://user-badge.committers.top/cuba/rb58853.svg" alt="" />
+        </a>
     </div>
 }
 export default Home

@@ -43,7 +43,7 @@ export const personalInformation = "\n\n\
 **GitHub:** [rb58853](https://github.com/rb58853)  \n\n\
 **Gmail:** rb58853@gmail.com  \n\n\
 **Telegram:** [@rb58853](https://t.me/rb58853)  \n\n\
-**Citizenship:** Cuban, Spanish  \n\n\
+**Citizenship:** Cuban 🇨🇺 | Spanish 🇪🇸 \n\n\
 **Location:** Havana, Cuba  \n\n\
 **Phone:** +53 58486223  \n\n\
 "
