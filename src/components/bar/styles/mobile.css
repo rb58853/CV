@@ -1,7 +1,7 @@
 @media(max-width:900px) {
     .bar {
         position: fixed;
-        
+
         left: auto;
         right: auto;
 
@@ -9,15 +9,22 @@
         max-width: 100%;
         z-index: 2;
         background-color: var(--bar-color);
-   }
+    }
 
 }
 
 @media(max-width:500px) {
     .bar {
-        top: 0px;
+        top: auto;
+        bottom: 0;
         width: 100%;
+        height: 65px;
+        font-size: 45px;
+        place-items: center;
+        border-top: solid 1px rgba(255, 255, 255, 0.219);
+        border-radius: 0px;
     }
+
     .barContent {
         font-size: 90%;
         display: flex;
@@ -25,8 +32,10 @@
         height: 25px;
         place-items: center;
         padding: 10px;
-        gap: 10px;
-
+        gap: 0px;
+        place-content: space-between;
+        max-width: 100%;
+        width: 80%;
     }
 
     .verticalLine {
@@ -34,5 +43,13 @@
         height: 100%;
         width: 1px;
         background-color: rgba(255, 255, 255, 0.281);
+    }
+
+    *.mobile {
+        display: block;
+    }
+
+    *.desktop {
+        display: none;
     }
 }

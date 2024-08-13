@@ -38,6 +38,7 @@
     z-index: 3;
     max-width: 90%;
     border-radius: 3px;
+    z-index: 0;
 
 
     transition-property: color, background-color, border-color;

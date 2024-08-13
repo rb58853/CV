@@ -4,15 +4,12 @@
     display: flex;
     place-items: center;
     flex-direction: column;
-    padding-bottom: 100px;
     transition-property: background-color;
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
     margin-top: 85px;
-    /* background-color: brown; */
-    flex-grow: 1;
     overflow-y: hidden;
-
+    height: fit-content;
 }
 
 .projectsContent {
@@ -22,6 +19,7 @@
     place-items: center;
     gap: 20px;
     width: min(max(90%, 800px), max(1400px, 120vh));
+
 }
 
 .skillsBar {

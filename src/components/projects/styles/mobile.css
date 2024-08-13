@@ -12,7 +12,7 @@
     .switchImageButton {
         display: none;
     }
-    
+
     .viewOnGithub {
         padding: 0px;
         padding-inline: 5px;
@@ -20,19 +20,21 @@
         font-weight: 600;
         width: fit-content;
     }
+
     .endBar {
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
         margin-top: auto;
         margin-bottom: 20px;
-    
+
         place-content: flex-start;
     }
 
     .projectBoxInfo>h1 {
         font-size: 14px;
     }
+
     .projectBoxInfo>text {
         font-size: 12px;
     }
@@ -44,6 +46,7 @@
     .skillsBar {
         scrollbar-width: none;
     }
+
     .viewProjectButton {
         font-size: 13px;
         margin-top: 10%;
@@ -61,4 +64,12 @@
         background-color: rgba(0, 0, 0, 0);
         transition-duration: 100ms;
     }
+}
+
+@media(max-width:500px) {
+    .projects {
+        margin-top: 10px;
+        margin-bottom: 80px;
+    }
+
 }

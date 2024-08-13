@@ -3,7 +3,7 @@
     display: flex;
     place-items: center;
     flex-direction: column;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     margin-top: 70px;
     transition-property: background-color;
     transition-duration: 500ms;

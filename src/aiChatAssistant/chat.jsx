@@ -12,6 +12,7 @@ import { addWsMessage, popWsMessage, setWs, setWsConnected, setWsMessages } from
 import { cvAssistantDomain } from '../environment/env';
 import { setSection } from '../redux/sections/sectionSlice';
 import setSectionFunction from '../redux/sections/functions';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 // const url = 'wss://dev.chat.flowychat.com/api/ws/chat';
 const url = cvAssistantDomain;
@@ -91,7 +92,8 @@ function Chat({ user = 'rb58853' }) {
         }
     };
 
-    return <div onFocus={setSectionFunction(dispatch,'chat')}>
+
+    return <div onFocus={setSectionFunction(dispatch, 'chat')} className='fullChatSpace'>
         {connected ? <ConnectedChat sendMessage={sendMessage} query={query} setQuery={setQuery} /> : <UnconnectedChat />}
     </div>
 }
@@ -137,8 +139,8 @@ function SendMessageToChat({ sendMessage, query, setQuery }) {
             <button className='buttonSendMesage'
                 onClick={() => { sendMessage() }}
             >
-                <img style={{ width: '100%', height: 'auto' }}
-                    src={process.env.PUBLIC_URL + "/icons/dark/send.svg"} alt="" />
+                <Icon className='icon' icon="mdi:send"
+                    style={{ width: '100%', height: 'auto', color: 'white' }} />
             </button>
         </div>
     </div>

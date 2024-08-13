@@ -12,6 +12,10 @@
     /* background-color: rgba(0, 0, 0, 0.1); */
     border-radius: 5px;
     backdrop-filter: blur(20px);
+    place-content: center;
+    display: flex;
+    z-index: 10;
+
 }
 
 .barContent {
@@ -30,10 +34,12 @@
     font-weight: 600;
     text-decoration: none;
 }
+
 .buttonSection:hover {
     color: var(--text-color);
 
 }
+
 .buttonSection.active {
     color: var(--text-color);
 }
@@ -45,6 +51,10 @@
     background-color: rgba(255, 255, 255, 0.219);
 }
 
-.verticalLine{
+.verticalLine {
+    display: none;
+}
+
+*.mobile {
     display: none;
 }

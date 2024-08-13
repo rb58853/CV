@@ -85,7 +85,7 @@ function Profile() {
             </div>
         </div>
         <ContributionsBox />
-        <PlusInfo />
+        {/* <PlusInfo /> */}
     </div>
 }
 
