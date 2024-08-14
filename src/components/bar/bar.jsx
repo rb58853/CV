@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import './styles/desktop.css'
 import './styles/mobile.css'
 import { Link } from 'react-router-dom'
-import { setSection } from '../../redux/sections/sectionSlice'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 function Bar() {

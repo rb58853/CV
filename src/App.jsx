@@ -1,9 +1,11 @@
 import { Provider } from 'react-redux';
 import './App.css';
 import './styles/style.css'
+import './styles/responsive.css'
 import './environment/styles/dark.css'
 import { store } from './redux/store';
 import Bar from './components/bar/bar';
+import { ChatButton } from './components/bar/floatButtons';
 
 function App({ content }) {
 
@@ -11,6 +13,7 @@ function App({ content }) {
     <div className="App">
       <Provider store={store}>
         <Bar />
+        <ChatButton />
         {content}
       </Provider>
     </div>
