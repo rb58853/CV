@@ -10,6 +10,8 @@
     background-color: var(--background-color);
     /* background-color: aqua; */
     margin-top: 85px;
+    /* background-color: wheat; */
+    min-height: 90vh;
 }
 
 .profileSection {

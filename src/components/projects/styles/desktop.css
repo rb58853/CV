@@ -19,7 +19,6 @@
     place-items: center;
     gap: 20px;
     width: min(max(90%, 800px), max(1400px, 120vh));
-
 }
 
 .skillsBar {

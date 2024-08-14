@@ -1,12 +1,18 @@
-
 .App {
   text-align: left;
   display: flex;
   flex-direction: column;
   place-items: center;
-  place-content: center;
+  place-content: start;
   background-color: var(--background-color);
   min-height: 100vh;
+}
+
+@media(max-width:500px) {
+  .App {
+    place-content: flex-start;
+
+  }
 }
 
 .App-header {
@@ -28,6 +34,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

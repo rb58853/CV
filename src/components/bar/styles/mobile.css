@@ -52,4 +52,13 @@
     *.desktop {
         display: none;
     }
+    .buttonSection {
+        color: var(--text-color);
+    }
+    .buttonSection:hover {
+        color: var(--default-highlight-color);
+    }
+    .buttonSection.active {
+        color: var(--default-highlight-color);
+    }
 }

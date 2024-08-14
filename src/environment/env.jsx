@@ -1,4 +1,4 @@
-export const cvAssistantDomain = 'ws://127.0.0.1:8000/api/v1/open_chat'
+export const cvAssistantDomain = 'ws://192.168.1.251:8000/api/v1/open_chat'
 
 const env = {
     boxProjectMinWidth: 300,

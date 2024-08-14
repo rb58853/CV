@@ -33,6 +33,10 @@ function Bar() {
                 </text>
                 <Icon className='iconSection mobile' icon={'akar-icons:person'} />
             </Link>
+
+            <Link className={`buttonSection mobile ${section == 'chat' ? 'active' : ''}`} to="/chat">
+                <Icon className='iconSection mobile' icon={'ci:chat'} />
+            </Link>
         </div>
     </div>
 }
