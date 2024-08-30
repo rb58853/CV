@@ -95,6 +95,7 @@ function Chat({ user = 'rb58853' }) {
 
     return <div onFocus={setSectionFunction(dispatch, 'chat')} className='fullChatSpace'>
         {connected ? <ConnectedChat sendMessage={sendMessage} query={query} setQuery={setQuery} /> : <UnconnectedChat />}
+        <BackButton />
     </div>
 }
 
@@ -102,8 +103,8 @@ function UnconnectedChat() {
     return (
         <div className='chatBox disconnected'>
             <img src={process.env.PUBLIC_URL + "/gifs/loading.gif"} alt="connecting"
-                style={{ width: "70px", height: "70px" }} />
-            <text style={{ fontSize: '80%', marginTop: '20px' }}>
+                style={{ width: "90px", height: "90px" }} />
+            <text style={{ fontSize: '80%', marginTop: '20px', color: 'rgb(47, 153, 255)', fontWeight: 100 }}>
                 CONNECTING
             </text>
         </div>)
@@ -144,6 +145,10 @@ function SendMessageToChat({ sendMessage, query, setQuery }) {
             </button>
         </div>
     </div>
+}
+
+function BackButton() {
+    return <Icon className='backButton' icon={'mdi:arrow-left-thick'} />
 }
 
 export default Chat

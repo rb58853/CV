@@ -7,6 +7,7 @@ const initialState = {
     debug: false,
     store: 'padel_store_gpt',
     indexStore: 0,
+    floatButton: 'active',
 };
 
 
@@ -37,9 +38,12 @@ export const wsSlice = createSlice({
         },
         setIndexStore: (state, action) => {
             state.indexStore = action.payload;
+        },
+        setFloatButton: (state, action) => {
+            state.floatButton = action.payload;
         }
     }
 });
 
-export const { setWs, setWsConnected, setWsMessages, addWsMessage, popWsMessage, setDebug, setStore, setIndexStore } = wsSlice.actions;
+export const { setWs, setWsConnected, setWsMessages, addWsMessage, popWsMessage, setDebug, setStore, setIndexStore, setFloatButton } = wsSlice.actions;
 export default wsSlice.reducer;

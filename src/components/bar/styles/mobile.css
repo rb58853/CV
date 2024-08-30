@@ -23,6 +23,7 @@
         place-items: center;
         border-top: solid 1px rgba(255, 255, 255, 0.219);
         border-radius: 0px;
+        background-color: rgb(20, 20, 22);
     }
 
     .barContent {
