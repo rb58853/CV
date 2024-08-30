@@ -7,6 +7,7 @@ export function ChatButton() {
     const activeState = useSelector((state) => state.ws).floatButton
 
     return <Link to='/chat'>
-        <Icon className={`chatButton desktop ${activeState}`} icon={'ci:chat'} />
+        <Icon className={`chatButton desktop`} icon={'ci:chat'} />
+        {/* <Icon className={`chatButton desktop ${activeState}`} icon={'ci:chat'} /> */}
     </Link>
 }
