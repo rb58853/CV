@@ -5,33 +5,21 @@
 }
 
 .waitMessage {
-    /* background-color: rgb(255, 255, 255, 0.04); */
-    /* margin-bottom: 15px; */
-    /* border-radius: 5px; */
-    /* padding: 5px; */
     display: flex;
     flex-direction: column;
-    /* place-content: center; */
+    place-content: center;
     place-items: center;
     border-radius: 50px;
-
-    /* overflow: hidden; */
-    /* background-color: aqua; */
+    height: 25px;
+    width: 120px;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 30px;
+    place-self: center;
 }
 
 .waitMessageFloat {
-    /* background-color: rgb(701, 1221, 910, 0.2); */
-    width: 100px;
-    place-self: start;
-    margin-left: 10px;
-    place-self: center;
-    margin-top: 0;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
-    /* height: 40px; */
-    /* border-radius: 50px; */
-    /* padding-inline: 20px; */
-    /* border: 1px solid rgb(255,255,255,1); */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+    width: 200px;
 }
 
 .waitMessageFloat.other {
@@ -44,7 +32,9 @@
 
 .userMessage {
     background-color:var(--my-messages-background-color);
-    background-image: linear-gradient(to bottom, rgb(0, 111, 155), rgb(7, 158, 163));
+    background-image: linear-gradient(to bottom, rgb(12, 129, 175), rgb(0, 247, 255));
+    color: black;
+    /* font-weight: 600; */
     border-radius: 7px;
     padding: 10px;
 }

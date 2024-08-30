@@ -3,12 +3,6 @@ function WaitMessage() {
     return (
         <div className="waitMessage">
             <img className='waitMessageFloat' src={process.env.PUBLIC_URL+ "/gifs/message.gif"} alt="connecting" />
-            {/* <img className='waitMessageFloat' src={process.env.PUBLIC_URL+ "/gifs/messages-typing.gif"} alt="connecting" /> */}
-            {/* <div>
-                <img className='waitMessageFloat other' src={process.env.PUBLIC_URL + "/gifs/waitMessage.gif"} alt="connecting" />
-                <img className='waitMessageFloat other' src={process.env.PUBLIC_URL + "/gifs/waitMessage.gif"} alt="connecting" />
-                <img className='waitMessageFloat other' src={process.env.PUBLIC_URL + "/gifs/waitMessage.gif"} alt="connecting" />
-            </div> */}
         </div>
     )
 }

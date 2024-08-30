@@ -25,7 +25,7 @@ function ProjectMessage({ projectInput, comment }) {
             <Markdown remarkPlugins={[remarkGfm]} >
                 {comment}
             </Markdown>
-            {<ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />}
+            <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
         </section>
     )
 }

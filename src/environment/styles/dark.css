@@ -1,7 +1,7 @@
 :root {
     --bar-color: rgb(25, 25, 29, 1);
     --background-color: rgba(20, 20, 22, 1);
-    --chat-background-color: rgba(15, 15, 20, 1);
+    --chat-background-color: rgb(25, 25, 28, 1);
 
     --line-color: rgba(255, 255, 255, 0.2);
     --text-color: rgb(240, 240, 240);
@@ -33,6 +33,6 @@
     --project-window-color: rgba(30, 30, 30);
 
     --my-messages-background-color: rgb(4, 104, 111);
-    --input-message-backgroundcolor: rgb(25, 25, 28, 1)
+    --input-message-backgroundcolor: rgb(35, 35, 38, 1)
 
 }
