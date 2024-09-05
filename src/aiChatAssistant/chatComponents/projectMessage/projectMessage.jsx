@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import { ProjectBox, ProjectWindow } from "../../../components/projects/projects"
+import { ProjectWindow } from "../../../components/projects/projects"
 import './styles/desktop.css'
 import Markdown from "react-markdown"
 import remarkGfm from "remark-gfm"
@@ -7,18 +7,18 @@ function ProjectMessage({ projectInput, comment }) {
     const [project, setProject] = useState(projectInput)
     const [windowProject, setWindowProject] = useState(false)
 
+
     return (
-        <section className="projectMessage">
-            <div className="boxProjectMessage">
-                <ProjectBox
-                    project={project}
-                    setProject={setProject}
-                    setWindowProject={setWindowProject}
-                    active={true}
-                    translate={[0, 0]}
-                    columns={1}
-                />
-            </div>
+        <section className="projectMessage"
+            onClick={() => {
+                if (!windowProject) {
+                    setProject(project)
+                    setWindowProject(true)
+                }
+            }}
+        >
+            <SimpleProjectOverview project={project} />
+
             <h4 style={{ marginBlock: 5 }}>{projectInput.title}</h4>
             <div className="line" />
 
@@ -30,4 +30,14 @@ function ProjectMessage({ projectInput, comment }) {
     )
 }
 
+function SimpleProjectOverview({ project }) {
+    return <div className="boxProjectMessage">
+        {
+            project.image
+                ? <img className="imageProjectOverview" src={process.env.PUBLIC_URL + project.image} alt="" />
+                : project.images[0] && <img className="imageProjectOverview" src={process.env.PUBLIC_URL + project.images[0]} alt='' />
+        }
+
+    </div>
+}
 export default ProjectMessage

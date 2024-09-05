@@ -148,7 +148,9 @@ function SendMessageToChat({ sendMessage, query, setQuery }) {
 }
 
 function BackButton() {
-    return <Icon className='backButton' icon={'mdi:arrow-left-thick'} />
+    return <Icon className='backButton' icon={'mdi:arrow-left-thick'}
+        onClick={() => { window.history.back() }}
+    />
 }
 
 export default Chat

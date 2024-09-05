@@ -100,7 +100,9 @@ function WeekView({ week, currentMonth, setCurrentMonth }) {
 }
 
 function DayView({ day }) {
-    const opacity = day['contributionCount'] / 12
+    let opacity = day['contributionCount'] / 12
+    if (day['contributionCount'] > 0)
+        opacity = Math.max(0.15, opacity)
 
     return <div className="backgroundSquare">
         <div className="simpleSquare" style={{ opacity: opacity }}>

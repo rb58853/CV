@@ -1,5 +1,5 @@
 .fullChatSpace {
-    background-color: var(--background-color);
+    background-color: var(--chat-background-color);
     display: flex;
     place-content: center;
     width: 100%;

@@ -56,7 +56,7 @@
         color: var(--default-highlight-color);
     }
 
-    .chatButton {
+    .chatButton.active {
         display: none;
     }
 }

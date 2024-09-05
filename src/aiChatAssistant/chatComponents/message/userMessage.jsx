@@ -1,4 +1,5 @@
 import './styles/desktop.css'
+// import './styles/mobile.css'
 function UserMessage({ text }) {
     return (
         <div className="userMessage">
