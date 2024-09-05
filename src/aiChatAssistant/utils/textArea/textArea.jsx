@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import './styles/desktop.css';
 
-const AutoResizeTextarea = ({ query, setQuery, sendMessage }) => {
+const AutoResizeTextarea = ({ query, setQuery, sendMessage, setHeight }) => {
     const textareaRef = useRef(null);
 
     useEffect(() => {
@@ -11,6 +11,7 @@ const AutoResizeTextarea = ({ query, setQuery, sendMessage }) => {
                 const scrollHeight = textareaRef.current.scrollHeight;
                 const height = Math.min(scrollHeight, 250)
                 textareaRef.current.style.height = `${height}px`;
+                setHeight(`${height}px`)
             }
         };
 

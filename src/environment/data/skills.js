@@ -30,7 +30,7 @@ const skills =
         label: 'ML',
         info: 'Machine Learning (ML) is a branch of artificial intelligence (AI) that focuses on developing computer systems capable of learning from data and improving their performance over time without needing to be explicitly programmed. It is applicable across a wide range of industries, including healthcare, defense, financial services, marketing, and security services. Machine learning is a rapidly growing field with numerous research and development opportunities',
         skill: 85,
-        icon: 'carbon:machine-learning-model'
+        icon: 'logos:tensorflow'
     },
 
     net: {
@@ -44,7 +44,7 @@ const skills =
         label: 'IRS',
         info: 'Information retrieval systems are tools or techniques that allow users to search and retrieve information from a collection of documents or databases. This process begins when a user makes a query to the system, which is a formal statement of the need for information. Information retrieval systems are fundamental in various applications, such as internet search engines, recommendation systems, knowledge management systems, and more',
         skill: 85,
-        icon: 'flat-color-icons:document'
+        icon: 'logos:typesense-icon'
     },
 
     daa: {
@@ -71,8 +71,8 @@ const skills =
     os: {
         label: 'OS',
         info: 'Operating systems are software programs that manage the hardware resources of a computer, such as the CPU, memory, storage, and input/output devices. Working with operating systems through a shell is a way to interact with the operating system through text commands',
-        skill: 35,
-        icon: 'mdi:linux'
+        skill: 45,
+        icon: 'logos:debian'
     },
 
     networks: {
@@ -106,6 +106,12 @@ const skills =
         info: 'Flutter is a UI toolkit developed by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language and provides a rich set of pre-designed widgets that make it easy to create complex custom interfaces. Flutter is known for its fast development cycle, expressive and flexible UI, and native performance.',
         skill: 40,
         icon: 'logos:flutter'
+    },
+    docker: {
+        label: 'Docker',
+        info: 'Docker is a lightweight container system that allows application and service virtualization. Its main goal is to facilitate efficient and consistent development, deployment, and execution of software across various environments.',
+        skill: 40,
+        icon: 'logos:docker-icon'
     },
 }
 export default skills

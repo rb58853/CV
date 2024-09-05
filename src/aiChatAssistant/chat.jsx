@@ -123,19 +123,21 @@ function ChatHistory() {
 
     return <div className='historySpaceChatBox'>
         <div className='historySpaceChatBoxContent'>
-            {/* {messages} */}
+            <div style={{ height: '50px', width: '100%'}} />
             {webSocket.messages}
         </div>
     </div>
 }
 
 function SendMessageToChat({ sendMessage, query, setQuery }) {
-    const inputMessage = <AutoResizeTextarea query={query} setQuery={setQuery} sendMessage={sendMessage} />
+    const [height, setHeight] = useState('100 px');
+
+    const inputMessage = <AutoResizeTextarea query={query} setQuery={setQuery} sendMessage={sendMessage} setHeight={setHeight} />
 
     return <div className='inputMessageSpace'>
-        {/* <div className='line' /> */}
+        <div style={{ height: height, marginBottom: '10px', paddingTop: '20px' }} />
+
         <div className='inputMessageSpaceContent'>
-            {/* <textarea className='inputMessage' type="text" placeholder='send message'  /> */}
             {inputMessage}
             <button className='buttonSendMesage'
                 onClick={() => { sendMessage() }}
