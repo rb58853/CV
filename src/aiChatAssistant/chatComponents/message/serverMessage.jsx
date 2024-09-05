@@ -4,27 +4,36 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import ProjectMessage from '../projectMessage/projectMessage';
 import projects from '../../../environment/data/projects';
+import { useState } from 'react';
+import { ProjectWindow } from '../../../components/projects/projects';
 
 
 function ServerMessage({ data }) {
-    const ws = useSelector((state) => state.ws)
+    const [windowProject, setWindowProject] = useState(false)
+    const [project, setProject] = useState(Object.values(projects).length > 0 ? Object.values(projects)[0] : null)
+
     const header = data['response']
 
     let projectsView = []
     if (Object.keys(data['projects']).length > 0) {
         const projectsData = data['projects']
         projectsView = Object.keys(projectsData).map((key) => {
-            return <ProjectMessage key={key} projectInput={projects[key]} comment={projectsData[key]} />
+            return <ProjectMessage key={key} project={projects[key]} comment={projectsData[key]} windowProject={windowProject} setWindowProject={setWindowProject} setProject={setProject} />
         })
     }
     return (
         <div className="serverMessage">
             {data && <Message projects={projectsView} header={header} />}
             <div className="line" />
+            {
+                project &&
+                <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
+            }
         </div>
     )
 }
 function Message({ projects, header }) {
+
     return (
         <div>
             <Markdown remarkPlugins={[remarkGfm]} className='headerServer'>

@@ -231,8 +231,8 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    height: 0vh;
-    width: 0vw;
+    height: 100vh;
+    width: 100vw;
     background-color: rgba(0, 0, 0, 0.467);
     backdrop-filter: blur(10px);
     /* top: 0px; */
@@ -250,8 +250,6 @@
 }
 
 .projectWindowBack.active {
-    height: 100vh;
-    width: 100vw;
     pointer-events: auto;
     opacity: 1;
     /* scale: 1; */
@@ -260,10 +258,9 @@
 
 .projectWindow {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    width: min(80vh, 100%);
+    height: min(min(85vh, 110vw), 100%);
     display: flex;
-    width: 0px;
-    height: 0px;
-    
     flex-direction: column;
     place-items: center;
     background-color: var(--project-window-color);
@@ -276,9 +273,6 @@
 
 
 .projectWindow.active {
-    width: min(80vh, 100%);
-    height: min(min(85vh, 110vw), 100%);
-    
     scale: 1;
     pointer-events: auto;
 }

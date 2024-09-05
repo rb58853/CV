@@ -3,10 +3,7 @@ import { ProjectWindow } from "../../../components/projects/projects"
 import './styles/desktop.css'
 import Markdown from "react-markdown"
 import remarkGfm from "remark-gfm"
-function ProjectMessage({ projectInput, comment }) {
-    const [project, setProject] = useState(projectInput)
-    const [windowProject, setWindowProject] = useState(false)
-
+function ProjectMessage({ project, comment,windowProject, setWindowProject, setProject }) {
 
     return (
         <section className="projectMessage"
@@ -19,13 +16,13 @@ function ProjectMessage({ projectInput, comment }) {
         >
             <SimpleProjectOverview project={project} />
 
-            <h4 style={{ marginBlock: 5 }}>{projectInput.title}</h4>
+            <h4 style={{ marginBlock: 5 }}>{project.title}</h4>
             <div className="line" />
 
             <Markdown remarkPlugins={[remarkGfm]} >
                 {comment}
             </Markdown>
-            <ProjectWindow project={project} setWindowProject={setWindowProject} windowProject={windowProject} />
+           
         </section>
     )
 }
