@@ -8,7 +8,7 @@ import { setData, setWeeks } from "../../redux/contributions/contributiosSlice";
 function ContributionsBox() {
     const reduxData = useSelector((state) => state.contributions).data
     const [data, setData] = useState(reduxData);
-
+    const git_token = process.env.REACT_APP_GITHUB_TOKEN;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,6 +29,9 @@ function ContributionsBox() {
 
     const total = data && data['data']['user']['contributionsCollection']['contributionCalendar']['totalContributions']
 
+    // return <div>
+    //     {git_token}
+    // </div>
     return (data && <div className="contributions">
         {data && `${total} contributions in the last year`}
         {data && <YearView data={data} />}
