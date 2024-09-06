@@ -129,8 +129,8 @@ const projects = {
         image: '/projects/shop/1.jpg',
         images: ['/projects/shop/2.jpg', '/projects/shop/3.jpg', '/projects/shop/4.jpg'],
 
-        github: 'https://github.com/rb58853/my-app',
-        sitie: 'https://rb58853.github.io/my-app/',
+        github: 'https://github.com/rb58853/emilito',
+        sitie: 'https://rb58853.github.io/emilito/',
     },
 
     yugiOhBackend: {
