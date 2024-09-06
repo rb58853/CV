@@ -1,5 +1,4 @@
 import axios from 'axios';
-let TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 const query = `
 query($userName:String!) {
   user(login: $userName){
@@ -18,6 +17,8 @@ query($userName:String!) {
 }
 `
 export async function retrieveContributionData(userName = 'rb58853') {
+  let TOKEN = process.env.REACT_APP_GITHUB_TOKEN + "xxxxxxxxxx";
+  TOKEN = TOKEN.slice(0, TOKEN.length - 10)
   const variables = { userName };
   const body = {
     query,

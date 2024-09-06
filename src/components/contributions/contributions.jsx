@@ -8,7 +8,6 @@ import { setData, setWeeks } from "../../redux/contributions/contributiosSlice";
 function ContributionsBox() {
     const reduxData = useSelector((state) => state.contributions).data
     const [data, setData] = useState(reduxData);
-    const git_token = process.env.REACT_APP_GITHUB_TOKEN;
 
     useEffect(() => {
         const fetchData = async () => {
