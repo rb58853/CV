@@ -8,8 +8,11 @@ import { useSize } from '../../hooks/useSize'
 import { studentInfo } from '../../environment/data/about'
 import { InfoBox } from '../skillsLanguajes/core'
 import { useDispatch } from 'react-redux'
-import { setSection } from '../../redux/sections/sectionSlice'
 import setSectionFunction from '../../redux/sections/functions'
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import { Icon } from '@iconify/react/dist/iconify.js'
+
 
 function Projects() {
     const [skill, setSkill] = useState('All')
@@ -192,21 +195,10 @@ export function ProjectBox({ project, setProject, setWindowProject, active, tran
 }
 
 export function ProjectWindow({ project, setWindowProject, windowProject }) {
-    const carruselRef = React.useRef();
-    const carruselImagesRef = React.useRef();
     const textRef = React.useRef();
-    const { width } = useSize(carruselRef)
-    const [indexImage, setIndexImage] = useState(0)
     const [boxInfoActive, setBoxInfoActive] = useState(false)
     const info = studentInfo(project.asStudent)
 
-    useEffect(() => {
-        carruselImagesRef.current.scrollTo({
-            // carruselRef.current.scrollTo({
-            left: width * indexImage,
-            behavior: 'smooth'
-        });
-    }, [indexImage, width])
 
     useEffect(() => {
 
@@ -217,11 +209,6 @@ export function ProjectWindow({ project, setWindowProject, windowProject }) {
     }, [windowProject])
 
 
-    const images = [];
-    project.images.forEach(path => {
-        images.push(<img className='carruselImage' src={process.env.PUBLIC_URL + path} alt=""
-            style={{ width: width }} />)
-    })
 
     const details = Object.keys(project.features).map((key) => {
         return <text><b>{key}: </b> {project.features[key]}</text>
@@ -232,68 +219,100 @@ export function ProjectWindow({ project, setWindowProject, windowProject }) {
 
             <div className={`projectWindow ${windowProject ? 'active' : ''}`}>
 
-                <div className='carruselContainer' ref={carruselRef}>
-                    {
-                        images.length - 1 > indexImage && <button className='switchImageButton next'
-                            onClick={() => setIndexImage(Math.min(indexImage + 1, images.length - 1))}
-                        > {'›'} </button>
-                    }
-                    {
-                        indexImage > 0 && <button className='switchImageButton back'
-                            onClick={() => setIndexImage(Math.max(indexImage - 1, 0))}
-                        > {'‹'} </button>
+                <ProjectWindowImage project={project} />
 
-                    }
-                    <div className='carrusel' ref={carruselImagesRef}>
-                        {images}
-                    </div>
-                </div>
+                <div className='proyectWindowTextSpace'>
+                    {project.asStudent && <div className='asStudentFlag'
+                        style={{ backgroundColor: env.flagColors[project.asStudent - 1] }}
 
-                    <div className='proyectWindowTextSpace'>
-                        {project.asStudent && <div className='asStudentFlag'
-                            style={{ backgroundColor: env.flagColors[project.asStudent - 1] }}
+                        onClick={() => { setBoxInfoActive(!boxInfoActive) }}
+                        onMouseOut={() => { setBoxInfoActive(false) }}
+                    >
+                        <img src={process.env.PUBLIC_URL + "/images/icons/info.svg"} alt="" />
+                    </div>}
+                    <div className='proyectWindowText'>
+                        <h1>{project.title}</h1>
+                        <text>{"" + project.skills.join(' / ') + " | " + project.languages.join(' / ')}</text>
+                        {/* <div className='line' /> */}
 
-                            onClick={() => { setBoxInfoActive(!boxInfoActive) }}
-                            onMouseOut={() => { setBoxInfoActive(false) }}
-                        >
-                            <img src={process.env.PUBLIC_URL + "/images/icons/info.svg"} alt="" />
-                        </div>}
-                        <div className='proyectWindowText'>
-                            <h1>{project.title}</h1>
-                            <text>{"" + project.skills.join(' / ') + " | " + project.languages.join(' / ')}</text>
-                            {/* <div className='line' /> */}
-
-                            <div className='description' ref={textRef}>
-                                <div className='features'>
-                                    {details}
-                                </div>
-                                <text>{project.description}</text>
+                        <div className='description' ref={textRef}>
+                            <div className='features'>
+                                {details}
                             </div>
+                            <Markdown remarkPlugins={[remarkGfm]}>
+                                {project.description}
+                            </Markdown>
+                        </div>
 
-                            <div className='endBar'>
-                                {project.github && <a href={project.github}
-                                    className={`viewOnGithub ${windowProject ? 'active' : ''}`}> View on github </a>}
+                        <div className='endBar'>
+                            {project.github && <a href={project.github}
+                                className={`viewOnGithub ${windowProject ? 'active' : ''}`}> View on github </a>}
 
-                                {project.paper && <a href={process.env.PUBLIC_URL + project.paper}
-                                    className={`viewOnGithub ${windowProject ? 'active' : ''}`}> Read paper </a>}
+                            {project.paper && <a href={process.env.PUBLIC_URL + project.paper}
+                                className={`viewOnGithub ${windowProject ? 'active' : ''}`}> Read paper </a>}
 
-                                {project.sitie && <a href={project.sitie}
-                                    className={`viewOnGithub ${windowProject ? 'active' : ''}`}> Visit sitie </a>}
+                            {project.sitie && <a href={project.sitie}
+                                className={`viewOnGithub ${windowProject ? 'active' : ''}`}> Visit sitie </a>}
 
-                                {project.app && <a href={project.app}
-                                    className={`viewOnGithub ${windowProject ? 'active' : ''}`}> App </a>}
+                            {project.app && <a href={project.app}
+                                className={`viewOnGithub ${windowProject ? 'active' : ''}`}> App </a>}
 
-                                <button className='buttonClose'
-                                    onClick={() => { setWindowProject(false) }}
-                                >
-                                    <img className='closeImage' src={process.env.PUBLIC_URL + `/images/icons/${env.mode}/close.png`} alt="" />
-                                </button>
-                            </div>
+                            <button className='buttonClose'
+                                onClick={() => { setWindowProject(false) }}
+                            >
+                                <img className='closeImage' src={process.env.PUBLIC_URL + `/images/icons/${env.mode}/close.png`} alt="" />
+                            </button>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     )
+}
+
+function ProjectWindowImage({ project }) {
+    const carruselRef = React.useRef();
+    const carruselImagesRef = React.useRef();
+    const { width } = useSize(carruselRef)
+    const [indexImage, setIndexImage] = useState(0)
+    const [hide, setHide] = useState(true)
+
+    useEffect(() => {
+        carruselImagesRef.current.scrollTo({
+            left: width * indexImage,
+            behavior: 'smooth'
+        });
+    }, [indexImage, width])
+
+    const images = [];
+    project.images.forEach(path => {
+        images.push(<img className={`carruselImage ${hide ? 'hide' : ''}`} src={process.env.PUBLIC_URL + path} alt=""
+            style={{ width: width }} />)
+    })
+
+    return <div className={`carruselContainer ${hide ? 'hide' : ''}`} ref={carruselRef}>
+        {
+            images.length - 1 > indexImage &&
+            <Icon className={`switchImageButton next ${hide ? 'hide' : ''}`} icon={'mdi:chevron-right'}
+                onClick={() => setIndexImage(Math.min(indexImage + 1, images.length - 1))}
+            />
+        }
+        {
+            indexImage > 0 &&
+            <Icon className={`switchImageButton back ${hide ? 'hide' : ''}`} icon={'mdi:chevron-left'}
+                onClick={() => setIndexImage(Math.max(indexImage - 1, 0))}
+            />
+
+        }
+
+        <Icon className={`buttonImageHide ${hide ? 'hide' : ''}`} icon={`${hide ? 'mdi:chevron-down' : 'mdi:chevron-up'}`}
+            onClick={() => { setHide(!hide) }} />
+
+        <div className='carrusel' ref={carruselImagesRef}>
+            {images}
+        </div>
+    </div>
+
 }
 
 export default Projects

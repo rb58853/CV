@@ -210,10 +210,34 @@ const projects = {
         },
         image: '/projects/chatBot/image.jpg',
         images: ['/projects/chatBot/image.jpg'],
-        // paper: '/projects/littleArchemy/paper.pdf',
-        // github: 'https://github.com/rb58853/Little-Archemy',
-        // asStudent: 3,
     },
+    cvAssistant: {
+        skills: ['ML', 'AI'],
+        title: 'Portfolio Assistant Bot',
+        description: "This project represents an innovative integration of advanced technologies in artificial intelligence and machine learning to create a personal assistant capable of efficiently processing and analyzing information. This project was developed using Python.\
+        \n### Overview\
+        \nThe project combines several key elements:\
+        \n- A personal assistant based on NLP and machine learning\
+        \n- Interacts with the GitHub API to access repository information\
+        \n- Uses the OpenAI API and GPT-4 mini for advanced language processing\
+        \n- Designed as open-source software to promote collaboration and continuous development\
+        \n### Project Objective\
+        \nThe main objective of this project is to develop an advanced virtual assistant that acts as the user's digital representative in job interviews and professional conversations. This assistant is designed to:\
+        \n- Use the user's personal and professional information to personalize its performance\
+        \n- Evaluate compatibility between job positions and the user's skills\
+        \n- Learn and continuously improve based on user feedback",
+
+        languages: ["Python"],
+        features: {
+            keywords: "NLP (Natural Language process), Open source code, fastapi, cifrated data."
+        },
+        image: '/projects/cvAssistant/images/1.jpg',
+        images: ['/projects/cvAssistant/images/1.jpg',
+            '/projects/cvAssistant/images/2.jpg',
+            '/projects/cvAssistant/images/3.jpg'],
+        github: 'https://github.com/samura99/cv-assitant',
+    },
+
 
 }
 export default projects
