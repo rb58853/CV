@@ -199,6 +199,9 @@ export function ProjectWindow({ project, setWindowProject, windowProject }) {
     const textRef = React.useRef();
     const [boxInfoActive, setBoxInfoActive] = useState(false)
     const info = studentInfo(project.asStudent)
+    //Se usa hide desde aqui para que se aplique a todos las vistas de proyecto
+    const [hide, setHide] = useState(false)
+
 
 
     useEffect(() => {
@@ -220,7 +223,7 @@ export function ProjectWindow({ project, setWindowProject, windowProject }) {
 
             <div className={`projectWindow ${windowProject ? 'active' : ''}`}>
 
-                <ProjectWindowImage project={project} />
+                <ProjectWindowImage key={project.title} project={project} hide={hide} setHide={setHide} />
 
                 <div className='proyectWindowTextSpace'>
                     {project.asStudent && <div className='asStudentFlag'
@@ -271,12 +274,11 @@ export function ProjectWindow({ project, setWindowProject, windowProject }) {
     )
 }
 
-function ProjectWindowImage({ project }) {
+function ProjectWindowImage({ project, hide, setHide }) {
     const carruselRef = React.useRef();
     const carruselImagesRef = React.useRef();
     const { width } = useSize(carruselRef)
     const [indexImage, setIndexImage] = useState(0)
-    const [hide, setHide] = useState(false)
     const size = useSize(carruselRef)
 
     useEffect(() => {
