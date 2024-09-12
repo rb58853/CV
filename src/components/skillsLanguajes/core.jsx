@@ -31,7 +31,7 @@ export function Languages({ setBoxInfoActive, setInfo, boxInfoActive }) {
 
 export function Skills({ setBoxInfoActive, setInfo, boxInfoActive }) {
     const skillsView = Object.values(SortedBars(skills)).map((item) => {
-        return <ProgressBar label={item.label} icon={item.icon} info={item.info} percentage={item.skill} setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
+        return <ProgressBar label={item.label} icon={item.icon} svg={item.svg} info={item.info} percentage={item.skill} setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
     })
 
     return (
@@ -44,7 +44,7 @@ export function Skills({ setBoxInfoActive, setInfo, boxInfoActive }) {
     )
 }
 
-function ProgressBar({ label, icon, info, percentage, setBoxInfoActive, setInfo, boxInfoActive }) {
+function ProgressBar({ label, icon, svg, info, percentage, setBoxInfoActive, setInfo, boxInfoActive }) {
     percentage /= 100
     return (
         <div className='progressBar'
@@ -57,7 +57,10 @@ function ProgressBar({ label, icon, info, percentage, setBoxInfoActive, setInfo,
             }}>
 
             <label className={`progressBarLabel ${label === boxInfoActive ? 'highlight' : ''}`}>
-                <Icon className='skillIcon' icon={icon} />
+
+                {icon && <Icon className='skillIcon' icon={icon} />}
+                {svg && <img className='skillIconImg' src={svg} alt="icon" />}
+
                 {label}
 
             </label>

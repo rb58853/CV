@@ -70,7 +70,8 @@ function Container({ setProject, setWindowProject, skill }) {
 
     //TODO Jugar con el width
     useLayoutEffect(() => {
-        const tempWidth = size.width >= 600 ? env.boxProjectMinWidth : env.boxProjectMinWidthMobile
+        const tempWidth = size.width >= 1000 ? env.boxProjectBigMinWidth : (size.width >= 800 ? env.boxProjectMinWidth : (size.width >= 600 ? env.boxProjectBigMinWidthMobile : env.boxProjectMinWidthMobile))
+
         if (size.width / (columns + 1) > tempWidth)
             setColums(columns + 1)
         if (size.width / columns < tempWidth)

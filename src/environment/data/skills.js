@@ -17,7 +17,8 @@ const skills =
         label: 'AI',
         info: 'Classical AI, also known as rule-based AI, focuses on developing systems that can perform specific tasks using predefined rules and heuristics. Unlike modern AI, which focuses on machine learning and adaptation from data, classical AI is based on human-established logic and rules',
         skill: 75,
-        icon: 'eos-icons:ai'
+        // icon: 'logos:openai-icon',
+        svg: process.env.PUBLIC_URL + "/images/icons/skills/ai2.png",
     },
 
     simulation: {
@@ -30,7 +31,8 @@ const skills =
         label: 'ML',
         info: 'Machine Learning (ML) is a branch of artificial intelligence (AI) that focuses on developing computer systems capable of learning from data and improving their performance over time without needing to be explicitly programmed. It is applicable across a wide range of industries, including healthcare, defense, financial services, marketing, and security services. Machine learning is a rapidly growing field with numerous research and development opportunities',
         skill: 85,
-        icon: 'logos:tensorflow'
+        // icon: 'logos:tensorflow',
+        svg: process.env.PUBLIC_URL + "/images/icons/skills/openAI.png",
     },
 
     net: {
@@ -44,7 +46,8 @@ const skills =
         label: 'IRS',
         info: 'Information retrieval systems are tools or techniques that allow users to search and retrieve information from a collection of documents or databases. This process begins when a user makes a query to the system, which is a formal statement of the need for information. Information retrieval systems are fundamental in various applications, such as internet search engines, recommendation systems, knowledge management systems, and more',
         skill: 85,
-        icon: 'logos:typesense-icon'
+        svg: process.env.PUBLIC_URL + "/images/icons/skills/ts1.png",
+        // icon: 'logos:typesense-icon'
     },
 
     daa: {
@@ -58,34 +61,41 @@ const skills =
         label: 'Compilers',
         info: 'A compiler is a program that translates code written in a high-level programming language to another language, usually a low-level one such as machine code or assembly. This translation process is known as compilation. Building a compiler involves dividing the process into phases, which include source program analysis and object program synthesis. Analysis verifies the correctness of the source program according to the language definition, while synthesis generates the output in the object language',
         skill: 83,
-        icon: 'websymbol:code'
+        // icon: 'websymbol:code'
+        svg: process.env.PUBLIC_URL + "/images/icons/skills/compiler2.png",
     },
 
     ds: {
         label: 'Dist Sys',
         info: 'A distributed system is a set of computer programs that use computational resources on different computing nodes to achieve a common goal. These systems, also known as "distributed computing," use different nodes to communicate and synchronize through a common network. The primary purpose of distributed systems is to eliminate bottlenecks or central points of failure in a system',
         skill: 55,
-        icon: 'lucide:network'
+        // icon: 'lucide:network',
+        svg: process.env.PUBLIC_URL + "/images/icons/skills/ds2.png",
     },
 
     os: {
         label: 'OS',
         info: 'Operating systems are software programs that manage the hardware resources of a computer, such as the CPU, memory, storage, and input/output devices. Working with operating systems through a shell is a way to interact with the operating system through text commands',
         skill: 45,
-        icon: 'logos:debian'
+        icon: 'logos:debian',
+        // svg: process.env.PUBLIC_URL + "/images/icons/skills/linux2.png",
+
     },
 
     networks: {
         label: 'Networks',
         info: 'Computer networks are communication systems that connect computer devices through various means, whether wired or wireless, allowing the exchange of information in the form of data packets. These networks facilitate data transmission through electrical pulses, electromagnetic waves, or other physical media',
         skill: 25,
-        icon: 'iconoir:network'
+        svg: process.env.PUBLIC_URL + "/images/icons/skills/networks4.png",
+        // icon: 'iconoir:network'
+
     },
     unity: {
         label: 'Unity',
         info: 'Unity is a leading game engine in the industry, renowned for its versatility and ability to support both 2D and 3D game development. It uses C# as its primary programming language, which simplifies the implementation of complex game logic. Furthermore, Unity provides a wide range of tools and resources for game development, including animation, artificial intelligence, and support for multiple distribution platforms.',
         skill: 83,
-        icon: 'devicon:unity'
+        icon: 'skill-icons:unity-light'
+        // icon: 'skill-icons:unity-dark'
     },
 
     django: {

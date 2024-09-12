@@ -17,6 +17,7 @@ function View() {
         <InfoBox info={info} active={boxInfoActive} />
         <div className='skillsAndLenguagesColums' >
             <Languages setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
+            <div className='line'/>
             <Skills setBoxInfoActive={setBoxInfoActive} setInfo={setInfo} boxInfoActive={boxInfoActive} />
         </div>
     </div>

@@ -285,8 +285,8 @@
     aspect-ratio: 16/9;
     height: 1000%;
 
-    transition-property: max-height, aspect-ratio ;
-    transition-duration: 1000ms;
+    transition-property: max-height;
+    transition-duration: 600ms;
     transition-timing-function: ease-in-out;
 }
 
@@ -344,7 +344,7 @@
 .switchImageButton.hide {
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 100ms;
+    transition-duration: 600ms;
     background-color: var(--project-window-color);
 }
 
@@ -355,7 +355,7 @@
 
 
     transition-property: opacity;
-    transition-duration: 1000ms;
+    transition-duration: 600ms;
     transition-timing-function: ease-in-out;
     pointer-events: none;
 }
