@@ -48,13 +48,13 @@ const languages =
     c: {
         label: 'C',
         info: 'C is a general-purpose programming language that was created in the 1970s by Dennis Ritchie at Bell Labs. It is widely used and influential, with its design reflecting the capabilities of the targeted CPUs. C has found lasting use in operating systems, device drivers, and protocol stacks, and it is commonly used across a range of computer architectures, from supercomputers to microcontrollers and embedded systems',
-        skill: 10,
+        skill: 15,
         icon: 'devicon:c'
     },
     cPlusPlus: {
         label: 'C++',
         info: 'C++ is a highly versatile and widely used programming language, known for its efficiency, control over system resources, and support for both low-level and high-level application development. Developed by Bjarne Stroustrup as an extension of the C language, C++ introduced object-oriented programming (OOP) to the C language, making it a middle-level language capable of handling both low-level system programming (such as operating systems, device drivers, and kernels) and high-level application development (like games, GUI applications, and desktop software).',
-        skill: 15,
+        skill: 20,
         icon: 'logos:c-plusplus'
     },
     dart: {
@@ -62,6 +62,12 @@ const languages =
         info: 'Dart is a client-optimized programming language developed by Google, designed for crafting fast apps on any platform. It aims to offer a highly productive programming experience for multi-platform development, supported by a flexible execution runtime platform for app frameworks. Dart is particularly suited for client development, focusing on both efficient development processes, such as sub-second stateful hot reload, and delivering high-quality production experiences across various compilation targets like web, mobile, and desktop platforms.',
         skill: 35,
         icon: 'logos:dart'
+    },
+    go: {
+        label: 'GO',
+        info: 'Go, also known as Golang, is a modern systems programming language developed by Google in 2009. It was designed to be fast, secure, and easy to learn, aiming to boost developer productivity. Go features rapid compilation and execution, native concurrency support through goroutines and channels, and automatic memory management. With its simple syntax and minimalistic approach, Go has gained popularity for building scalable and efficient applications, particularly in web services, distributed systems, and infrastructure-as-code projects. ',
+        skill: 15,
+        icon: 'logos:go'
     },
 }
 export default languages

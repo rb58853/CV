@@ -231,10 +231,10 @@ const projects = {
         features: {
             keywords: "NLP (Natural Language process), Open source code, fastapi, cifrated data."
         },
-        image: '/projects/cvAssistant/images/1.jpg',
-        images: ['/projects/cvAssistant/images/1.jpg',
-            '/projects/cvAssistant/images/2.jpg',
-            '/projects/cvAssistant/images/3.jpg'],
+        images: ['/projects/cvAssistant/images/1.jpg'],
+        // images: ['/projects/cvAssistant/images/1.jpg',
+        //     '/projects/cvAssistant/images/2.jpg',
+        //     '/projects/cvAssistant/images/3.jpg'],
         github: 'https://github.com/samura99/cv-assitant',
     },
 

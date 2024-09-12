@@ -7,7 +7,7 @@ const skills =
         icon: 'logos:react'
     },
     reactNative: {
-        label: 'React Native',
+        label: 'R. Native',
         info: 'React Native is a mobile application development framework that uses React, a JavaScript library for building user interfaces, and allows developers to create native applications for iOS and Android using JavaScript and React. Unlike React, which is used for developing web applications, React Native focuses on mobile application development, using native components instead of web components ',
         skill: 66,
         icon: 'skill-icons:react-dark'
@@ -62,7 +62,7 @@ const skills =
     },
 
     ds: {
-        label: 'Dist Systems',
+        label: 'Dist Sys',
         info: 'A distributed system is a set of computer programs that use computational resources on different computing nodes to achieve a common goal. These systems, also known as "distributed computing," use different nodes to communicate and synchronize through a common network. The primary purpose of distributed systems is to eliminate bottlenecks or central points of failure in a system',
         skill: 55,
         icon: 'lucide:network'
@@ -96,7 +96,7 @@ const skills =
     },
 
     telegramBot: {
-        label: 'Telegram bot',
+        label: 'Tele bot',
         info: 'A Telegram bot is a program designed to interact with users through the Telegram messaging platform. These bots can perform various functions, such as answering queries, providing information, and automating tasks.',
         skill: 40,
         icon: 'logos:telegram'
