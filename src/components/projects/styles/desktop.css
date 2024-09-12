@@ -237,7 +237,6 @@
     backdrop-filter: blur(10px);
     /* top: 0px; */
     z-index: 5;
-    scroll-behavior: none;
     place-content: center;
     place-items: center;
     display: flex;
@@ -280,12 +279,13 @@
 .carruselContainer {
     width: 100%;
     position: relative;
-    aspect-ratio: 16/9;
     overflow-y: hidden;
-    max-height: 45%;
-    height: 100%;
+    /* max-height: calc(9*100vw/16); */
+    flex-grow: 1;
+    aspect-ratio: 16/9;
+    height: 1000%;
 
-    transition-property: max-height, ;
+    transition-property: max-height, aspect-ratio ;
     transition-duration: 1000ms;
     transition-timing-function: ease-in-out;
 }
@@ -303,6 +303,7 @@
     width: 100%;
     height: 100%;
     scrollbar-width: none;
+
 }
 
 
@@ -319,7 +320,7 @@
     border-radius: 50px;
     opacity: 1;
 
-    transition-property: color, opacity, scale;
+    transition-property: color, scale;
     transition-timing-function: ease-in-out;
     transition-duration: 150ms;
 
@@ -331,15 +332,18 @@
 }
 
 .switchImageButton.next {
+    opacity: 1;
     right: 10px;
 }
 
 .switchImageButton.back {
+    opacity: 1;
     left: 10px;
 }
 
 .switchImageButton.hide {
     opacity: 0;
+    transition-property: opacity;
     transition-duration: 100ms;
     background-color: var(--project-window-color);
 }
@@ -348,6 +352,7 @@
     object-fit: cover;
     min-width: 100%;
     user-select: none;
+
 
     transition-property: opacity;
     transition-duration: 1000ms;
@@ -411,6 +416,7 @@
     overflow-y: auto;
     max-height: 100%;
     margin-block: 20px;
+    /* width: 100px; */
 }
 
 .proyectWindowText>h1 {

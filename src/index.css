@@ -17,7 +17,7 @@ code {
 /* Cambia el ancho de la scrollbar */
 ::-webkit-scrollbar {
   width: 0px; /* Ancho de la scrollbar */
-  height: 10px;
+  height: 5px;
 }
 
 /* Estilo del track (fondo de la scrollbar) */

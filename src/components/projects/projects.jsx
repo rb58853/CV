@@ -275,7 +275,8 @@ function ProjectWindowImage({ project }) {
     const carruselImagesRef = React.useRef();
     const { width } = useSize(carruselRef)
     const [indexImage, setIndexImage] = useState(0)
-    const [hide, setHide] = useState(true)
+    const [hide, setHide] = useState(false)
+    const size = useSize(carruselRef)
 
     useEffect(() => {
         carruselImagesRef.current.scrollTo({
@@ -290,7 +291,9 @@ function ProjectWindowImage({ project }) {
             style={{ width: width }} />)
     })
 
-    return <div className={`carruselContainer ${hide ? 'hide' : ''}`} ref={carruselRef}>
+    return <div className={`carruselContainer ${hide ? 'hide' : ''}`} ref={carruselRef}
+        style={{ maxHeight: !hide ? size.width * 9 / 16 : 33 }}
+    >
         {
             images.length - 1 > indexImage &&
             <Icon className={`switchImageButton next ${hide ? 'hide' : ''}`} icon={'mdi:chevron-right'}
