@@ -53,7 +53,7 @@ const skills =
     daa: {
         label: 'DAA',
         info: 'The design and analysis of algorithms is a crucial field in computing that focuses on creating algorithms to solve specific problems, as well as analyzing and demonstrating their complexity. The field of algorithm design and analysis addresses one of the millennium problems, known as the P vs NP problem, which is fundamental in computational complexity theory',
-        skill: 90,
+        skill: 95,
         icon: 'logos:google-cloud-functions'
     },
 
@@ -93,7 +93,7 @@ const skills =
     unity: {
         label: 'Unity',
         info: 'Unity is a leading game engine in the industry, renowned for its versatility and ability to support both 2D and 3D game development. It uses C# as its primary programming language, which simplifies the implementation of complex game logic. Furthermore, Unity provides a wide range of tools and resources for game development, including animation, artificial intelligence, and support for multiple distribution platforms.',
-        skill: 83,
+        skill: 90,
         icon: 'skill-icons:unity-light'
         // icon: 'skill-icons:unity-dark'
     },

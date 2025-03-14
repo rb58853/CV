@@ -6,6 +6,8 @@ import './environment/styles/dark.css'
 import { store } from './redux/store';
 import Bar from './components/bar/bar';
 import { ChatButton } from './components/bar/floatButtons';
+import { useEffect, useState } from 'react';
+import { AssistantData } from './utils/test';
 
 function App({ content }) {
   return (
@@ -18,4 +20,8 @@ function App({ content }) {
     </div>
   );
 }
+// function App({ content }) {
+//   return <AssistantData />
+// }
+
 export default App;

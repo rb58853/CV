@@ -30,7 +30,7 @@ const languages =
     cSharp: {
         label: 'C#',
         info: 'C# is a modern, object-oriented programming language with type safety, designed to create secure and robust applications that run in the .NET environment. This language is based on the C family of languages and is familiar to programmers of C, C++, Java, and JavaScript. C# is used in a wide range of applications and platforms due to its versatility and simplicity.',
-        skill: 90,
+        skill: 95,
         icon: 'devicon:csharp'
     },
     mips: {
@@ -48,7 +48,7 @@ const languages =
     c: {
         label: 'C',
         info: 'C is a general-purpose programming language that was created in the 1970s by Dennis Ritchie at Bell Labs. It is widely used and influential, with its design reflecting the capabilities of the targeted CPUs. C has found lasting use in operating systems, device drivers, and protocol stacks, and it is commonly used across a range of computer architectures, from supercomputers to microcontrollers and embedded systems',
-        skill: 15,
+        skill: 18,
         icon: 'devicon:c'
     },
     cPlusPlus: {
@@ -68,6 +68,18 @@ const languages =
         info: 'Go, also known as Golang, is a modern systems programming language developed by Google in 2009. It was designed to be fast, secure, and easy to learn, aiming to boost developer productivity. Go features rapid compilation and execution, native concurrency support through goroutines and channels, and automatic memory management. With its simple syntax and minimalistic approach, Go has gained popularity for building scalable and efficient applications, particularly in web services, distributed systems, and infrastructure-as-code projects. ',
         skill: 15,
         icon: 'logos:go'
+    },
+    haskell: {
+        label: 'Haskell',
+        info: 'Haskell is a mature functional programming language that excels at maintaining quality and developer productivity, particularly in web applications and networked servers. Its strong type system and functional programming paradigm ensure high reliability and maintainability in software development.',
+        skill: 15,
+        icon: 'devicon:haskell'
+    },
+    rust: {
+        label: 'Rust',
+        info: 'Rust is a modern systems programming language focused on safety and performance, designed to compete with C++ while maintaining memory security guarantees. It excels in systems programming, embedded systems, game development, and high-performance computing applications. ',
+        skill: 15,
+        icon: 'skill-icons:rust'
     },
 }
 export default languages
