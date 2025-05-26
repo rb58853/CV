@@ -237,6 +237,86 @@ const projects = {
         //     '/projects/cvAssistant/images/3.jpg'],
         github: 'https://github.com/samura99/cv-assitant',
     },
+    ArcaneAscent: {
+        skills: ['Game Dev'],
+        title: 'Arcane Ascnt',
+        description: "Arcane Ascent is an innovative digital game that fuses a sophisticated card-based combat system with the traditional mechanics of the roguelike genre. The game implements three distinctive magical specializations: the Elemental Mage, specialized in the mastery of natural elements; the Summoner Mage, dedicated to the summoning of supernatural entities; and the Blood Mage, skilled in the manipulation of life essence. The technical structure of the game is developed on Unity with C#, rigorously incorporating SOLID principles and agile development methodologies. A particularly notable feature is its evolutionary card system, where each specialization has a unique and exclusive library of magic cards.\
+            \n\
+            \n## Main Features\
+            \n\
+            \n### Strategic Deck System\
+            \n\
+            \nAllows the construction of powerful decks through hundreds of possible combinations, thus optimizing the strategy in each confrontation.\
+            \n\
+            \n\
+            \n### Unique Exploration\
+            \n\
+            \nEach ascent through the tower presents a differentiated experience thanks to:\
+            \n\
+            \n* Procedurally generated encounters\
+            \n* Random events\
+            \n* Varied card combinations\
+            \n* Wide variety of enemies and bosses\
+            \n\
+            \n\
+            \n### Total Control\
+            \n\
+            \nDecisions made have a direct influence on combat and define the style of play, leading to unpredictable results.\
+            \n\
+            \n### Diversified Combat Styles\
+            \n\
+             \nEach warlock has a unique and exclusive combat style, offering multiple creative ways to defeat opponents.\
+            \n\
+            \n\
+            \n## Current Status and Development\
+            \n\
+            \n* Available in Early Access.\
+            \n* Active participation of the developer community is maintained.\
+            \n* Continuously implementing feedback to improve and expand the game.\
+            \n\
+            \n## Idiomas Soportados\
+            \n\
+            \n| Language | Interface | Audio | Subtitles |\
+            \n|---------------|----------|-------|------------|\
+            \n| Spanish | ✓ | ✗ | ✓ | ✗ | ✓ |\
+            \n| French | ✓ | ✓ | ✗ | ✓ | ✓ |\
+            \n| German  | ✓ | ✗ | ✓ | ✓ | ✓ |\
+            \n| Italian  | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ |\
+            \n| Portuguese | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ |\
+            \n| Simplified Chinese| ✓ | ✗ | ✓ | ✓ | ✓ |\
+            \n| Traditional Chinese       | ✓ | ✗ | ✓ | ✗ | ✓ | ✓ |\
+            \n| Korean | ✓ | ✗ | ✓ | ✓ | ✓ |\
+            \n| Japanese  | ✓ | ✗ | ✓ | ✓ |\
+            \n| Russian  | ✓ | ✗ | ✓ | ✓ |\
+            \n| English | ✓ | ✓ | ✗ | ✓ | ✓ |\
+            \n\
+            \n## Technologies Used\
+            \n\
+            \n* **Unity**: Graphics engine selected for the generation of the game.\
+            \n* **C#**: Programming language used for the development of the projects code.\
+            \n* **Python**: Implemented in parallel for language generation during the indexing time\
+            \n* **OpenAI**: Python library used for the automation of language generation using NLP models\
+            \n* **Steamworks**: Steam library management to develop the achievement system.\
+            \n\
+            \n## Commercial Information\
+            \n\
+            \n* The established price is $14.99 USD\
+            \n* The distribution platform is PC (Steam)\
+            \n* Features available on Steam include:\
+              \n* Steam Achievements\
+              \n* Modo un jugador\
+              \n* Compartir Familia",
+
+        languages: ["C#"],
+        features: {},
+        image: '/projects/arcaneAscent/Portada0.png',
+        images: ['/projects/arcaneAscent/Portada.png', '/projects/arcaneAscent/heroSelection.jpg',
+            '/projects/arcaneAscent/collection.jpg',
+            '/projects/arcaneAscent/claimCard.jpg',
+            '/projects/arcaneAscent/combat.jpg',
+        ],
+        github: 'https://github.com/rb58853/Arcane-Ascent',
+    },
 
 
 }

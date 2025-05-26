@@ -16,15 +16,33 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 
 // const url = 'wss://dev.chat.flowychat.com/api/ws/chat';
 const url = cvAssistantDomain;
+const user = "rb58853"
+const token = "w6Ig502ZWHQhFrUEezK6SoGDAbeaFoUdgqIO2_OPkTQ="
+
+function crearWebSocketConHeaders(url) {
+    // Crear una conexión HTTP para el handshake inicial
+    const xhr = new XMLHttpRequest();
+
+    // Configurar los headers
+    xhr.open('GET', url, false);
+    xhr.setRequestHeader('API-KEY', token);
+
+    // Realizar la petición
+    xhr.send();
+
+    // Crear la conexión WebSocket después del handshake exitoso
+    return new WebSocket(url);
+}
 
 function connectWebSocket(url, configMessage) {
     return new Promise((resolve, reject) => {
-        const ws = new WebSocket(url);
+        // const ws = new WebSocket(url + user);
+        const ws = crearWebSocketConHeaders(url + user);
 
         ws.onopen = () => {
             console.log('Conectado al servidor');
-            ws.send(configMessage);
-            resolve(ws); // Resolvemos la promesa cuando la conexión es abierta
+            // ws.send(configMessage);
+            // resolve(ws); // Resolvemos la promesa cuando la conexión es abierta
         };
 
         ws.onerror = (error) => {
@@ -123,7 +141,7 @@ function ChatHistory() {
 
     return <div className='historySpaceChatBox'>
         <div className='historySpaceChatBoxContent'>
-            <div style={{ height: '50px', width: '100%'}} />
+            <div style={{ height: '50px', width: '100%' }} />
             {webSocket.messages}
         </div>
     </div>
