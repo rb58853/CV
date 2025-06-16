@@ -28,8 +28,8 @@ function About() {
 
                     <div className='line' />
                     <Text value={aboutMe} />
-                    <div className='line' />
-                    <Text value={interests} />
+                    {/* <div className='line' /> */}
+                    {/* <Text value={interests} /> */}
                     <div className='line' />
                     <div className='columsOrRows'>
                         <Text value={studyFields} />
