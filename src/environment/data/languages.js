@@ -10,13 +10,13 @@ const languages =
     html: {
         label: 'HTML',
         info: 'HTML (HyperText Markup Language) is the standard markup language for creating web pages. It is the foundation of any website and is used to structure the page content, including text, icons, videos, and more. HTML uses tags to define elements such as headers, paragraphs, lists, links, and forms, among others. These tags allow web browsers to interpret and display the content appropriately.',
-        skill: 50,
+        skill: 40,
         icon: 'devicon:html5'
     },
     css: {
         label: 'CSS',
         info: 'CSS (Cascading Style Sheets) is a style sheet language used to describe the appearance and formatting of a document written in HTML or XML. It allows developers to precisely control how HTML elements are displayed in the browser, applying designs, colors, fonts, margins, sizes, and more.',
-        skill: 70,
+        skill: 50,
         icon: 'skill-icons:css'
     },
 
@@ -49,7 +49,8 @@ const languages =
         label: 'C',
         info: 'C is a general-purpose programming language that was created in the 1970s by Dennis Ritchie at Bell Labs. It is widely used and influential, with its design reflecting the capabilities of the targeted CPUs. C has found lasting use in operating systems, device drivers, and protocol stacks, and it is commonly used across a range of computer architectures, from supercomputers to microcontrollers and embedded systems',
         skill: 18,
-        icon: 'devicon:c'
+        svg: process.env.PUBLIC_URL + "/images/icons/skills/c.png",
+        // icon: 'logos:c'
     },
     cPlusPlus: {
         label: 'C++',
