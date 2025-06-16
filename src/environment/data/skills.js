@@ -45,7 +45,7 @@ const skills =
     irs: {
         label: 'IRS',
         info: 'Information retrieval systems are tools or techniques that allow users to search and retrieve information from a collection of documents or databases. This process begins when a user makes a query to the system, which is a formal statement of the need for information. Information retrieval systems are fundamental in various applications, such as internet search engines, recommendation systems, knowledge management systems, and more',
-        skill: 85,
+        skill: 83,
         svg: process.env.PUBLIC_URL + "/images/icons/skills/ts1.png",
         // icon: 'logos:typesense-icon'
     },
@@ -120,8 +120,14 @@ const skills =
     docker: {
         label: 'Docker',
         info: 'Docker is a lightweight container system that allows application and service virtualization. Its main goal is to facilitate efficient and consistent development, deployment, and execution of software across various environments.',
-        skill: 40,
+        skill: 60,
         icon: 'logos:docker-icon'
+    },
+    mcp: {
+        label: 'MCP',
+        info: "The Model Context Protocol (MCP) is an open standard developed by Anthropic that connects AI systems with external data sources and tools in a standardized way. It resolves two main limitations of AI models: their short memory and inability to interact directly with external files and applications. Instead of loading all information into the model's memory, MCP allows access to needed data in real-time, requesting only the specific information required at each moment.",
+        skill: 60,
+        svg: process.env.PUBLIC_URL + "/images/icons/skills/mcp.png",
     },
 }
 export default skills
