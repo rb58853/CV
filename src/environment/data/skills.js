@@ -60,7 +60,7 @@ const skills =
     compiler: {
         label: 'Compilers',
         info: 'A compiler is a program that translates code written in a high-level programming language to another language, usually a low-level one such as machine code or assembly. This translation process is known as compilation. Building a compiler involves dividing the process into phases, which include source program analysis and object program synthesis. Analysis verifies the correctness of the source program according to the language definition, while synthesis generates the output in the object language',
-        skill: 83,
+        skill: 81,
         // icon: 'websymbol:code'
         svg: process.env.PUBLIC_URL + "/images/icons/skills/compiler2.png",
     },
@@ -101,8 +101,15 @@ const skills =
     django: {
         label: 'Django',
         info: 'Django is a high-level Python web framework designed to facilitate rapid development and clean, pragmatic design. Developed by experienced programmers, Django aims to simplify the complexities of web development, allowing developers to focus on writing their applications without having to reinvent the wheel. It adheres to the "Dont Repeat Yourself" (DRY) principle, promoting reusability and modularity. Django follows the Model-View-Template (MVT) architectural pattern, separating the database layer (models), business logic (views), and presentation layer (templates).',
-        skill: 70,
+        skill: 40,
         icon: 'vscode-icons:file-type-django'
+    },
+
+    fastapi: {
+        label: 'Fastapi',
+        info: 'FastAPI is a modern Python framework for building web APIs with high speed and low code. It is characterized by its superior speed compared to frameworks like Flask and Django, automatic documentation, and native support for async/await.',
+        skill: 80,
+        icon: 'skill-icons:fastapi'
     },
 
     telegramBot: {
